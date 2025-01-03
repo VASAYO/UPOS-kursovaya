@@ -24,10 +24,4 @@ clc; clear; close all;
         IC_Qeq = Fc / IC_BW;
 
     % Волновое сопротивление 
-        IC_ro = IC_Req / IC_Qeq;
-
-    % Ёмкость контура
-        IC_C = 1 / (2*pi * Fc * IC_ro);
-    % Инд-сть контура
-        IC_L = 1 / (2*pi * Fc)^2 / IC_C;
         

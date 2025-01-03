@@ -2,26 +2,23 @@
 ***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
-***                        Transient Analysis of Main                        ***
-***                           03.01.2025 14:31:29                            ***
+***                           AC Analysis of Main                            ***
+***                           03.01.2025 14:30:10                            ***
 ********************************************************************************
 Limits
 ======
-Maximum Run Time           1/{Fmod}
-Output Start Time (tstart) 1/{Fc}/1000
-Maximum Time Step          0
-Number of Points           51
-Temperature                Linear 27
-Retrace Runs               1
-Run Options                Normal
-State Variables            Zero
-Operating Point            On
-Operating Point Only       Off
-Auto Scale Ranges          Off
-Accumulate Plots           Off
-Fixed Time Step            Off
-Periodic Steady State      Off
-Ignore Expression Errors   Off
+Frequency Range          Log 1E9,1Meg
+Number of Points         100100
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
 
 
 *****************************************************
