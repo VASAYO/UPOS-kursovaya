@@ -87,7 +87,7 @@ Name=2SC4618
 Definition=NPN
 Shape=NPN
 Mask=4224
-Used=2
+Used=4
 memo=NPN High Frequency Amplifier Transistor Vceo=25V Ic=50mA Ft=300MHz
 Link=http://www.rohm.com/products/databook/tr/pdf/2sc5659.pdf#page=001
 Label Offset=37,-17,-14,33
@@ -101,7 +101,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=257
-Used=435
+Used=440
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -112,7 +112,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=6913
-Used=120
+Used=121
 memo=Battery
 Link=2N2222
 Label Offset=19,7,10,13
@@ -125,7 +125,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6401
-Used=290
+Used=298
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -266,6 +266,7 @@ Pxs=520,384,536,384
 
 [Wire]
 Pxs=520,384,520,400
+Enable=FALSE
 
 [Wire]
 Pxs=584,384,600,384
@@ -337,7 +338,6 @@ Rot=1
 
 [Wire]
 Pxs=448,384,448,400
-Enable=FALSE
 
 [Wire]
 Pxs=448,384,520,384
@@ -545,7 +545,7 @@ Scale 1=1
 Scale 2=1
 SB 3=298,256
 Scale 3=0.5
-Px=715,416
+Px=448,390
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -935,7 +935,7 @@ Seed=0
 [Limits]
 Analysis=DC
 I1Range=3.5,0,0.001
-I1=VIN
+I1=VOUT
 NPts=51
 Temp=27
 MaxChng=5
