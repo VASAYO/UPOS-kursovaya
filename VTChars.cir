@@ -234,7 +234,7 @@ V=Vout
 Style=8192
 
 [Attr]
-ON=-18,-41,VALUE
+ON=-30,-47,VALUE
 V=1.75
 Style=8192
 
@@ -327,7 +327,7 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_None
-V=DC 0 AC 1 0 
+V=DC 0 AC 1 0
 Style=256
 
 [Comp]
@@ -545,7 +545,7 @@ Scale 1=1
 Scale 2=1
 SB 3=298,256
 Scale 3=0.5
-Px=519,393
+Px=715,416
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -899,6 +899,21 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000080
+w=1
+AliasID1=1
+Page="TR"
+Pos=0.6630969428257768,0.0050199999999999941,0.72993421052631546,0.0055759599332220302
+Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
 w=2
 AliasID1=2
 Page="OUT"
@@ -1052,7 +1067,7 @@ Analysis=AC
 
 [Pane]
 Analysis=DC
-CurrentPage 0="IN"
+CurrentPage 0="TR"
 
 [Pane]
 Analysis=HmDistortion
