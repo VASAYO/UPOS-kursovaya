@@ -1,0 +1,103 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                          Dynamic DC of VTChars                           ***
+***                           03.01.2025 16:56:19                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1        -2.945E-027  2           228.585p  3             0.000  
+4             0.000   5           228.585p 
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                Q1
+Using model:        2SC4618
+
+Beta Terms:
+BETADC            -986.546m
+BETAAC               0.000 
+
+Capacitance Terms:
+CPI                  3.836p
+CMU                  2.000p
+CBX                  0.000 
+CJS                  0.000 
+
+Conductance Terms:
+GM                   0.000 
+
+Current Terms:
+IB               1.811E-019
+IC              -1.787E-019
+
+Resistance Terms:
+RPI                 93.821G
+RX                  12.661 
+RO                 392.690G
+
+Voltage Terms:
+VBE                228.585p
+VBC                228.585p
+VCE             -2.945E-027
+
+Frequency Terms:
+FT                   0.000 
+
+Power DC Terms:
+PD               4.139E-029
+PS                   0.000 
+
+DC Pin Currents:
+Ib               1.811E-019
+Ic              -1.787E-019
+Ie              -2.436E-021
+Is                   0.000 
+
+Condition:
+State                   OFF
+
+Device Variables:
+area                 1.000 
+vbe                  0.000 
+vce                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                RIN           ROUT
+V                     0.000     -2.945E-027
+Power DC Terms:
+PD                    0.000      8.672E-048
+
+DC Pin Currents:
+Ir                    0.000     -2.945E-021
+
+Device Variables:
+tc1                   0.000          0.000 
+tc2                   0.000          0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               VIN           VOUT            IIN
+V                    0.000          0.000       -228.585p
+Power DC Terms:
+PG                   0.000          0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000     -2.945E-021         0.000 
+
+
