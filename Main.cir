@@ -1286,34 +1286,6 @@ Name="BUF1_T"
 Analysis=Transient
 Name="BUF1_F"
 
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000080
-w=5
-AliasID1=6
-Page="IC_F"
-Pos=199980000,0.0044437756087318927,200242250.28702641,0.0072491909385113268
-Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000080
-w=4
-AliasID1=5
-Page="IC_F"
-Pos=199980000,0.0046747587311557794,199771526.98048219,0.007119741100323625
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
 [AC]
 WinID=2
 Window Placement=2,3, -1,-1, -8,-31, 78,78,907,572
