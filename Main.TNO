@@ -3,11 +3,11 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                        Transient Analysis of Main                        ***
-***                           03.01.2025 20:15:04                            ***
+***                           03.01.2025 20:45:52                            ***
 ********************************************************************************
 Limits
 ======
-Maximum Run Time           1/{Fmod}
+Maximum Run Time           25u
 Output Start Time (tstart) 0
 Maximum Time Step          1/{Fc}/100
 Number of Points           51

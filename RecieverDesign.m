@@ -33,12 +33,14 @@ clc; clear; close all;
         IC_L = 1 / (2*pi * Fc)^2 / IC_C;
 
 %% Буферный усилитель
+    E = 3.5;
+
     Vce = 1.75;
     Ic = 5.02e-3;
     Ib = 30e-6;
     Vbe = 663.099e-3;
 
-    Rs = (3.5 - Vce) / Ic;
+    Rs = (E - Vce) / Ic;
     Ve = Rs * Ic;
     Vb = Ve + Vbe;
 
@@ -46,7 +48,7 @@ clc; clear; close all;
         b = 15;
 
     % Верхний резистор делителя
-        R1 = (3.5 - Vb) / (b+1) / Ib;
+        R1 = (E - Vb) / (b+1) / Ib;
     % Нижний резистор делителя
         R2 = Vb / b / Ib;
     % Их пар-е сопр-е
@@ -54,3 +56,6 @@ clc; clear; close all;
 
 
 %% Усилитель радиочастоты
+    E = 3.5
+    K = 10;
+
