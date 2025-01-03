@@ -1,0 +1,227 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***            Transient Analysis of amp_restrictor_with_detector            ***
+***                           03.01.2025 19:41:50                            ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           400u
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node           Voltage  Node           Voltage  Node           Voltage 
+1               0.000   2           2.308E-056  3          -9.759E-024 
+4          -9.759E-024  OUTDETECTP  2.330E-022  OUTDETECTM  2.330E-022 
+7               0.000   8               0.000   9           2.308E-056 
+SIG             0.000   11          2.308E-056  12          2.308E-056 
+13          2.308E-056  14          1.000E-049  15          1.000E-049 
+X1.3        2.308E-056  X1.4        2.308E-056 
+
+DC Operating Point Inductor Current
+===================================
+  Inductor     Current    Inductor     Current    Inductor     Current 
+L_SV       -9.321E-026  L1         -4.614E-068  L2         -4.660E-026 
+L3          4.660E-026 
+
+
+Operating Point for Devices of Type Diode
+=========================================
+Instance:                D3             D4             D1             D2
+Using model:         1N5711         1N5711         1N5711         1N5711
+
+Capacitance Terms:
+CAP                  1.476p         1.476p         1.476p         1.476p
+
+Current Terms:
+ID              -1.063E-029    -1.063E-029    -1.000E-050    -1.000E-050
+
+Resistance Terms:
+REQ               13.216MEG      13.216MEG      13.216MEG      13.216MEG
+
+Voltage Terms:
+VD              -2.428E-022    -2.428E-022    -1.000E-049    -1.000E-049
+
+Power DC Terms:
+PD               2.593E-051     2.593E-051     6.293E-099     6.293E-099
+PS                   0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Id              -1.063E-029    -1.063E-029    -1.000E-050    -1.000E-050
+
+Condition:
+State                   OFF            OFF            OFF            OFF
+
+Device Variables:
+area                 1.000          1.000          1.000          1.000 
+ic                   0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:              R_DET         R_DET1         R0_DET        R0_DET1
+V                -2.330E-022     2.330E-022    -9.759E-024    -9.759E-024
+Power DC Terms:
+PD                1.086E-047     1.086E-047     4.548E-049     4.548E-049
+
+DC Pin Currents:
+Ir               -4.660E-026     4.660E-026    -4.660E-026    -4.660E-026
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:             R0_RES        R0_RES1          R_RES             R5
+V                 1.195E-067     1.141E-067    -1.000E-049     1.000E-049
+Power DC Terms:
+PD                1.000E-099     1.000E-099     1.000E-099     1.000E-099
+
+DC Pin Currents:
+Ir                1.000E-049     1.000E-049    -1.000E-050     1.000E-050
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:            R_INDET          X1.R1          X1.R2         K5.RPM
+V                -5.429E-069         0.000          0.000      2.308E-056
+Power DC Terms:
+PD                4.776E-103         0.000          0.000      1.000E-112
+
+DC Pin Currents:
+Ir               -4.776E-053         0.000          0.000      1.000E-062
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              K5.RP          K5.RM         K5.RPM          K5.RP
+V                     0.000          0.000      2.308E-056         0.000 
+Power DC Terms:
+PD                    0.000          0.000      1.000E-112         0.000 
+
+DC Pin Currents:
+Ir                    0.000          0.000      1.000E-062         0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:              K5.RM         K5.RPM          K5.RP          K5.RM
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PD                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ir                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Inductor
+============================================
+Instance:               L_SV             L1             L2             L3
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Il               -9.321E-026    -4.614E-068    -4.660E-026     4.660E-026
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Capacitor
+=============================================
+Instance:               C_SV             C2          C_DET         C_DET1
+V                -2.308E-056         0.000     -2.330E-022     2.330E-022
+Power DC Terms:
+PS                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000          0.000 
+
+
+Instance:            C_INDET          C_RES             C5
+V                     0.000     -1.000E-049     1.000E-049
+Power DC Terms:
+PS                    0.000          0.000          0.000 
+
+DC Pin Currents:
+Ic                    0.000          0.000          0.000 
+
+Device Variables:
+ic                    0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type Dependent Source
+====================================================
+Instance:             X1.E2
+V                    0.000 
+Power DC Terms:
+PG                   0.000 
+
+DC Pin Currents:
+ISource              0.000 
+
+
+
+Operating Point for Devices of Type SPICE Poly
+==============================================
+Instance:             X1.F1
+V                    0.000 
+Power DC Terms:
+PG                   0.000 
+
+DC Pin Currents:
+ISource              0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1          X1.V1
+V                    0.000          0.000 
+Power DC Terms:
+PG                   0.000          0.000 
+
+DC Pin Currents:
+ISource              0.000          0.000 
+
+
