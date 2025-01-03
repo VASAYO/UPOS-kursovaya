@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=98
-TXCnt=3
+NLCnt=100
+TXCnt=5
 
 [shapedef]
 Name=Capacitor
@@ -265,7 +265,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4865
-Used=55
+Used=56
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -301,106 +301,103 @@ Show Attribute Text=True
 Show Grid Text=True
 
 [Wire]
-Pxs=680,80,680,120
+Pxs=736,80,736,120
 
 [Wire]
-Pxs=680,168,680,216
+Pxs=736,168,736,216
 
 [Wire]
-Pxs=744,136,744,144
+Pxs=800,136,800,144
 
 [Wire]
-Pxs=744,144,800,144
+Pxs=800,144,856,144
 
 [Wire]
-Pxs=744,144,744,152
+Pxs=800,144,800,152
 
 [Wire]
-Pxs=640,32,688,32
+Pxs=696,32,744,32
 
 [Wire]
-Pxs=640,32,640,80
+Pxs=696,32,696,80
 
 [Wire]
-Pxs=640,80,680,80
+Pxs=696,80,736,80
 
 [Comp]
 Name=Capacitor
-Px=688,32
+Px=744,32
 
 [Attr]
-ON=7,-24,PART
+ON=9,-24,PART
 V=C_sv
 Style=8192
 
 [Attr]
 ON=11,13,CAPACITANCE
-V=5n
-Style=8192
+V={Csv}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=736,32,800,32
+Pxs=792,32,856,32
 
 [Wire]
-Pxs=800,32,800,144
+Pxs=856,32,856,144
 
 [Comp]
 Name=Inductor
-Px=888,32
+Px=944,32
 Rot=6
 
 [Attr]
-ON=-37,-27,PART
+ON=-35,-24,PART
 V=L_sv
 Style=8192
 
 [Attr]
 ON=-32,6,INDUCTANCE
-V=50m
-Style=8192
+V={Lsv}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=744,88,768,88
+Pxs=800,88,824,88
 
 [Wire]
-Pxs=832,88,832,120
+Pxs=888,88,888,120
 
 [Wire]
-Pxs=744,200,768,200
+Pxs=800,200,824,200
 
 [Comp]
 Name=Capacitor
-Px=832,120
+Px=888,120
 Rot=1
 
 [Attr]
-ON=-19,28,PART
+ON=-25,15,PART
 V=C2
 Style=8192
 
 [Attr]
 ON=2,6,CAPACITANCE
-V=0.632p
-Style=8192
+V={C2det}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=832,168,832,200
+Pxs=888,168,888,200
 
 [Comp]
 Name=Diode
-Px=920,88
+Px=976,88
 Rot=2
 
 [Attr]
@@ -418,7 +415,7 @@ V
 
 [Comp]
 Name=Diode
-Px=920,200
+Px=976,200
 Rot=2
 
 [Attr]
@@ -435,88 +432,86 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=832,88,872,88
+Pxs=888,88,928,88
 
 [Wire]
-Pxs=832,200,872,200
+Pxs=888,200,928,200
 
 [Wire]
-Pxs=920,200,992,200
+Pxs=976,200,1048,200
 
 [Wire]
-Pxs=920,88,992,88
+Pxs=976,88,1048,88
 
 [Wire]
-Pxs=992,88,1064,88
+Pxs=1048,88,1120,88
 
 [Wire]
-Pxs=992,200,1064,200
+Pxs=1048,200,1120,200
 
 [Wire]
-Pxs=944,144,992,144
+Pxs=1000,144,1048,144
 
 [Wire]
-Pxs=1064,144,1064,152
+Pxs=1120,144,1120,152
 
 [Wire]
-Pxs=992,144,1064,144
+Pxs=1048,144,1120,144
 
 [Wire]
-Pxs=992,144,992,152
+Pxs=1048,144,1048,152
 
 [Wire]
-Pxs=944,32,944,144
+Pxs=1000,32,1000,144
 
 [Wire]
-Pxs=888,32,944,32
+Pxs=944,32,1000,32
 
 [Wire]
-Pxs=1064,88,1104,88
+Pxs=1120,88,1160,88
 
 [Wire]
-Pxs=1064,200,1104,200
+Pxs=1120,200,1160,200
 
 [Comp]
 Name=Ground
-Px=1136,144
+Px=1192,144
 Rot=1
 
 [Comp]
 Name=Capacitor
-Px=992,88
+Px=1048,88
 Rot=1
 
 [Attr]
-ON=12,12,PART
+ON=10,15,PART
 V=C_det
 Style=8192
 
 [Attr]
 ON=12,26,CAPACITANCE
-V=4.5p
-Style=8192
+V={Cdet}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=992,136,992,144
+Pxs=1048,136,1048,144
 
 [Comp]
 Name=Capacitor
-Px=992,152
+Px=1048,152
 Rot=1
 
 [Attr]
-ON=12,12,PART
+ON=9,17,PART
 V=C_det1
 Style=8192
 
 [Attr]
 ON=12,26,CAPACITANCE
-V=4.5p
-Style=8192
+V={Cdet}
 
 [Attr]
 ON=0,0,PACKAGE
@@ -524,40 +519,38 @@ V
 
 [Comp]
 Name=Resistor
-Px=1064,88
+Px=1120,88
 Rot=1
 
 [Attr]
-ON=8,11,PART
+ON=7,15,PART
 V=R_det
 Style=8192
 
 [Attr]
 ON=8,25,RESISTANCE
-V=5k
-Style=8192
+V={Rdet}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1064,136,1064,144
+Pxs=1120,136,1120,144
 
 [Comp]
 Name=Resistor
-Px=1064,152
+Px=1120,152
 Rot=1
 
 [Attr]
-ON=8,11,PART
+ON=8,17,PART
 V=R_det1
 Style=8192
 
 [Attr]
 ON=8,25,RESISTANCE
-V=5k
-Style=8192
+V={Rdet}
 
 [Attr]
 ON=0,0,PACKAGE
@@ -565,71 +558,68 @@ V
 
 [Comp]
 Name=Resistor
-Px=768,88
+Px=824,88
 
 [Attr]
-ON=-14,-19,PART
+ON=-12,-18,PART
 V=R0_det
 Style=8192
 
 [Attr]
 ON=7,6,RESISTANCE
-V=209.4
-Style=8192
+V={Rloss}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=816,88,832,88
+Pxs=872,88,888,88
 
 [Comp]
 Name=Resistor
-Px=768,200
+Px=824,200
 
 [Attr]
-ON=-10,-21,PART
+ON=0,7,PART
 V=R0_det1
 Style=8192
 
 [Attr]
 ON=7,6,RESISTANCE
-V=209.4
-Style=8192
+V={Rloss}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=816,200,832,200
+Pxs=872,200,888,200
 
 [Comp]
 Name=Capacitor
-Px=640,128
+Px=696,128
 Rot=1
 
 [Attr]
-ON=-49,27,PART
+ON=-54,19,PART
 V=C_indet
 Style=8192
 
 [Attr]
 ON=3,1,CAPACITANCE
-V=1.27p
-Style=8192
+V={Cindet}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=640,216,680,216
+Pxs=696,216,736,216
 
 [Comp]
 Name=Ideal_Trans2
-Px=184,128
+Px=240,128
 
 [Attr]
 ON=17,-19,PART
@@ -646,12 +636,12 @@ V
 
 [Comp]
 Name=Ground
-Px=184,176
+Px=240,176
 Rot=7
 
 [Comp]
 Name=Resistor
-Px=296,80
+Px=352,80
 
 [Attr]
 ON=7,-21,PART
@@ -660,8 +650,7 @@ Style=8192
 
 [Attr]
 ON=19,4,RESISTANCE
-V=0.1
-Style=8192
+V={R0_res}
 
 [Attr]
 ON=0,0,PACKAGE
@@ -669,7 +658,7 @@ V
 
 [Comp]
 Name=Resistor
-Px=288,216
+Px=344,216
 
 [Attr]
 ON=7,-21,PART
@@ -677,46 +666,44 @@ V=R0_res1
 Style=8192
 
 [Attr]
-ON=23,6,RESISTANCE
-V=0.1
-Style=8192
+ON=5,8,RESISTANCE
+V={R0_res}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=232,128,256,128
+Pxs=288,128,312,128
 
 [Wire]
-Pxs=256,80,256,128
+Pxs=312,80,312,128
 
 [Wire]
-Pxs=256,80,296,80
+Pxs=312,80,352,80
 
 [Wire]
-Pxs=232,176,256,176
+Pxs=288,176,312,176
 
 [Wire]
-Pxs=256,176,256,216
+Pxs=312,176,312,216
 
 [Wire]
-Pxs=256,216,288,216
+Pxs=312,216,344,216
 
 [Comp]
 Name=Capacitor
-Px=360,128
+Px=416,128
 Rot=5
 
 [Attr]
-ON=-36,-21,PART
+ON=-44,-32,PART
 V=C_res
 Style=8192
 
 [Attr]
 ON=2,-42,CAPACITANCE
-V=100u
-Style=8192
+V={C_res}
 
 [Attr]
 ON=0,0,PACKAGE
@@ -724,46 +711,44 @@ V
 
 [Comp]
 Name=Resistor
-Px=432,128
+Px=488,128
 Rot=3
 
 [Attr]
-ON=-39,-18,PART
+ON=-40,-31,PART
 V=R_res
 Style=8192
 
 [Attr]
 ON=7,-41,RESISTANCE
-V=10
-Style=8192
+V={R_res}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=344,80,360,80
+Pxs=400,80,416,80
 
 [Wire]
-Pxs=360,80,432,80
+Pxs=416,80,488,80
 
 [Wire]
-Pxs=432,80,520,80
+Pxs=488,80,576,80
 
 [Comp]
 Name=Capacitor
-Px=480,216
+Px=536,216
 Rot=5
 
 [Attr]
-ON=-35,-20,PART
-V=C5
+ON=-52,-31,PART
+V=C_res1
 Style=8192
 
 [Attr]
 ON=3,-43,CAPACITANCE
-V=100u
-Style=8192
+V={C_res}
 
 [Attr]
 ON=0,0,PACKAGE
@@ -771,35 +756,34 @@ V
 
 [Comp]
 Name=Resistor
-Px=552,216
+Px=608,216
 Rot=3
 
 [Attr]
-ON=-40,-19,PART
-V=R5
+ON=-48,-31,PART
+V=R_res1
 Style=8192
 
 [Attr]
 ON=7,-41,RESISTANCE
-V=10
-Style=8192
+V={R_res}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=336,216,392,216
+Pxs=392,216,448,216
 
 [Wire]
-Pxs=480,216,552,216
+Pxs=536,216,608,216
 
 [Wire]
-Pxs=552,216,640,216
+Pxs=608,216,696,216
 
 [Comp]
 Name=Diode
-Px=392,152
+Px=448,152
 Rot=1
 
 [Attr]
@@ -817,7 +801,7 @@ V=Outline-15
 
 [Comp]
 Name=Diode
-Px=520,144
+Px=576,144
 Rot=5
 
 [Attr]
@@ -834,53 +818,53 @@ ON=0,0,PACKAGE
 V=Outline-15
 
 [Wire]
-Pxs=360,128,360,144
+Pxs=416,128,416,144
 
 [Wire]
-Pxs=360,144,392,144
+Pxs=416,144,448,144
 
 [Wire]
-Pxs=432,128,432,144
+Pxs=488,128,488,144
 
 [Wire]
-Pxs=392,144,392,152
+Pxs=448,144,448,152
 
 [Wire]
-Pxs=392,144,432,144
+Pxs=448,144,488,144
 
 [Wire]
-Pxs=392,200,392,216
+Pxs=448,200,448,216
 
 [Wire]
-Pxs=392,216,480,216
+Pxs=448,216,536,216
 
 [Wire]
-Pxs=480,152,480,168
+Pxs=536,152,536,168
 
 [Wire]
-Pxs=480,152,520,152
+Pxs=536,152,576,152
 
 [Wire]
-Pxs=552,152,552,168
+Pxs=608,152,608,168
 
 [Wire]
-Pxs=520,144,520,152
+Pxs=576,144,576,152
 
 [Wire]
-Pxs=520,152,552,152
+Pxs=576,152,608,152
 
 [Wire]
-Pxs=520,80,520,96
+Pxs=576,80,576,96
 
 [Wire]
-Pxs=520,80,568,80
+Pxs=576,80,624,80
 
 [Wire]
-Pxs=128,128,160,128
+Pxs=184,128,216,128
 
 [Comp]
 Name=Resistor
-Px=568,80
+Px=624,80
 
 [Attr]
 ON=0,-21,PART
@@ -889,36 +873,34 @@ Style=8192
 
 [Attr]
 ON=13,8,RESISTANCE
-V=209.4
-Style=8192
+V={Rloss}
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=640,176,640,216
+Pxs=696,176,696,216
 
 [Wire]
-Pxs=640,80,640,128
+Pxs=696,80,696,128
 
 [Wire]
-Pxs=616,80,640,80
+Pxs=672,80,696,80
 
 [Comp]
 Name=Inductor
-Px=680,168
+Px=736,168
 Rot=5
 
 [Attr]
-ON=-20,-8,PART
+ON=-23,-31,PART
 V=L1
 Style=8192
 
 [Attr]
 ON=2,-56,INDUCTANCE
-V=50u
-Style=8192
+V={Ldet}
 
 [Attr]
 ON=0,0,PACKAGE
@@ -926,18 +908,17 @@ V
 
 [Comp]
 Name=Inductor
-Px=744,136
+Px=800,136
 Rot=3
 
 [Attr]
-ON=-23,-43,PART
+ON=5,-29,PART
 V=L2
 Style=8192
 
 [Attr]
 ON=4,-26,INDUCTANCE
-V=50u
-Style=8192
+V={Ldet}
 
 [Attr]
 ON=0,0,PACKAGE
@@ -945,18 +926,17 @@ V
 
 [Comp]
 Name=Inductor
-Px=744,200
+Px=800,200
 Rot=3
 
 [Attr]
-ON=-23,-30,PART
+ON=7,-28,PART
 V=L3
 Style=8192
 
 [Attr]
 ON=5,-33,INDUCTANCE
-V=50u
-Style=8192
+V={Ldet}
 
 [Attr]
 ON=0,0,PACKAGE
@@ -964,39 +944,58 @@ V
 
 [Comp]
 Name=K
-Px=728,120
+Px=784,120
 Rot=1
 
 [Attr]
-ON=-29,-23,PART
+ON=-25,-19,PART
 V=K5
 Style=8192
 
 [Attr]
-ON=0,0,INDUCTORS
+ON=-39,47,INDUCTORS
 V=L1 L2 L3
+Style=8192
 
 [Attr]
-ON=0,0,COUPLING
+ON=-24,61,COUPLING
 V=0.5
+Style=8192
 
 [Attr]
 ON=0,0,PACKAGE
 V
 
 [Comp]
+Name=Ground
+Px=184,176
+Rot=7
+
+[Wire]
+Pxs=216,128,240,128
+
+[Wire]
+Pxs=1160,200,1176,200
+
+[Wire]
+Pxs=1120,144,1192,144
+
+[Wire]
+Pxs=856,32,896,32
+
+[Comp]
 Name=Voltage Source
-Px=128,176
-Rot=3
+Px=184,176
+Rot=5
 
 [Attr]
-ON=-31,-27,PART
-V=V1
+ON=15,-31,PART
+V=Va
 Style=8192
 
 [Attr]
-ON=-128,-41,VALUE
-V=DC 250m AC 1 0 SFFM 0 250m 200e6 8 45e3
+ON=15,-41,VALUE
+V=DC 0 AC 1 0 SFFM 0 250m {Fc} {m} {Fmod}
 
 [Attr]
 ON=0,0,PACKAGE
@@ -1028,33 +1027,47 @@ V=DC 0 AC 1 0 Pulse 0 5 100n 10n 10n 400n 1u
 Style=256
 
 [Attr]
-ON=0,0,Saved_SFFM
-V=DC 250m AC 1 0 SFFM 0 250m 200e6 8 45e3
+ON=0,11,Saved_SFFM
+V=DC 0 AC 1 0 SFFM 0 250m {Fc} {m} {Fmod}
 Style=256
 
-[Comp]
-Name=Ground
-Px=128,176
-Rot=7
+[Attr]
+ON=0,22,Saved_Sin
+V=DC 0 AC 1 0 Sin 0 {Umax} {Fc} 0 0 0
+Style=256
+
+[Attr]
+ON=0,33,Saved_None
+V=DC 0 AC 1 0
+Style=256
+
+[Object]
+Object=Rectangle
+CBorder=#000080
+Px=214,44,620,263
+
+[Object]
+Object=Rectangle
+CBorder=#000080
+Px=625,3,1247,259
 
 [Wire]
-Pxs=160,128,184,128
+Pxs=1160,88,1176,88
 
-[Wire]
-Pxs=1104,88,1120,88
-
-[Wire]
-Pxs=1104,200,1120,200
-
-[Wire]
-Pxs=1064,144,1136,144
-
-[Wire]
-Pxs=800,32,840,32
+[Grid Text]
+Text="Амплитудный ограничитель"
+Px=216,256
+Height=-13
+FStyle=4
+Color=#000000
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
 
 [Grid Text]
 Text="OutDetectM"
-Px=1104,200
+Px=1160,200
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -1062,7 +1075,7 @@ CBorder=None
 
 [Grid Text]
 Text="OutDetectP"
-Px=1104,88
+Px=1160,88
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -1070,7 +1083,18 @@ CBorder=None
 
 [Grid Text]
 Text="Sig"
-Px=160,128
+Px=216,128
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Детектор на настроенных контурах"
+Px=632,248
+Height=-13
+FStyle=4
+Color=#000000
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -1084,7 +1108,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1
+Scale=0.66666666666666663
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -1256,7 +1280,7 @@ Enable=True
 CurrentPage 0=0
 CurrentPage 1=0
 CurrentPage 2=0
-CurrentPage 3=0
+CurrentPage 3=1
 TabSize 0=425
 TabSize 1=425
 TabSize 2=425
@@ -1272,8 +1296,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-Scale 3=1
-Px=546,332
+SB 3=131,0
+Scale 3=0.66666666666666663
+Px=286,329
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1363,6 +1388,28 @@ Search Color=#FFFF00
 [Text Area]
 Section=0
 Page=1
+Text=* Параметры сигнала
+Text=		.define Fc 200meg
+Text=		.define Fmod 45e3
+Text=		.define m 8
+Text=
+Text=* Ограничитель
+Text=		.define R0_res 0.1
+Text=		.define C_res 100u
+Text=		.define R_res 10
+Text=
+Text=* Детектор
+Text=		.define Cindet 1.27p
+Text=		.define Rloss 209.44
+Text=		
+Text=		.define Ldet 50u
+Text=		.define C2det 0.632p
+Text=		
+Text=		.define Cdet 4.5p
+Text=		.define Rdet 5k
+Text=		
+Text=		.define Csv 5n
+Text=		.define Lsv 50m
 
 [Text Area]
 Section=0
@@ -1654,10 +1701,10 @@ Plt=1
 AliasID=1
 XExp=T
 YExp=v(Sig)
-XRng=0.0001
+XRng=0.00015
 YRng=0.45,-0.3
 Options=LINEARX,LINEARY
-Range Grid X=2e-5
+Range Grid X=3e-5
 Range Grid Y=0.15
 Enable=Enable
 Line Color=#0000FF
@@ -1680,11 +1727,11 @@ Plt=2
 AliasID=2
 XExp=T
 YExp=v(OutDetectP, OutDetectM)
-XRng=0.0001
-YRng=0.0045,-0.003
+XRng=0.00015
+YRng=0.006,-0.004
 Options=LINEARX,LINEARY
-Range Grid X=2e-5
-Range Grid Y=0.0015
+Range Grid X=3e-5
+Range Grid Y=0.002
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
