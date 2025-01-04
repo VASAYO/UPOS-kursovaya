@@ -3,7 +3,7 @@
 ***                                                                          ***
 ***                                                                          ***
 ***            Transient Analysis of amp_restrictor_with_detector            ***
-***                           04.01.2025 18:53:09                            ***
+***                           04.01.2025 20:41:53                            ***
 ********************************************************************************
 Limits
 ======
@@ -33,7 +33,7 @@ Temperature=27
 DC Operating Point Voltages
 ===========================
 Node           Voltage  Node           Voltage  Node           Voltage 
-1               0.000   SIG             0.000   3          -1.891E-027 
+SIG             0.000   2               0.000   3          -1.891E-027 
 4          -1.891E-027  OUTDETECTP  2.256E-022  OUTDETECTM  2.256E-022 
 7               0.000   8               0.000   9               0.000  
 10          1.000E-049  11          1.000E-049 
@@ -94,12 +94,12 @@ tc2                   0.000          0.000          0.000          0.000
 
 
 Instance:            R_INDET          R_RES         R_RES1      X3.K0.RPM
-V                     0.000     -1.000E-049     1.000E-049         0.000 
+V                     0.000      1.000E-049     1.000E-049         0.000 
 Power DC Terms:
 PD                    0.000      1.000E-099     1.000E-099         0.000 
 
 DC Pin Currents:
-Ir                    0.000     -1.000E-050     1.000E-050         0.000 
+Ir                    0.000      1.000E-050     1.000E-050         0.000 
 
 Device Variables:
 tc1                   0.000          0.000          0.000          0.000 
@@ -163,7 +163,7 @@ ic                    0.000          0.000          0.000          0.000
 
 
 Instance:            C_INDET          C_RES         C_RES1
-V                     0.000     -1.000E-049     1.000E-049
+V                     0.000      1.000E-049     1.000E-049
 Power DC Terms:
 PS                    0.000          0.000          0.000 
 

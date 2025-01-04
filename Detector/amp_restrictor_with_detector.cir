@@ -194,7 +194,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6145
-Used=202
+Used=203
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -272,7 +272,8 @@ Pxs=664,32,664,80
 
 [Comp]
 Name=Capacitor
-Px=744,32
+Px=792,32
+Rot=2
 
 [Attr]
 ON=9,-24,PART
@@ -347,7 +348,7 @@ Px=976,80
 Rot=2
 
 [Attr]
-ON=-30,11,PART
+ON=-32,10,PART
 V=D3
 Style=8192
 
@@ -365,7 +366,7 @@ Px=976,208
 Rot=2
 
 [Attr]
-ON=-30,-25,PART
+ON=-31,-25,PART
 V=D4
 Style=8192
 
@@ -524,11 +525,11 @@ V
 
 [Comp]
 Name=Capacitor
-Px=656,128
-Rot=1
+Px=656,176
+Rot=3
 
 [Attr]
-ON=4,30,PART
+ON=11,-33,PART
 V=C_indet
 Style=8192
 
@@ -548,7 +549,7 @@ Name=Resistor
 Px=672,80
 
 [Attr]
-ON=1,8,PART
+ON=3,8,PART
 V=R_indet
 Style=8192
 
@@ -586,7 +587,7 @@ Style=8192
 
 [Attr]
 ON=15,-41,VALUE
-V=DC 0 AC 1 0 SFFM 0 300m {Fc} {m} {Fmod}
+V=DC 0 AC 1 0 SFFM 0 350m {Fc} {m} {Fmod}
 
 [Attr]
 ON=0,0,PACKAGE
@@ -619,7 +620,7 @@ Style=256
 
 [Attr]
 ON=0,11,Saved_SFFM
-V=DC 0 AC 1 0 SFFM 0 300m {Fc} {m} {Fmod}
+V=DC 0 AC 1 0 SFFM 0 350m {Fc} {m} {Fmod}
 Style=256
 
 [Attr]
@@ -714,11 +715,11 @@ Pxs=800,168,800,208
 
 [Comp]
 Name=Capacitor
-Px=376,160
-Rot=5
+Px=376,112
+Rot=7
 
 [Attr]
-ON=-44,-32,PART
+ON=-43,15,PART
 V=C_res
 Style=8192
 
@@ -732,11 +733,11 @@ V
 
 [Comp]
 Name=Resistor
-Px=448,160
-Rot=3
+Px=448,112
+Rot=1
 
 [Attr]
-ON=-40,-31,PART
+ON=7,15,PART
 V=R_res
 Style=8192
 
@@ -1934,9 +1935,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=230,0
+SB 3=219,0
 Scale 3=0.66666666666666663
-Px=251,130
+Px=360,259
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1985,7 +1986,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
-SB 0=0,7
+SB 0=0,2
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -2583,6 +2584,7 @@ Enable Y Scaling=True
 Keep X Scales The Same=True
 Number of Grids X=5
 Number of Grids Y=5
+FFT_Min="22.3u"
 FFT_NPts="8192"
 FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
@@ -2702,7 +2704,19 @@ EndPoint=ArrowF
 CBorder=#000080
 w=0
 AliasID1=1
-Pos=45000,0.0020025052466174425,75335.249042145631,0.0022654958677685963
+Pos=90018.533227429158,0.00083184900631532875,91642.272350151063,0.0017816428036286269
+Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Pos=45009.266613714593,0.0036492279454088858,49710.138121402822,0.019986293538206509
 Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
 Format=3
 FormatY=3
@@ -2733,10 +2747,10 @@ AliasID=1
 Enable=0
 Auto Scale X=No
 Auto Scale Y=No
-Range Min X=0
-Range Min Y=9.9999999999999995e-007
-Range Max X=100000
-Range Max Y=1
+Range Min X=36745.406824146979
+Range Min Y=7.5986063277222453e-007
+Range Max X=101312.33595800525
+Range Max Y=0.34049449261977305
 Range Grid X=2500
 Range Grid Y=0.00025000000000000011
 Range Bold X=0
@@ -2764,11 +2778,11 @@ Plt=1
 AliasID=1
 XExp=T
 YExp=v(Sig)
-XRng=0.0004
-YRng=0.45,-0.3
+XRng=0.0005
+YRng=0.6,-0.4
 Options=LINEARX,LINEARY
-Range Grid X=8e-5
-Range Grid Y=0.15
+Range Grid X=0.0001
+Range Grid Y=0.2
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -2790,11 +2804,11 @@ Plt=2
 AliasID=2
 XExp=T
 YExp=v(OutDetectP, OutDetectM)
-XRng=0.0004
-YRng=0.375
+XRng=0.0005
+YRng=0.5
 Options=LINEARX,LINEARY
-Range Grid X=8e-5
-Range Grid Y=0.075
+Range Grid X=0.0001
+Range Grid Y=0.1
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
