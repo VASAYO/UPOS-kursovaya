@@ -539,9 +539,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=258,213
+SB 3=258,357
 Scale 3=0.66666666666666663
-Px=541,398
+Px=613,384
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -951,7 +951,7 @@ Data Point Labels Color Back=#FFFF00
 AutoScaleRanges=False
 PrinterAutoTile=No
 PrinterBlackBorder=No
-MonMaxShow=4
+MonMaxShow=3
 MonPageWidth=66
 MonPlotWidth=21
 MonExprXWidth=142
@@ -1114,10 +1114,6 @@ Name="IN"
 Analysis=DC
 Name="TR"
 
-[APage]
-Analysis=DC
-Name="OUT"
-
 [AObject]
 Analysis=DC
 Object=Tag
@@ -1127,8 +1123,23 @@ CBorder=#000080
 w=0
 AliasID1=3
 Page="IN"
-Pos=0.68342499999999995,5.7493390603901085e-005,0.65377049180327862,6.5871559633027507e-005
+Pos=0.75029699999999999,5.6531160568848729e-005,0.52749490835030555,5.3024911032028462e-005
 Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=1
+AliasID1=1
+Page="TR"
+Pos=0.75029675236798909,0.010000000000000002,0.48449331093173781,0.0081267056530214439
+Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
 Format=3
 FormatY=3
 Branch=0
@@ -1242,7 +1253,7 @@ NOFmtY=3E
 
 [Limits]
 Analysis=DC
-I1Range=3.5,0,0.001
+I1Range=1,0,0.01
 I1=VIN
 NPts=5100
 Temp=27
@@ -1262,10 +1273,10 @@ Page=IN
 AliasID=3
 XExp=v(Vin)
 YExp=i(Rin)
-XRng=0.7, 0.4
+XRng=1
 YRng=100u, 0
 Options=LINEARX,LINEARY
-Range Grid X=0.1
+Range Grid X=0.2
 Range Grid Y=10u
 Enable=Enable
 Line Color=#FF0000
@@ -1289,10 +1300,10 @@ Page=TR
 AliasID=1
 XExp=v(Vin)
 YExp=-i(Rout)
-XRng=0.7, 0.4
+XRng=1
 YRng=11m, 0
 Options=LINEARX,LINEARY
-Range Grid X=0.1
+Range Grid X=0.2
 Range Grid Y=1m
 Enable=Enable
 Line Color=#0000FF
@@ -1321,28 +1332,9 @@ YRng=11m, 0
 Options=LINEARX,LINEARY
 Range Grid X=0.25
 Range Grid Y=1m
-Enable=Enable
+Enable=DontRun
 Line Color=#FF0000
 Text Color=#FF0000
-Rainbow=False
-VFmtX=3
-VFmtY=3
-ScaleFactorX="None"
-ScaleFactorY="None"
-ScaleUnitsX="Auto"
-ScaleUnitsY="Auto"
-SFmtX=2
-SFmtY=2
-NOFmtX=3E
-NOFmtY=3E
-
-[WaveForm]
-Analysis=DC
-AliasID=-1
-Options=LINEARX,LINEARY
-Enable=Enable
-Line Color=#008000
-Text Color=#008000
 Rainbow=False
 VFmtX=3
 VFmtY=3
@@ -1376,7 +1368,7 @@ CurrentPage 0="MAIN"
 
 [Pane]
 Analysis=DC
-CurrentPage 0="TR"
+CurrentPage 0="IN"
 
 [Pane]
 Analysis=HmDistortion
@@ -1401,7 +1393,6 @@ Value=5u
 [Stepping]
 Analysis=DC
 Index=2
-Status=On
 Parameter Type=Component
 Name=VOUT
 Param=dc.value

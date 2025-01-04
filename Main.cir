@@ -367,7 +367,7 @@ Pin="Plus Input",0,0,-31,-4
 Pin="Minus Input",0,6,-41,18
 
 [Circuit]
-Window Placement=2,3, -1,-1, -8,-31, 0,0,1121,664
+Window Placement=2,3, -1,-1, -8,-31, 0,0,945,664
 Default Object=Color=#000000
 Default Object Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Default Object Apply Border To Text=No
@@ -2030,7 +2030,7 @@ Enable=True
 CurrentPage 0=0
 CurrentPage 1=0
 CurrentPage 2=0
-CurrentPage 3=0
+CurrentPage 3=1
 TabSize 0=425
 TabSize 1=425
 TabSize 2=425
@@ -2046,7 +2046,7 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=1751,267
+SB 3=1829,315
 Scale 3=1.3333333333333333
 Px=2804,860
 WinBackGround Color=#FFFFFF
@@ -2172,7 +2172,7 @@ Text=	.define R2_buf1 3.514555555555556e+04
 Text=
 Text=* Смеситель
 Text=	.define R1_mixer 100
-Text=	.define R2_mixer 2.784556498644685e+02
+Text=	.define R2_mixer 2.718961873268452e+02
 
 [Text Area]
 Section=0

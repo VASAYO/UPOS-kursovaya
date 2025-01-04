@@ -163,7 +163,7 @@ SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=True
+Show Voltages=False
 Show Current=False
 Show Power=False
 Show Condition=False
@@ -267,7 +267,6 @@ Pxs=520,384,536,384
 
 [Wire]
 Pxs=520,384,520,400
-Enable=FALSE
 
 [Wire]
 Pxs=584,384,600,384
@@ -339,6 +338,7 @@ Rot=1
 
 [Wire]
 Pxs=448,384,448,400
+Enable=FALSE
 
 [Wire]
 Pxs=448,384,520,384
@@ -541,7 +541,7 @@ Scale 1=1
 Scale 2=1
 SB 3=258,213
 Scale 3=0.66666666666666663
-Px=619,384
+Px=541,398
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1133,21 +1133,6 @@ Format=3
 FormatY=3
 Branch=0
 
-[AObject]
-Analysis=DC
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000080
-w=1
-AliasID1=1
-Page="TR"
-Pos=0.6834252814564955,0.010000000000000012,0.63473282442748091,0.0091633027522935763
-Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
-Format=3
-FormatY=3
-Branch=0
-
 [Monte Carlo Options]
 Analysis=AC
 Status=Off
@@ -1258,7 +1243,7 @@ NOFmtY=3E
 [Limits]
 Analysis=DC
 I1Range=3.5,0,0.001
-I1=VOUT
+I1=VIN
 NPts=5100
 Temp=27
 MaxChng=5
@@ -1391,7 +1376,7 @@ CurrentPage 0="MAIN"
 
 [Pane]
 Analysis=DC
-CurrentPage 0="OUT"
+CurrentPage 0="TR"
 
 [Pane]
 Analysis=HmDistortion
@@ -1406,7 +1391,6 @@ Analysis=Stability
 Analysis=DC
 Index=1
 Simultaneous=Yes
-Status=On
 Parameter Type=Component
 Name=IIN
 Param=dc.value
@@ -1417,6 +1401,7 @@ Value=5u
 [Stepping]
 Analysis=DC
 Index=2
+Status=On
 Parameter Type=Component
 Name=VOUT
 Param=dc.value

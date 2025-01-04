@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=192
-TXCnt=8
+NLCnt=194
+TXCnt=9
 
 [shapedef]
 Name=Battery
@@ -242,7 +242,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=257
-Used=454
+Used=455
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -367,7 +367,7 @@ Pin="Plus Input",0,0,-31,-4
 Pin="Minus Input",0,6,-41,18
 
 [Circuit]
-Window Placement=0,1, -1,-1, -8,-31, 0,0,1121,664
+Window Placement=2,3, -1,-1, -8,-31, 0,0,1121,664
 Default Object=Color=#000000
 Default Object Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Default Object Apply Border To Text=No
@@ -399,7 +399,7 @@ Show Grid Text=True
 [Object]
 Object=Rectangle
 CBorder=#000000
-Px=2081,350,2914,946
+Px=2081,351,2925,947
 
 [Object]
 Object=Rectangle
@@ -1178,11 +1178,11 @@ Style=8192
 
 [Attr]
 ON=-94,-3,MODEL
-V=2SC4618
+V=2N3904
 
 [Attr]
 ON=-83,25,PACKAGE
-V=SC-75A
+V=TO-92
 
 [Comp]
 Name=Battery
@@ -1195,8 +1195,8 @@ V=V3
 Style=8192
 
 [Attr]
-ON=-30,-41,VALUE
-V=2.5
+ON=15,-26,VALUE
+V=3.5
 Style=8192
 
 [Attr]
@@ -1226,7 +1226,7 @@ Px=2336,376
 Rot=1
 
 [Attr]
-ON=8,11,PART
+ON=8,4,PART
 V=R21
 Style=8192
 
@@ -1245,7 +1245,7 @@ Px=2784,376
 Rot=1
 
 [Attr]
-ON=8,11,PART
+ON=9,4,PART
 V=R22
 Style=8192
 
@@ -1273,11 +1273,11 @@ Style=8192
 
 [Attr]
 ON=-94,-3,MODEL
-V=2SC4618
+V=2N3904
 
 [Attr]
 ON=-83,25,PACKAGE
-V=SC-75A
+V=TO-92
 
 [Wire]
 Pxs=2784,424,2784,536
@@ -1293,11 +1293,11 @@ Style=8192
 
 [Attr]
 ON=-94,-3,MODEL
-V=2SC4618
+V=2N3904
 
 [Attr]
 ON=-83,25,PACKAGE
-V=SC-75A
+V=TO-92
 
 [Comp]
 Name=NPN
@@ -1311,11 +1311,11 @@ Style=8192
 
 [Attr]
 ON=-94,-3,MODEL
-V=2SC4618
+V=2N3904
 
 [Attr]
 ON=-83,25,PACKAGE
-V=SC-75A
+V=TO-92
 
 [Wire]
 Pxs=2440,536,2440,552
@@ -1364,11 +1364,11 @@ Style=8192
 
 [Attr]
 ON=-94,-3,MODEL
-V=2SC4618
+V=2N3904
 
 [Attr]
 ON=-83,25,PACKAGE
-V=SC-75A
+V=TO-92
 
 [Comp]
 Name=NPN
@@ -1382,11 +1382,11 @@ Style=8192
 
 [Attr]
 ON=-94,-3,MODEL
-V=2SC4618
+V=2N3904
 
 [Attr]
 ON=-83,25,PACKAGE
-V=SC-75A
+V=TO-92
 
 [Wire]
 Pxs=2384,616,2384,696
@@ -1433,11 +1433,11 @@ Style=8192
 
 [Attr]
 ON=-94,-3,MODEL
-V=2SC4618
+V=2N3904
 
 [Attr]
 ON=-83,25,PACKAGE
-V=SC-75A
+V=TO-92
 
 [Comp]
 Name=Ground
@@ -1461,11 +1461,11 @@ Style=8192
 
 [Attr]
 ON=-94,-3,MODEL
-V=2SC4618
+V=2N3904
 
 [Attr]
 ON=-83,25,PACKAGE
-V=SC-75A
+V=TO-92
 
 [Comp]
 Name=Ground
@@ -1478,7 +1478,7 @@ Px=2816,776
 Rot=1
 
 [Attr]
-ON=8,11,PART
+ON=12,9,PART
 V=R23
 Style=8192
 
@@ -1502,7 +1502,7 @@ V=V4
 Style=8192
 
 [Attr]
-ON=10,27,VALUE
+ON=9,-3,VALUE
 V=2.5
 Style=8192
 
@@ -1626,7 +1626,7 @@ V=V5
 Style=8192
 
 [Attr]
-ON=-39,-35,VALUE
+ON=-44,-35,VALUE
 V=2.36
 Style=8192
 
@@ -1684,7 +1684,7 @@ V=V6
 Style=8192
 
 [Attr]
-ON=-27,-35,VALUE
+ON=-50,-36,VALUE
 V=1.756
 Style=8192
 
@@ -1764,6 +1764,14 @@ Pxs=1992,688,2096,688
 [Wire]
 Pxs=1992,576,2096,576
 
+[Comp]
+Name=Ground
+Px=2904,536
+Rot=1
+
+[Wire]
+Pxs=2904,488,2912,488
+
 [Grid Text]
 Text="Антенная цепь"
 Px=696,616
@@ -1832,6 +1840,16 @@ JustifyH=Left
 JustifyV=Bottom
 CBorder=None
 
+[Grid Text]
+Text="Смеситель"
+Px=2472,976
+Height=-18
+Font=Unbounded
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
 [Schematic]
 CurrentSection 0=0
 CurrentSection 1=0
@@ -1840,7 +1858,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1
+Scale=1.3333333333333333
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -2028,9 +2046,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=1798,431
-Scale 3=1
-Px=1989,576
+SB 3=1751,267
+Scale 3=1.3333333333333333
+Px=2804,860
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
