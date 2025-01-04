@@ -2,9 +2,24 @@
 ***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
-***                          Dynamic DC of VTChars                           ***
-***                           04.01.2025 16:51:46                            ***
+***                          AC Analysis of VTChars                          ***
+***                           04.01.2025 16:51:48                            ***
 ********************************************************************************
+Limits
+======
+Frequency Range          Log 1E8,1Meg
+Number of Points         1001
+Temperature              Linear 27
+Maximum Change %         5
+Noise Input              NONE
+Noise Output             2
+Run Options              Normal
+State Variables          Zero
+Operating Point          On
+Auto Scale Ranges        On
+Accumulate Plots         Off
+Ignore Expression Errors Off
+
 
 *****************************************************
 ***                Temperature=27                 ***
