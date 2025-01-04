@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=98
+NLCnt=99
 TXCnt=8
 
 [shapedef]
@@ -127,8 +127,8 @@ Current=32,16,16,16
 Name=Ground
 Definition=Ground
 Shape=Ground
-Mask=1793
-Used=389
+Mask=257
+Used=440
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -138,8 +138,8 @@ Pin="PinA",0,0,-3,-7
 Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
-Mask=4865
-Used=58
+Mask=5377
+Used=67
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -150,8 +150,8 @@ Pin="Minus",0,0,-20,-6
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=6913
-Used=289
+Mask=6401
+Used=299
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -163,7 +163,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=7425
-Used=71
+Used=68
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -174,8 +174,8 @@ Pin="Minus",0,0,-14,-5
 Name=Inductor
 Definition=Inductor
 Shape=Inductor
-Mask=7681
-Used=48
+Mask=7425
+Used=46
 memo=Inductor
 Label Offset=18,9,11,12
 PinCnt=2
@@ -186,9 +186,10 @@ Pin="Minus",0,0,-3,-9
 Name=Battery
 Definition=Battery
 Shape=Battery
-Mask=7937
-Used=85
+Mask=6913
+Used=121
 memo=Battery
+Link=2N2222
 Label Offset=19,7,10,13
 PinCnt=2
 Pin="Plus",6,0,-4,-5
@@ -199,6 +200,7 @@ Name=2SC4618
 Definition=NPN
 Shape=NPN
 Mask=4224
+Used=4
 memo=NPN High Frequency Amplifier Transistor Vceo=25V Ic=50mA Ft=300MHz
 Link=http://www.rohm.com/products/databook/tr/pdf/2sc5659.pdf#page=001
 Label Offset=37,-17,-14,33
@@ -220,8 +222,8 @@ PowerFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 45,78,1008,572
-Window Placement in AC Analysis=2,3, -1,-1, -8,-31, 78,78,907,572
+Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 0,78,689,572
+Window Placement in AC Analysis=2,3, -1,-1, -8,-31, 78,78,784,572
 Window Placement in DC Analysis=2,3, -1,-1, -8,-31, 234,234,1911,728
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
@@ -245,7 +247,7 @@ Px=1034,244,1312,598
 [Object]
 Object=Rectangle
 CBorder=#000080
-Px=1535,317,1712,582
+Px=1535,317,1712,634
 
 [Object]
 Object=Rectangle
@@ -473,8 +475,9 @@ Pxs=1552,480,1552,488
 
 [Comp]
 Name=Resistor
-Px=1632,512
+Px=1632,560
 Rot=1
+COff=8,1640,571,130,-109
 
 [Attr]
 ON=8,11,PART
@@ -492,11 +495,11 @@ V
 
 [Comp]
 Name=Ground
-Px=1632,560
+Px=1632,608
 Rot=1
 
 [Wire]
-Pxs=1632,496,1632,504
+Pxs=1632,544,1632,552
 
 [Comp]
 Name=Capacitor
@@ -530,6 +533,7 @@ Pxs=1552,400,1592,400
 Name=Battery
 Px=1592,352
 Rot=1
+COff=8,1602,365,-1,-18
 
 [Attr]
 ON=10,13,PART
@@ -555,7 +559,7 @@ Rot=3
 
 [Comp]
 Name=Capacitor
-Px=1696,504
+Px=1696,552
 Rot=6
 
 [Attr]
@@ -573,18 +577,18 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=1632,504,1648,504
+Pxs=1632,552,1648,552
 
 [Wire]
-Pxs=1632,504,1632,512
+Pxs=1632,552,1632,560
 
 [Wire]
-Pxs=1696,504,1720,504
+Pxs=1696,552,1720,552
 
 [Comp]
 Name=2SC4618
 Px=1608,472
-COff=8,1608,472,-25,11
+COff=8,1608,472,-44,-8
 COff=8,1632,448,4,-24
 COff=8,1632,496,60,-240
 
@@ -699,7 +703,7 @@ V
 Name=Resistor
 Px=1176,512
 Rot=1
-COff=8,1184,523,333,-40
+COff=8,1184,523,269,18
 
 [Attr]
 ON=8,11,PART
@@ -937,7 +941,7 @@ Pxs=1000,520,1080,520
 
 [Comp]
 Name=Resistor
-Px=1760,552
+Px=1760,600
 Rot=3
 
 [Attr]
@@ -947,7 +951,7 @@ Style=8192
 
 [Attr]
 ON=-32,-39,RESISTANCE
-V=20
+V=100
 Style=8192
 
 [Attr]
@@ -956,11 +960,11 @@ V
 
 [Comp]
 Name=Ground
-Px=1760,552
+Px=1760,600
 Rot=7
 
 [Wire]
-Pxs=1720,504,1760,504
+Pxs=1720,552,1760,552
 
 [Wire]
 Pxs=1000,488,1000,520
@@ -989,6 +993,32 @@ Pxs=1400,512,1416,512
 
 [Wire]
 Pxs=1416,512,1432,512
+
+[Comp]
+Name=Resistor
+Px=1632,496
+Rot=1
+COff=8,1640,507,129,-64
+
+[Attr]
+ON=8,11,PART
+V=R20
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=0
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Node Offsets]
+Section=0
+;Node,Page,GridX,GridY,OffsetX,OffsetY
+Offset=3,0,1552,488,-16,-201
+Offset=4,0,1552,424,40,-10
 
 [Grid Text]
 Text="Антенная цепь"
@@ -1026,7 +1056,7 @@ CBorder=None
 
 [Grid Text]
 Text="BUF1"
-Px=1720,504
+Px=1720,552
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -1034,7 +1064,7 @@ CBorder=None
 
 [Grid Text]
 Text="Эмиттерный повторитель"
-Px=1560,600
+Px=1528,648
 Font=Unbounded
 GridSnap=True
 JustifyH=Left
@@ -1066,7 +1096,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=0.5
+Scale=1.3333333333333333
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -1254,9 +1284,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=1034,287
-Scale 3=0.5
-Px=1462,598
+SB 3=465,20
+Scale 3=1.3333333333333333
+Px=1217,710
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1305,6 +1335,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
+SB 0=0,4
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -1357,13 +1388,8 @@ Text=	* Сопротивление антенны
 Text=		.define Ra 50
 Text=
 Text=* Входная цепь
-Text=	.define C_ic 348.8e-12
-Text=	.define L_ic 1.815e-09
-Text=
-Text=* Буфер между ВЦ и УРЧ
-Text=	.define Re_buf1 348.6
-Text=	.define R1_buf1 2264
-Text=	.define R2_buf1 5362
+Text=	.define C_ic 3.342253804929803e-10
+Text=	.define L_ic 1.894701703474945e-09
 Text=
 Text=* УРЧ
 Text=	.define Re_rfa (4.641663572224285e+02 - Rfb_rfa)
@@ -1371,10 +1397,15 @@ Text=	.define R1_rfa 2.616187499999999e+03
 Text=	.define R2_rfa 3.297008333333334e+04
 Text=
 Text=	.define Rc_rfa 100
-Text=	.define Ck_rfa 1.827262676286343e-10
-Text=	.define Lk_rfa 3.465606811668800e-09
+Text=	.define Ck_rfa 1.671126902464901e-10
+Text=	.define Lk_rfa 3.789403406949889e-09
 Text=
-Text=	.define Rfb_rfa 3.7
+Text=	.define Rfb_rfa 4
+Text=
+Text=* Буфер
+Text=	.define Re_buf1 4.987033712347896e+02
+Text=	.define R1_buf1 2.807500000000000e+03
+Text=	.define R2_buf1 3.514555555555556e+04
 
 [Text Area]
 Section=0
@@ -1395,10 +1426,10 @@ Text=* .Model BJT1 NPN (RE=12 LOT/1/GAUSS=30% DEV/2/UNIFORM=2%)
 Text=*
 Text=* A .cir file is typically found in the data directory
 Text=*** From file C:\Users\VIVADO\Desktop\Micro-Cap 12.2.0.5\library\ROHM_TRANSISTOR.LIB
-Text=.MODEL 2SC4618 NPN (BF=378.97 BR=6.6209 CJC=2.0001E-14 CJE=3.8356E-13
+Text=.MODEL 2SC4618 NPN (BF=378.97 BR=6.6209 CJC=2.0001E-14 CJE=3.8356E-14
 Text=+ IKF=.11754 IKR=11.942E-3 IS=40.000E-15 ISC=41.950E-12 ISE=403.75E-15
 Text=+ ITF=1.0238 MJC=.19187 MJE=.37142 NC=2.0763 NE=1.4655 NK=.82547 RB=12.661
-Text=+ RC=1.0143 TF=299.22E-13 TR=26.534E-9 VAF=100 VAR=100 VTF=8.3572 XTB=1.5000
+Text=+ RC=1.0143 TF=799.22E-14 TR=26.534E-9 VAF=100 VAR=100 VTF=8.3572 XTB=1.5000
 Text=+ XTF=26.349)
 
 [InfoPage]
@@ -1418,13 +1449,13 @@ SimulationLog=True
 
 [Transient]
 WinID=1
-Window Placement=2,3, -1,-1, -8,-31, 45,78,1008,572
+Window Placement=2,3, -1,-1, -8,-31, 0,78,689,572
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Title=Main.cir RFA_F
+Title=Main.cir IC_T
 AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
@@ -1483,7 +1514,7 @@ FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
-MonMaxShow=14
+MonMaxShow=15
 MonPageWidth=66
 MonPlotWidth=21
 MonExprXWidth=142
@@ -1676,10 +1707,24 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000080
-w=8
-AliasID1=13
-Page="RFA_F"
-Pos=200000000,0.001928833146532988,200614236.50975889,0.018802588996763757
+w=13
+AliasID1=10
+Page="BUF1_F"
+Pos=200000000,0.018939085921668031,199616415.41038525,0.04957295373665481
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=12
+AliasID1=9
+Page="BUF1_F"
+Pos=200000000,0.020250120036682008,199117252.93132329,0.04957295373665481
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
 FormatY=3
@@ -1693,8 +1738,50 @@ CBorder=#000080
 w=9
 AliasID1=14
 Page="RFA_F"
-Pos=200000000,0.019113779635797218,199541905.85533869,0.049385113268608422
+Pos=200000000,0.020250120036682008,200777777.77777779,0.022923976608187138
 Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=8
+AliasID1=13
+Page="RFA_F"
+Pos=200000000,0.0020002563470880416,200773195.87628865,0.0081871345029239772
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=5
+AliasID1=6
+Page="IC_F"
+Pos=200320000,0.0054126522237332381,200708284.71411902,0.0079741100323624595
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=4
+AliasID1=5
+Page="IC_F"
+Pos=200320000,0.0057682537487573566,200183197.19953325,0.0099417475728155336
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
 FormatY=3
 
@@ -1714,7 +1801,7 @@ FormatY=3
 
 [AC]
 WinID=2
-Window Placement=2,3, -1,-1, -8,-31, 78,78,907,572
+Window Placement=2,3, -1,-1, -8,-31, 78,78,784,572
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -1756,7 +1843,7 @@ Tracker Cursor=True
 Tracker Cursor BranchInfo=False
 Horizontal Cursor=False
 Same Y Scales=Yes
-Enable X Scaling=True
+Enable X Scaling=False
 Enable Y Scaling=True
 Keep X Scales The Same=True
 Number of Grids X=5
@@ -1938,11 +2025,86 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000080
-w=0
+w=1
 AliasID1=3
 Page="PRESEL"
-Pos=200007283.52816132,20.030999999999999,192395693.13593543,5.9611650485437186
+Pos=194911106.68006563,17.034999999999997,173113964.6869984,14.004402202849278
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=1
+AliasID1=3
+Page="PRESEL"
+Pos=205070684.03145772,17.034999999999993,227688603.53130019,14.277271087488529
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=1
+AliasID1=3
+Page="PRESEL"
+Pos=199931915.4149482,20.035065211717054,192696629.21348315,7.9103304459059771
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Page="PRESEL"
+Pos=194763387.28806269,-3.4275460000000018,167419354.83870968,-3.6310583705880095
+Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Page="PRESEL"
+Pos=204706614.06907642,-3.4275459999999938,206996587.03071672,-0.09199999999999818
+Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=1
+Page="PRESEL"
+Pos=199619000,-0.42754577763987384,190806451.61290324,-12.733070756449383
+Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
 Format=3
 FormatY=3
 Branch=0
@@ -2265,7 +2427,7 @@ Options=LINEARX,LINEARY
 Enable=Enable
 CS=Normal
 Line Color=#000000
-Text Color=#008000
+Text Color=#000000
 Rainbow=False
 VFmtX=3
 VFmtY=3
@@ -2291,7 +2453,7 @@ Options=LINEARX,LINEARY
 Enable=Enable
 CS=Normal
 Line Color=#FF0000
-Text Color=#FF00FF
+Text Color=#FF0000
 Rainbow=False
 VFmtX=3
 VFmtY=3
@@ -2576,6 +2738,34 @@ SFmtY=2
 NOFmtX=3E
 NOFmtY=3E
 
+[WaveForm]
+Analysis=Transient
+Plt=1
+Page=BUF1_F
+AliasID=15
+XExp=F
+YExp=harm(i(R20))
+XRng=201e6,199e6
+YRng=70m,0
+Options=LINEARX,LINEARY
+Range Grid X=1e6
+Range Grid Y=5m
+Enable=Enable
+CS=Popsicle
+Line Color=#000000
+Text Color=#000000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
 [Limits]
 Analysis=AC
 FRange=1E10,1Meg
@@ -2606,7 +2796,7 @@ YRng=22, -20
 Options=LINEARX,LINEARY
 Range Grid X=10e6
 Range Grid Y=5
-Enable=DontRun
+Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
 Rainbow=False
@@ -2661,7 +2851,7 @@ YRng=22, -20
 Options=LINEARX,LINEARY
 Range Grid X=10e6
 Range Grid Y=5
-Enable=DontRun
+Enable=Enable
 Line Color=#008000
 Text Color=#008000
 Rainbow=False
@@ -2766,7 +2956,7 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
-CurrentPage 0="ANT_T"
+CurrentPage 0="BUF1_F"
 
 [Pane]
 Analysis=AC
