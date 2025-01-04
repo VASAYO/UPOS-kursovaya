@@ -100,7 +100,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=389
+Used=391
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -143,7 +143,7 @@ Pin="Plus",0,0,8,11
 Pin="Minus",0,6,8,3
 
 [Circuit]
-Window Placement=2,3, -1,-1, -8,-31, 0,130,949,624
+Window Placement=2,3, -1,-1, -8,-31, 0,130,945,624
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -156,7 +156,7 @@ PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
 Window Placement in AC Analysis=2,3, -1,-1, -8,-31, 0,0,715,477
-Window Placement in DC Analysis=2,3, -1,-1, -8,-31, 156,156,742,650
+Window Placement in DC Analysis=0,1, -1,-1, -8,-31, 156,156,742,650
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
@@ -265,6 +265,7 @@ Pxs=520,384,536,384
 
 [Wire]
 Pxs=520,384,520,400
+Enable=FALSE
 
 [Wire]
 Pxs=584,384,600,384
@@ -312,7 +313,7 @@ Style=8192
 
 [Attr]
 ON=-90,-40,VALUE
-V=DC 27.069e-6 AC 1 0 
+V=DC 27.069e-6 AC 1 0
 Style=8192
 
 [Attr]
@@ -326,7 +327,7 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_None
-V=DC 27.069e-6 AC 1 0 
+V=DC 27.069e-6 AC 1 0
 Style=256
 
 [Comp]
@@ -336,7 +337,6 @@ Rot=1
 
 [Wire]
 Pxs=448,384,448,400
-Enable=FALSE
 
 [Wire]
 Pxs=448,384,520,384
@@ -560,7 +560,7 @@ Scale 1=1
 Scale 2=1
 SB 3=258,165
 Scale 3=0.66666666666666663
-Px=518,392
+Px=443,426
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -624,7 +624,6 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=65,22
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -916,7 +915,7 @@ Name="MAIN"
 
 [DC]
 WinID=3
-Window Placement=2,3, -1,-1, -8,-31, 156,156,742,650
+Window Placement=0,1, -1,-1, -8,-31, 156,156,742,650
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -958,7 +957,7 @@ Tracker Cursor=True
 Tracker Cursor BranchInfo=False
 Horizontal Cursor=False
 Same Y Scales=Yes
-Enable X Scaling=True
+Enable X Scaling=False
 Enable Y Scaling=True
 Keep X Scales The Same=True
 Number of Grids X=5
@@ -1176,7 +1175,7 @@ CBorder=#000080
 w=2
 AliasID1=2
 Page="OUT"
-Pos=0.97913922173952728,0.0050000000000000001,1.3464439655172418,0.0058128742514970055
+Pos=0.97913922173952728,0.0050000000000000001,1.6659999999999999,0.0057172528210129043
 Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Format=3
 FormatY=3
@@ -1223,21 +1222,6 @@ AliasID1=1
 Page="TR"
 Pos=0.72083873627472628,0.0050000000000000001,0.45141700404858298,0.0056761565836298926
 Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
-Format=3
-FormatY=3
-Branch=0
-
-[AObject]
-Analysis=DC
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000080
-w=2
-AliasID1=2
-Page="OUT"
-Pos=1.1687217787125619,0.01,1.4709051724137934,0.0082994011976047898
-Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Format=3
 FormatY=3
 Branch=0
@@ -1366,8 +1350,8 @@ NOFmtY=3E
 
 [Limits]
 Analysis=DC
-I1Range=1,0,0.01
-I1=VIN
+I1Range=3.5,0,0.01
+I1=VOUT
 NPts=5100
 Temp=27
 MaxChng=5
@@ -1481,7 +1465,7 @@ CurrentPage 0="MAIN"
 
 [Pane]
 Analysis=DC
-CurrentPage 0="IN"
+CurrentPage 0="OUT"
 
 [Pane]
 Analysis=HmDistortion
