@@ -3,7 +3,7 @@
 ***                                                                          ***
 ***                                                                          ***
 ***            Transient Analysis of amp_restrictor_with_detector            ***
-***                           04.01.2025 20:41:53                            ***
+***                           04.01.2025 23:23:25                            ***
 ********************************************************************************
 Limits
 ======
@@ -33,16 +33,16 @@ Temperature=27
 DC Operating Point Voltages
 ===========================
 Node           Voltage  Node           Voltage  Node           Voltage 
-SIG             0.000   2               0.000   3          -1.891E-027 
-4          -1.891E-027  OUTDETECTP  2.256E-022  OUTDETECTM  2.256E-022 
+SIG             0.000   2               0.000   3           3.666E-026 
+4           3.666E-026  OUTDETECTP -3.455E-022  OUTDETECTM -3.455E-022 
 7               0.000   8               0.000   9               0.000  
 10          1.000E-049  11          1.000E-049 
 
 DC Operating Point Inductor Current
 ===================================
   Inductor     Current    Inductor     Current    Inductor     Current 
-L_SV       -9.026E-026  X3.LP           0.000   X3.LS1     -4.513E-026 
-X3.LS2      4.513E-026 
+L_SV        1.382E-025  X3.LP           0.000   X3.LS1      6.911E-026 
+X3.LS2     -6.911E-026 
 
 
 Operating Point for Devices of Type Diode
@@ -54,20 +54,20 @@ Capacitance Terms:
 CAP                  1.476p         1.476p         1.476p         1.476p
 
 Current Terms:
-ID              -9.879E-030    -9.879E-030    -1.000E-050    -1.000E-050
+ID               1.513E-029     1.513E-029    -1.000E-050    -1.000E-050
 
 Resistance Terms:
 REQ               13.216MEG      13.216MEG      13.216MEG      13.216MEG
 
 Voltage Terms:
-VD              -2.257E-022    -2.257E-022    -1.000E-049    -1.000E-049
+VD               3.456E-022     3.456E-022    -1.000E-049    -1.000E-049
 
 Power DC Terms:
-PD               2.241E-051     2.241E-051     6.293E-099     6.293E-099
+PD               5.256E-051     5.256E-051     6.293E-099     6.293E-099
 PS                   0.000          0.000          0.000          0.000 
 
 DC Pin Currents:
-Id              -9.879E-030    -9.879E-030    -1.000E-050    -1.000E-050
+Id               1.513E-029     1.513E-029    -1.000E-050    -1.000E-050
 
 Condition:
 State                   OFF            OFF            OFF            OFF
@@ -81,12 +81,12 @@ ic                   0.000          0.000          0.000          0.000
 Operating Point for Devices of Type Resistor
 ============================================
 Instance:              R_DET         R_DET1         R0_DET        R0_DET1
-V                -2.256E-022     2.256E-022    -1.891E-027    -1.891E-027
+V                 3.455E-022    -3.455E-022     3.666E-026     3.666E-026
 Power DC Terms:
-PD                1.018E-047     1.018E-047     8.534E-053     8.534E-053
+PD                2.388E-047     2.388E-047     2.534E-051     2.534E-051
 
 DC Pin Currents:
-Ir               -4.513E-026     4.513E-026    -4.513E-026    -4.513E-026
+Ir                6.911E-026    -6.911E-026     6.911E-026     6.911E-026
 
 Device Variables:
 tc1                   0.000          0.000          0.000          0.000 
@@ -141,7 +141,7 @@ Power DC Terms:
 PS                    0.000          0.000          0.000          0.000 
 
 DC Pin Currents:
-Il               -9.026E-026         0.000     -4.513E-026     4.513E-026
+Il                1.382E-025         0.000      6.911E-026    -6.911E-026
 
 Device Variables:
 ic                    0.000          0.000          0.000          0.000 
@@ -151,7 +151,7 @@ ic                    0.000          0.000          0.000          0.000
 Operating Point for Devices of Type Capacitor
 =============================================
 Instance:               C_SV             C2          C_DET         C_DET1
-V                     0.000          0.000     -2.256E-022     2.256E-022
+V                     0.000          0.000      3.455E-022    -3.455E-022
 Power DC Terms:
 PS                    0.000          0.000          0.000          0.000 
 

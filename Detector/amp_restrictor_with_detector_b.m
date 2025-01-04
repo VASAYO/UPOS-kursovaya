@@ -11,24 +11,23 @@ Fc = 200e6;
 Fg = 220e6;
 Fpc = Fg - Fc;
 
-L1 = 1e-9;
-L2 = 50e-9;
+Cindet = 500e-12;
+C2 = 5e-12;
+L1 = 1/((2 * pi * Fpc)^2 * Cindet);
+L2 = (1/((2 * pi * Fpc)^2 * C2)) / 2;
 L3 = L2;
 
 Q = 30;
 
 Rloss = (2 * pi * Fpc * L1)/Q;
 
-Cindet = 1/((2 * pi * Fpc)^2 * L1);
-C2 = 1/((2 * pi * Fpc)^2 * (L2 + L3));
+Lsv = L1 * 1e3;
+Csv = max(Cindet, C2) * 1e3;
 
+% 1/Fc < teta < 1/Fmod
 lowBound = 1/Fpc;
-highBound= 1/Fmod;
-% lowbound < tetaDet < highbound, tetaDet = Rdet * Cdet
-tetaDet = 30e-6;
-Rdet = 5e3;
-Cdet = tetaDet / Rdet;
+highBound = 1/Fmod;
+teta = 30e-6;
 
-% Csv >> Cdet, Lsv >> L1
-Lsv = 100e-6;
-Csv = 120e-9;
+Rdet = 5e3;
+Cdet = teta/5e3;
