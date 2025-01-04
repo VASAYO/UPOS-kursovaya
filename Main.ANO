@@ -3,7 +3,7 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                           AC Analysis of Main                            ***
-***                           04.01.2025 14:17:46                            ***
+***                           04.01.2025 15:22:46                            ***
 ********************************************************************************
 Limits
 ======
@@ -30,10 +30,11 @@ Temperature=27
 DC Operating Point Voltages
 ===========================
 Node         Voltage  Node         Voltage  Node         Voltage 
-RX            0.000   IC            0.000   3             2.413  
-4             3.500   5             1.750   6             3.165  
-BUF1          0.000   8             3.500   9             3.500  
-10            2.500   11            2.478   RFA           0.000  
+RX            0.000   IC            0.000   3             3.163  
+4             3.500   5             2.500   6             3.165  
+BUF1          0.000   8             2.500   9             3.500  
+10            3.500   11            2.500   12            2.478  
+RFA           0.000  
 
 DC Operating Point Inductor Current
 ===================================
@@ -47,43 +48,43 @@ Instance:               Q1            Q2
 Using model:       2SC4618       2SC4618
 
 Beta Terms:
-BETADC            167.344       167.326 
-BETAAC            187.222       185.775 
+BETADC            166.096       167.326 
+BETAAC            185.823       185.775 
 
 Capacitance Terms:
-CPI                 1.512p        1.601p
-CMU                16.851f       18.650f
+CPI                 1.501p        1.601p
+CMU                18.642f       18.650f
 CBX                 0.000         0.000 
 CJS                 0.000         0.000 
 
 Conductance Terms:
-GM                180.757m      191.762m
+GM                179.422m      191.762m
 
 Current Terms:
-IB                 29.998u       31.998u
-IC                  5.020m        5.354m
+IB                 30.001u       31.998u
+IC                  4.983m        5.354m
 
 Resistance Terms:
 RPI                 1.036K      968.781 
 RX                 12.661        12.661 
-RO                 20.004K       18.615K
+RO                 20.002K       18.615K
 
 Voltage Terms:
-VBE               663.100m      665.127m
-VBC                -1.087      -334.866m
-VCE                 1.750       999.993m
+VBE               663.102m      665.127m
+VBC              -336.902m     -334.866m
+VCE                 1.000       999.993m
 
 Frequency Terms:
-FT                 18.820G       18.846G
+FT                 18.788G       18.846G
 
 Power DC Terms:
-PD                  8.805m        5.375m
+PD                  5.003m        5.375m
 PS                  0.000         0.000 
 
 DC Pin Currents:
-Ib                 29.998u       31.998u
-Ic                  5.020m        5.354m
-Ie                 -5.050m       -5.386m
+Ib                 30.001u       31.998u
+Ic                  4.983m        5.354m
+Ie                 -5.013m       -5.386m
 Is                  0.000         0.000 
 
 Condition:
@@ -99,12 +100,12 @@ vce                 0.000         0.000
 Operating Point for Devices of Type Resistor
 ============================================
 Instance:                R1            R7            R8            R9           R11
-V                    0.000        -2.413        -1.087        -1.750        -3.165 
+V                    0.000        -3.163      -336.902m       -2.500        -3.165 
 Power DC Terms:
-PD                   0.000       217.181u      130.425u        8.838m      303.853u
+PD                   0.000       284.679u       40.428u       12.532m      303.853u
 
 DC Pin Currents:
-Ir                   0.000       -90.000u     -119.999u       -5.050m      -96.000u
+Ir                   0.000       -90.000u     -120.001u       -5.013m      -96.000u
 
 Device Variables:
 tc1                  0.000         0.000         0.000         0.000         0.000 
@@ -124,17 +125,17 @@ tc1                  0.000         0.000         0.000         0.000         0.0
 tc2                  0.000         0.000         0.000         0.000         0.000 
 
 
-Instance:            C7.int
-V                    0.000 
+Instance:               R20        C7.int
+V                   -5.013n        0.000 
 Power DC Terms:
-PD                   0.000 
+PD                  25.130p        0.000 
 
 DC Pin Currents:
-Ir                   0.000 
+Ir                  -5.013m        0.000 
 
 Device Variables:
-tc1                  0.000 
-tc2                  0.000 
+tc1                  0.000         0.000 
+tc2                  0.000         0.000 
 
 
 
@@ -156,7 +157,7 @@ ic                   0.000         0.000
 Operating Point for Devices of Type Capacitor
 =============================================
 Instance:                C1            C3            C4            C5            C6
-V                    0.000        -3.165         1.750         2.478         0.000 
+V                    0.000        -3.165         2.500         2.478         0.000 
 Power DC Terms:
 PS                   0.000         0.000         0.000         0.000         0.000 
 
@@ -168,7 +169,7 @@ ic                   0.000         0.000         0.000         0.000         0.0
 
 
 Instance:                C7            C8
-V                    3.500        -2.413 
+V                    3.500        -3.163 
 Power DC Terms:
 PS                   0.000         0.000 
 
@@ -185,9 +186,9 @@ Operating Point for Devices of Type SPICE Source
 Instance:               VA            V1            V2
 V                   0.000         3.500         3.500 
 Power DC Terms:
-PG                  0.000        17.990m       19.187m
+PG                  0.000        17.860m       19.187m
 
 DC Pin Currents:
-ISource             0.000        -5.140m       -5.482m
+ISource             0.000        -5.103m       -5.482m
 
 
