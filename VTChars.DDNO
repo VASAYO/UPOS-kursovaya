@@ -3,7 +3,7 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                          Dynamic DC of VTChars                           ***
-***                           04.01.2025 17:44:07                            ***
+***                           04.01.2025 19:03:41                            ***
 ********************************************************************************
 
 *****************************************************
@@ -15,8 +15,8 @@ Temperature=27
 DC Operating Point Voltages
 ===========================
 Node         Voltage  Node         Voltage  Node         Voltage 
-1             1.000   2             0.102f  3             0.000  
-4             1.000   5             0.000  
+1             1.000   2             1.992f  3             0.000  
+4             1.000   5            27.069G 
 
 
 Operating Point for Devices of Type Bipolar Junction Transistors NPN
@@ -25,43 +25,43 @@ Instance:                Q1
 Using model:         2N3904
 
 Beta Terms:
-BETADC              -1.010 
-BETAAC              16.687m
+BETADC              -1.507 
+BETAAC            -370.146m
 
 Capacitance Terms:
 CPI                  4.421p
-CMU                  2.808p
+CMU                  2.809p
 CBX                  0.000 
 CJS                  0.000 
 
 Conductance Terms:
-GM                 374.420f
+GM                  -9.438p
 
 Current Terms:
-IB                -101.911p
-IC                 102.931p
+IB                  -1.992n
+IC                   3.002n
 
 Resistance Terms:
-RPI                 44.568G
+RPI                 39.219G
 RX                   0.000 
-RO                 980.640G
+RO               980.734MEG
 
 Voltage Terms:
-VBE                  0.102f
+VBE                  1.992f
 VBC                 -1.000 
 VCE                  1.000 
 
 Frequency Terms:
-FT                   8.243m
+FT                -207.761m
 
 Power DC Terms:
-PD                 102.931p
+PD                   3.002n
 PS                   0.000 
 
 DC Pin Currents:
-Ib                -101.911p
-Ic                 102.931p
-Ie                  -1.020p
+Ib                  -1.992n
+Ic                   3.002n
+Ie                  -1.010n
 Is                   0.000 
 
 Condition:
@@ -77,12 +77,12 @@ vce                  0.000
 Operating Point for Devices of Type Resistor
 ============================================
 Instance:                RIN           ROUT        IIN.int
-V                    -0.102f        -0.111f         0.000 
+V                    -1.992f        -3.109f       -27.069G
 Power DC Terms:
-PD                1.039E-026     1.233E-026         0.000 
+PD                3.967E-024     9.664E-024       732.731K
 
 DC Pin Currents:
-Ir                 -101.911p      -111.022p         0.000 
+Ir                   -1.992n        -3.109n       -27.069u
 
 Device Variables:
 tc1                   0.000          0.000          0.000 
@@ -93,11 +93,11 @@ tc2                   0.000          0.000          0.000
 Operating Point for Devices of Type SPICE Source
 ================================================
 Instance:               VIN           VOUT            IIN
-V                    0.000          1.000          0.000 
+V                    0.000          1.000        -27.069G
 Power DC Terms:
-PG                   0.000        116.415p         0.000 
+PG                   0.000          3.143n       732.731K
 
 DC Pin Currents:
-ISource            101.911p      -116.415p         0.000 
+ISource              1.992n        -3.143n        27.069u
 
 

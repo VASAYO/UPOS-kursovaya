@@ -8,7 +8,7 @@ Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
 NLCnt=194
-TXCnt=9
+TXCnt=10
 
 [shapedef]
 Name=Battery
@@ -241,8 +241,8 @@ Current=32,16,16,16
 Name=Ground
 Definition=Ground
 Shape=Ground
-Mask=257
-Used=455
+Mask=1793
+Used=389
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -252,8 +252,8 @@ Pin="PinA",0,0,-3,-7
 Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
-Mask=5377
-Used=67
+Mask=4865
+Used=58
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -264,8 +264,8 @@ Pin="Minus",0,0,-20,-6
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=6401
-Used=305
+Mask=6913
+Used=290
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -277,7 +277,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=7425
-Used=70
+Used=71
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -288,8 +288,8 @@ Pin="Minus",0,0,-14,-5
 Name=Inductor
 Definition=Inductor
 Shape=Inductor
-Mask=7425
-Used=46
+Mask=7681
+Used=48
 memo=Inductor
 Label Offset=18,9,11,12
 PinCnt=2
@@ -300,10 +300,9 @@ Pin="Minus",0,0,-3,-9
 Name=Battery
 Definition=Battery
 Shape=Battery
-Mask=6657
-Used=127
+Mask=7937
+Used=85
 memo=Battery
-Link=2N2222
 Label Offset=19,7,10,13
 PinCnt=2
 Pin="Plus",6,0,-4,-5
@@ -314,7 +313,6 @@ Name=2SC4618
 Definition=NPN
 Shape=NPN
 Mask=4224
-Used=4
 memo=NPN High Frequency Amplifier Transistor Vceo=25V Ic=50mA Ft=300MHz
 Link=http://www.rohm.com/products/databook/tr/pdf/2sc5659.pdf#page=001
 Label Offset=37,-17,-14,33
@@ -328,7 +326,7 @@ Name=NPN
 Definition=NPN
 Shape=NPN
 Mask=5633
-Used=47
+Used=30
 memo=NPN Transistor
 Label Offset=37,-17,-14,33
 PinCnt=3
@@ -341,7 +339,6 @@ Name=Ideal_Trans3
 Definition=Macro
 Shape=Trans3
 Mask=4736
-Used=3
 memo=Ideal Transformer - 3 Port Macro
 Label Offset=7,115,0,2
 PinCnt=6
@@ -353,21 +350,21 @@ Pin="3P",a,6,8,-5,16
 Pin="3M",a,6,14,-5,-2
 
 [compdef]
-Name=Transformer
-Definition=Transformer
+Name=Ideal_Trans2
+Definition=Macro
 Shape=Transformer
-Mask=4096
+Mask=4224
 Used=3
-memo=Transformer
-Label Offset=18,45,-1,12
+memo=Ideal Transformer Macro
+Label Offset=10,53,1,11
 PinCnt=4
-Pin="Plus Output",6,0,-19,-4
-Pin="Minus Output",6,6,-20,18
-Pin="Plus Input",0,0,-31,-4
-Pin="Minus Input",0,6,-41,18
+Pin="1P",a,0,0,-5,-3
+Pin="1M",a,0,6,-6,17
+Pin="2P",a,6,0,-4,-3
+Pin="2M",a,6,6,-6,17
 
 [Circuit]
-Window Placement=2,3, -1,-1, -8,-31, 0,0,945,664
+Window Placement=2,3, -1,-1, -8,-31, 0,0,944,788
 Default Object=Color=#000000
 Default Object Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Default Object Apply Border To Text=No
@@ -386,8 +383,8 @@ SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=False
-Show Current=False
+Show Voltages=True
+Show Current=True
 Show Power=False
 Show Condition=False
 Show Pin Connections=False
@@ -1170,6 +1167,9 @@ Pxs=1280,392,1320,392
 [Comp]
 Name=NPN
 Px=2312,576
+COff=8,2312,576,21,-3
+COff=8,2336,552,16,-13
+COff=8,2336,600,13,-5
 
 [Attr]
 ON=-18,-26,PART
@@ -1265,6 +1265,7 @@ Pxs=2336,424,2336,488
 Name=NPN
 Px=2808,576
 Rot=6
+COff=8,2784,600,-41,0
 
 [Attr]
 ON=-18,-26,PART
@@ -1303,6 +1304,7 @@ V=TO-92
 Name=NPN
 Px=2464,576
 Rot=6
+COff=8,2440,552,8,-6
 
 [Attr]
 ON=-18,-26,PART
@@ -1356,6 +1358,8 @@ Pxs=2784,600,2784,616
 [Comp]
 Name=NPN
 Px=2440,744
+COff=8,2440,744,-38,9
+COff=8,2464,768,12,0
 
 [Attr]
 ON=-18,-26,PART
@@ -1374,6 +1378,9 @@ V=TO-92
 Name=NPN
 Px=2680,744
 Rot=6
+COff=8,2680,744,25,-13
+COff=8,2656,720,4,-10
+COff=8,2656,768,5,2
 
 [Attr]
 ON=-18,-26,PART
@@ -1425,6 +1432,9 @@ Pxs=2656,768,2656,784
 Name=NPN
 Px=2584,864
 Rot=6
+COff=8,2584,864,20,14
+COff=8,2560,840,5,-22
+COff=8,2560,888,18,14
 
 [Attr]
 ON=-18,-26,PART
@@ -1503,7 +1513,7 @@ Style=8192
 
 [Attr]
 ON=9,-3,VALUE
-V=2.5
+V=3.5
 Style=8192
 
 [Attr]
@@ -1619,6 +1629,7 @@ Pxs=2160,632,2160,640
 Name=Battery
 Px=2248,632
 Rot=2
+COff=8,2213,611,-5,-2
 
 [Attr]
 ON=-35,-21,PART
@@ -1626,8 +1637,8 @@ V=V5
 Style=8192
 
 [Attr]
-ON=-44,-35,VALUE
-V=2.36
+ON=-63,-44,VALUE
+V=V2_mixer
 Style=8192
 
 [Attr]
@@ -1677,6 +1688,7 @@ Pxs=2160,800,2184,800
 Name=Battery
 Px=2248,800
 Rot=2
+COff=8,2213,779,39,-10
 
 [Attr]
 ON=-35,-21,PART
@@ -1685,7 +1697,7 @@ Style=8192
 
 [Attr]
 ON=-50,-36,VALUE
-V=1.756
+V=V1_mixer
 Style=8192
 
 [Attr]
@@ -1728,19 +1740,6 @@ Pxs=2160,800,2160,808
 [Wire]
 Pxs=2160,744,2440,744
 
-[Comp]
-Name=Transformer
-Px=2856,488
-
-[Attr]
-ON=18,45,PART
-V=K1
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
 [Wire]
 Pxs=2784,536,2856,536
 
@@ -1771,6 +1770,39 @@ Rot=1
 
 [Wire]
 Pxs=2904,488,2912,488
+
+[Comp]
+Name=Ideal_Trans2
+Px=2856,488
+
+[Attr]
+ON=10,53,PART
+V=X4
+Style=8192
+
+[Attr]
+ON=10,67,FILE
+V=Ideal_Trans2
+
+[Attr]
+ON=0,11,Param:GAIN
+V=1
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Node Offsets]
+Section=0
+;Node,Page,GridX,GridY,OffsetX,OffsetY
+Offset=14,0,2336,552,-1,-107
+Offset=15,0,2312,576,-80,-12
+Offset=16,0,2336,600,28,58
+Offset=19,0,2784,600,-35,64
+Offset=21,0,2440,744,-130,-14
+Offset=22,0,2464,768,95,2
+Offset=23,0,2680,744,31,68
+Offset=28,0,2160,624,12,-9
 
 [Grid Text]
 Text="Антенная цепь"
@@ -1850,6 +1882,24 @@ JustifyH=Left
 JustifyV=Bottom
 CBorder=None
 
+[Grid Text]
+Text="Dynamic DC"
+Text="Temperature=27"
+Text="Displaying DC Voltages, Currents"
+Text="PGT = Total power generated = [PGT]"
+Text="PDT = Total power dissipated = [PDT]"
+BannerDC=True
+Px=16,117
+Height=-15
+Color=#800000
+Font=Arial
+GridSnap=False
+JustifyH=Left
+JustifyV=Bottom
+Formula=True
+CFill=#C0C0C0
+CBorder=#000000
+
 [Schematic]
 CurrentSection 0=0
 CurrentSection 1=0
@@ -1858,7 +1908,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1.3333333333333333
+Scale=1
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -2030,7 +2080,7 @@ Enable=True
 CurrentPage 0=0
 CurrentPage 1=0
 CurrentPage 2=0
-CurrentPage 3=1
+CurrentPage 3=0
 TabSize 0=425
 TabSize 1=425
 TabSize 2=425
@@ -2046,9 +2096,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=1829,315
-Scale 3=1.3333333333333333
-Px=2804,860
+SB 3=1925,346
+Scale 3=1
+Px=2436,660
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2113,7 +2163,6 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=13,20
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -2173,6 +2222,9 @@ Text=
 Text=* Смеситель
 Text=	.define R1_mixer 100
 Text=	.define R2_mixer 2.718961873268452e+02
+Text=
+Text=	.define V1_mixer 1.8898
+Text=	.define V2_mixer 2.8446
 
 [Text Area]
 Section=0

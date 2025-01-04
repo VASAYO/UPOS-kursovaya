@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=19
-TXCnt=0
+NLCnt=20
+TXCnt=1
 
 [shapedef]
 Name=Battery
@@ -87,7 +87,6 @@ Name=2SC4618
 Definition=NPN
 Shape=NPN
 Mask=4224
-Used=4
 memo=NPN High Frequency Amplifier Transistor Vceo=25V Ic=50mA Ft=300MHz
 Link=http://www.rohm.com/products/databook/tr/pdf/2sc5659.pdf#page=001
 Label Offset=37,-17,-14,33
@@ -100,8 +99,8 @@ Pin="Emitter",3,3,5,1
 Name=Ground
 Definition=Ground
 Shape=Ground
-Mask=257
-Used=455
+Mask=1793
+Used=389
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -111,10 +110,9 @@ Pin="PinA",0,0,-3,-7
 Name=Battery
 Definition=Battery
 Shape=Battery
-Mask=6657
-Used=127
+Mask=7937
+Used=85
 memo=Battery
-Link=2N2222
 Label Offset=19,7,10,13
 PinCnt=2
 Pin="Plus",6,0,-4,-5
@@ -124,8 +122,8 @@ Pin="Minus",0,0,-10,-5
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=6401
-Used=305
+Mask=6913
+Used=290
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -136,8 +134,8 @@ Pin="Minus",0,0,-14,-4
 Name=Current Source
 Definition=ISpice
 Shape=SPICE_I
-Mask=6657
-Used=11
+Mask=7681
+Used=4
 memo=Current Source
 Label Offset=15,12,-29,12
 PinCnt=2
@@ -163,15 +161,15 @@ SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=False
+Show Voltages=True
 Show Current=False
 Show Power=False
 Show Condition=False
 Show Pin Connections=False
 Show Connection Warnings=False
 Show Cross=False
-Show Attribute Text=True
-Show Grid Text=True
+Show Attribute Text=False
+Show Grid Text=False
 
 [Comp]
 Name=2SC4618
@@ -192,7 +190,7 @@ V=TO-92
 
 [Comp]
 Name=Ground
-Px=624,408
+Px=624,440
 Rot=1
 
 [Comp]
@@ -314,7 +312,7 @@ Style=8192
 
 [Attr]
 ON=-90,-40,VALUE
-V=DC 0 AC 1 0
+V=DC 27.069e-6 AC 1 0 
 Style=8192
 
 [Attr]
@@ -328,7 +326,7 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_None
-V=DC 0 AC 1 0
+V=DC 27.069e-6 AC 1 0 
 Style=256
 
 [Comp]
@@ -342,6 +340,27 @@ Enable=FALSE
 
 [Wire]
 Pxs=448,384,520,384
+
+[Wire]
+Pxs=624,408,624,440
+
+[Grid Text]
+Text="Dynamic DC"
+Text="Temperature=27"
+Text="Displaying DC Voltages"
+Text="PGT = Total power generated = [PGT]"
+Text="PDT = Total power dissipated = [PDT]"
+BannerDC=True
+Px=16,117
+Height=-15
+Color=#800000
+Font=Arial
+GridSnap=False
+JustifyH=Left
+JustifyV=Bottom
+Formula=True
+CFill=#C0C0C0
+CBorder=#000000
 
 [Schematic]
 CurrentSection 0=0
@@ -539,9 +558,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=258,357
+SB 3=258,165
 Scale 3=0.66666666666666663
-Px=613,384
+Px=518,392
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -1114,6 +1133,10 @@ Name="IN"
 Analysis=DC
 Name="TR"
 
+[APage]
+Analysis=DC
+Name="OUT"
+
 [AObject]
 Analysis=DC
 Object=Tag
@@ -1123,7 +1146,7 @@ CBorder=#000080
 w=0
 AliasID1=3
 Page="IN"
-Pos=0.75029699999999999,5.6531160568848729e-005,0.52749490835030555,5.3024911032028462e-005
+Pos=0.69646000000000008,1.4008047610758333e-005,0.48972972972972972,1.7814371257485027e-005
 Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Format=3
 FormatY=3
@@ -1138,8 +1161,98 @@ CBorder=#000080
 w=1
 AliasID1=1
 Page="TR"
-Pos=0.75029675236798909,0.010000000000000002,0.48449331093173781,0.0081267056530214439
+Pos=0.69645982272820706,0.0024999999999999983,0.49892241379310343,0.0035404191616766468
 Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=2
+AliasID1=2
+Page="OUT"
+Pos=0.97913922173952728,0.0050000000000000001,1.3464439655172418,0.0058128742514970055
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=1
+AliasID1=1
+Page="TR"
+Pos=0.75036248749819623,0.010000000000000004,0.45951417004048584,0.0091992882562277577
+Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=3
+Page="IN"
+Pos=0.72083900000000012,2.7069387923089743e-005,0.46054054054054056,3.6526946107784424e-005
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=1
+AliasID1=1
+Page="TR"
+Pos=0.72083873627472628,0.0050000000000000001,0.45141700404858298,0.0056761565836298926
+Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=2
+AliasID1=2
+Page="OUT"
+Pos=1.1687217787125619,0.01,1.4709051724137934,0.0082994011976047898
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=3
+Page="IN"
+Pos=0.75029699999999999,5.6531160568848729e-005,0.52749490835030555,5.3024911032028462e-005
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Format=3
 FormatY=3
 Branch=0
@@ -1332,7 +1445,7 @@ YRng=11m, 0
 Options=LINEARX,LINEARY
 Range Grid X=0.25
 Range Grid Y=1m
-Enable=DontRun
+Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
 Rainbow=False
@@ -1382,7 +1495,6 @@ Analysis=Stability
 [Stepping]
 Analysis=DC
 Index=1
-Simultaneous=Yes
 Parameter Type=Component
 Name=IIN
 Param=dc.value
