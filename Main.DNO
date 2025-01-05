@@ -2,22 +2,22 @@
 ***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
-***                          DC Analysis of VTChars                          ***
-***                           04.01.2025 20:23:09                            ***
+***                           DC Analysis of Main                            ***
+***                           04.01.2025 16:54:10                            ***
 ********************************************************************************
 Limits
 ======
 Variable 1 Method        Auto
-Variable 1 Name          VOUT
-Variable 1 Range         3.5,0,0.01
+Variable 1 Name          V8
+Variable 1 Range         10,0,.005
 Variable 2 Method        None
 Variable 2 Name          
 Variable 2 Range         
 Temperature              Linear 27
-Number of Points         5100
+Number of Points         51
 Maximum Change %         5
 Run Options              Normal
-Auto Scale Ranges        Off
+Auto Scale Ranges        On
 Accumulate Plots         Off
 Ignore Expression Errors Off
 
