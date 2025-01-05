@@ -21,8 +21,9 @@ Q = 30;
 
 Rloss = (2 * pi * Fpc * L1)/Q;
 
-Lsv = L1 * 1e3;
-Csv = max(Cindet, C2) * 1e3;
+Lsv = L1 / 50;
+Csv = max(Cindet, C2) / 50;
+Fcsv = 1/(2 * pi * sqrt(Lsv * Csv));
 
 % 1/Fpc < teta < 1/Fmod
 lowBound = 1/Fpc;
