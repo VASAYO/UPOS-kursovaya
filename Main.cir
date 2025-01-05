@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=210
+NLCnt=216
 TXCnt=11
 
 [shapedef]
@@ -260,7 +260,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=392
+Used=394
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -283,7 +283,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6913
-Used=291
+Used=295
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -769,7 +769,7 @@ Pxs=1552,552,1568,552
 Pxs=1552,552,1552,560
 
 [Wire]
-Pxs=1616,552,1680,552
+Pxs=1616,552,1656,552
 
 [Comp]
 Name=2SC4618
@@ -1117,7 +1117,7 @@ Style=8192
 
 [Attr]
 ON=-32,-39,RESISTANCE
-V=100
+V=10
 Style=8192
 
 [Attr]
@@ -1639,6 +1639,14 @@ ON=-89,-143,FILE
 V=Ideal_Trans3
 
 [Attr]
+ON=0,11,Param:RATIO12
+V=0.3162
+
+[Attr]
+ON=0,22,Param:RATIO13
+V=0.3162
+
+[Attr]
 ON=0,0,PACKAGE
 V
 
@@ -1784,9 +1792,6 @@ Px=824,1240
 Rot=1
 
 [Wire]
-Pxs=704,1128,824,1128
-
-[Wire]
 Pxs=720,1072,824,1072
 
 [Wire]
@@ -1920,6 +1925,7 @@ Rot=7
 
 [Comp]
 Name=Voltage Source
+Enable=FALSE
 Px=560,1184
 Rot=3
 
@@ -1948,6 +1954,7 @@ Style=256
 
 [Comp]
 Name=Ground
+Enable=FALSE
 Px=560,1184
 Rot=7
 
@@ -1955,10 +1962,7 @@ Rot=7
 Pxs=560,1128,560,1136
 
 [Wire]
-Pxs=560,1128,584,1128
-
-[Wire]
-Pxs=584,1128,632,1128
+Pxs=560,1128,576,1128
 
 [Comp]
 Name=Resistor
@@ -1991,7 +1995,7 @@ Style=8192
 
 [Attr]
 ON=12,-40,CAPACITANCE
-V=0.000004u
+V=4p
 Style=8192
 
 [Attr]
@@ -2008,6 +2012,64 @@ Rot=7
 
 [Wire]
 Pxs=1760,872,1768,872
+
+[Comp]
+Name=Resistor
+Px=784,1128
+Rot=2
+
+[Attr]
+ON=-32,-25,PART
+V=R25
+Style=8192
+
+[Attr]
+ON=-16,-39,RESISTANCE
+V=0
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=704,1128,736,1128
+
+[Wire]
+Pxs=784,1128,824,1128
+
+[Wire]
+Pxs=1656,552,1680,552
+
+[Wire]
+Pxs=576,1128,632,1128
+
+[Comp]
+Name=Resistor
+Px=1864,920
+Rot=3
+
+[Attr]
+ON=-32,-25,PART
+V=R26
+Style=8192
+
+[Attr]
+ON=-40,-39,RESISTANCE
+V=1000
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=1864,920
+Rot=7
+
+[Wire]
+Pxs=1768,872,1864,872
 
 [Grid Text]
 Text="Антенная цепь"
@@ -2045,7 +2107,7 @@ CBorder=None
 
 [Grid Text]
 Text="BUF1"
-Px=584,1128
+Px=576,1128
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2089,7 +2151,7 @@ CBorder=None
 
 [Grid Text]
 Text="BUF1"
-Px=592,1040
+Px=1656,552
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2299,9 +2361,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=168,99
+SB 3=295,48
 Scale 3=2
-Px=2021,715
+Px=1209,1105
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2728,15 +2790,11 @@ Name="MIXER_T"
 
 [APage]
 Analysis=Transient
-Name="MIXER_F"
+Name="MIXER_IN_F"
 
 [APage]
 Analysis=Transient
-Name="MIXER_OUT1_F"
-
-[APage]
-Analysis=Transient
-Name="MIXER_OUT2_F"
+Name="MIXER_OUT_F"
 
 [AObject]
 Analysis=Transient
@@ -2744,9 +2802,9 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
-w=17
+w=18
 AliasID1=18
-Page="MIXER_OUT1_F"
+Page="MIXER_OUT_F"
 Pos=20000000,0.59272913316528675,22255319.148936171,0.55571856287425159
 Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Format=3
@@ -2760,7 +2818,7 @@ EndPoint=ArrowF
 CBorder=#000000
 w=16
 AliasID1=17
-Page="MIXER_F"
+Page="MIXER_IN_F"
 Pos=200000000,0.14999996429718343,203384113.16648531,0.1280538922155689
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
@@ -3464,7 +3522,7 @@ Page=ANT_F
 AliasID=2
 XExp=F
 YExp=harm(v(RX))
-XRng=203e6,199e6
+XRng=201e6,199e6
 YRng=20m,0
 Options=LINEARX,LINEARY
 Range Grid X=1e6
@@ -3864,12 +3922,40 @@ NOFmtY=3E
 [WaveForm]
 Analysis=Transient
 Plt=1
-Page=MIXER_F
+Page=MIXER_IN_F
 AliasID=17
 XExp=F
 YExp=harm(v(BUF1))
-XRng=210e6,190e6
-YRng=70m,0
+XRng=201e6,199e6
+YRng=80m,0
+Options=LINEARX,LINEARY
+Range Grid X=20e6
+Range Grid Y=5m
+Enable=Enable
+CS=Popsicle
+Line Color=#FF0000
+Text Color=#FF0000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+Page=MIXER_IN_F
+AliasID=20
+XExp=F
+YExp=harm(i(R25))
+XRng=201e6,199e6
+YRng=80m,0
 Options=LINEARX,LINEARY
 Range Grid X=20e6
 Range Grid Y=5m
@@ -3892,12 +3978,12 @@ NOFmtY=3E
 [WaveForm]
 Analysis=Transient
 Plt=1
-Page=MIXER_OUT1_F
+Page=MIXER_OUT_F
 AliasID=18
 XExp=F
 YExp=harm(v(MIXER))
-XRng=30e6,10e6
-YRng=230m,0
+XRng=21e6,19e6
+YRng=200m,0
 Options=LINEARX,LINEARY
 Range Grid X=4e6
 Range Grid Y=20m
@@ -3905,34 +3991,6 @@ Enable=Enable
 CS=Popsicle
 Line Color=#FF0000
 Text Color=#FF0000
-Rainbow=False
-VFmtX=3
-VFmtY=3
-ScaleFactorX="None"
-ScaleFactorY="None"
-ScaleUnitsX="Auto"
-ScaleUnitsY="Auto"
-SFmtX=2
-SFmtY=2
-NOFmtX=3E
-NOFmtY=3E
-
-[WaveForm]
-Analysis=Transient
-Plt=1
-Page=MIXER_OUT2_F
-AliasID=19
-XExp=F
-YExp=harm(v(MIXER))
-XRng=250e6,230e6
-YRng=230m,0
-Options=LINEARX,LINEARY
-Range Grid X=4e6
-Range Grid Y=20m
-Enable=Enable
-CS=Popsicle
-Line Color=#FF00FF
-Text Color=#FF00FF
 Rainbow=False
 VFmtX=3
 VFmtY=3
@@ -4137,7 +4195,8 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
-CurrentPage 0="MIXER_T"
+FirstTab 0=1
+CurrentPage 0="MIXER_IN_F"
 
 [Pane]
 Analysis=AC
