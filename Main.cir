@@ -383,8 +383,8 @@ SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=False
-Show Current=False
+Show Voltages=True
+Show Current=True
 Show Power=False
 Show Condition=False
 Show Pin Connections=False
@@ -2058,7 +2058,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1.3333333333333333
+Scale=1
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -2246,9 +2246,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=471,409
-Scale 3=1.3333333333333333
-Px=712,528
+SB 3=403,280
+Scale 3=1
+Px=723,534
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2370,10 +2370,10 @@ Text=	.define R2_buf1 3.514555555555556e+04
 Text=
 Text=* Смеситель
 Text=	.define R1_mixer 100
-Text=	.define R2_mixer 2.718961873268452e+02
+Text=	.define R2_mixer (3.5 - 750.388m) / (10m + 2*56.64u)
 Text=
-Text=	.define V1_mixer 1.8898
-Text=	.define V2_mixer 2.8446
+Text=	.define V1_mixer 1.720863
+Text=	.define V2_mixer 2.696754
 
 [Text Area]
 Section=0
@@ -4067,7 +4067,7 @@ PlaceText=True
 [Pane]
 Analysis=Transient
 FirstTab 0=2
-CurrentPage 0="MIXER_IN_F"
+CurrentPage 0="MIXER_OUT_F"
 
 [Pane]
 Analysis=AC
