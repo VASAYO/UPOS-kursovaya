@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=216
+NLCnt=210
 TXCnt=11
 
 [shapedef]
@@ -80,12 +80,6 @@ Line=39,7,43,7
 Current=32,8,16,8
 
 [shapedef]
-Name=NFV
-Root="Vsource.root",0,0,0
-Root="TextN.Root",28,-6,1
-Root="TextF.Root",28,1,1
-
-[shapedef]
 Name=NPN
 Root="Bjt.root",0,0,0
 PolyClosed=3
@@ -118,18 +112,6 @@ Current=32,8,16,8
 [shapedef]
 Name=SPICE_V
 Root="Vsource.root",0,0,0
-
-[shapedef]
-Name=TextF.Root
-Line=0,0,5,0
-Line=0,0,0,8
-Line=2,4,0,4
-
-[shapedef]
-Name=TextN.Root
-Line=0,8,0,0
-Line=0,0,5,8
-Line=5,8,5,0
 
 [shapedef]
 Name=Trans3
@@ -260,7 +242,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=1793
-Used=394
+Used=395
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -381,18 +363,6 @@ Pin="1M",a,0,6,-6,17
 Pin="2P",a,6,0,-4,-3
 Pin="2M",a,6,6,-6,17
 
-[compdef]
-Name=NFV
-Definition=NFV
-Shape=NFV
-Mask=4864
-Used=59
-memo=Analog behavioral voltage source (E.g. VALUE=I(R2)*V(3,4)^2)
-Label Offset=18,12,16,13
-PinCnt=2
-Pin="Plus",6,0,-8,-4
-Pin="Minus",0,0,-21,-6
-
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 0,0,944,788
 Default Object=Color=#000000
@@ -406,7 +376,7 @@ PowerFormat=3
 PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
-Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 0,78,689,572
+Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 0,78,617,572
 Window Placement in AC Analysis=2,3, -1,-1, -8,-31, 78,78,784,572
 Window Placement in DC Analysis=0,1, -1,-1, -8,-31, 1,-13,975,664
 SpiceType=AMBIGUOUS
@@ -1792,7 +1762,7 @@ Px=824,1240
 Rot=1
 
 [Wire]
-Pxs=720,1072,824,1072
+Pxs=720,1072,736,1072
 
 [Wire]
 Pxs=720,960,824,960
@@ -1803,7 +1773,7 @@ Px=1632,920
 Rot=1
 
 [Wire]
-Pxs=1632,872,1696,872
+Pxs=1632,872,1760,872
 
 [Comp]
 Name=Ideal_Trans2
@@ -1880,48 +1850,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=632,1128,656,1128
-
-[Comp]
-Name=NFV
-Enable=FALSE
-Px=632,1176
-Rot=3
-
-[Attr]
-ON=-32,-27,PART
-V=E1
-Style=8192
-
-[Attr]
-ON=-65,-41,VALUE
-V=v(BUF1)
-
-[Attr]
-ON=-61,-55,DERIVATIVE
-V=Default
-
-[Attr]
-ON=-33,-69,SMOOTHING
-V=No
-
-[Attr]
-ON=-28,-83,FRACTION
-V=.1
-
-[Attr]
-ON=-134,-97,INTERPOLATION
-V=Linear_X_Linear_Y
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Ground
-Enable=FALSE
-Px=632,1176
-Rot=7
+Pxs=576,1128,656,1128
 
 [Comp]
 Name=Voltage Source
@@ -1936,7 +1865,7 @@ Style=8192
 
 [Attr]
 ON=-255,-41,VALUE
-V=DC 0 AC 1 0 Sin 0 150m 200meg 0 0 0
+V=DC 0 AC 1 0 Sin 0 100m 200meg 0 0 0
 
 [Attr]
 ON=0,0,PACKAGE
@@ -1949,7 +1878,7 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_Sin
-V=DC 0 AC 1 0 Sin 0 150m 200meg 0 0 0
+V=DC 0 AC 1 0 Sin 0 100m 200meg 0 0 0
 Style=256
 
 [Comp]
@@ -1964,54 +1893,8 @@ Pxs=560,1128,560,1136
 [Wire]
 Pxs=560,1128,576,1128
 
-[Comp]
-Name=Resistor
-Px=1744,872
-Rot=2
-
-[Attr]
-ON=-32,-25,PART
-V=R24
-Style=8192
-
-[Attr]
-ON=-16,-39,RESISTANCE
-V=1000
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Capacitor
-Px=1768,920
-Rot=5
-
-[Attr]
-ON=12,-26,PART
-V=C12
-Style=8192
-
-[Attr]
-ON=12,-40,CAPACITANCE
-V=4p
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
 [Wire]
-Pxs=1744,872,1760,872
-
-[Comp]
-Name=Ground
-Px=1768,920
-Rot=7
-
-[Wire]
-Pxs=1760,872,1768,872
+Pxs=1760,872,1864,872
 
 [Comp]
 Name=Resistor
@@ -2038,12 +1921,6 @@ Pxs=704,1128,736,1128
 [Wire]
 Pxs=784,1128,824,1128
 
-[Wire]
-Pxs=1656,552,1680,552
-
-[Wire]
-Pxs=576,1128,632,1128
-
 [Comp]
 Name=Resistor
 Px=1864,920
@@ -2068,8 +1945,16 @@ Name=Ground
 Px=1864,920
 Rot=7
 
+[Comp]
+Name=Ground
+Px=736,1072
+Rot=7
+
 [Wire]
-Pxs=1768,872,1864,872
+Pxs=736,1072,824,1072
+
+[Wire]
+Pxs=1656,552,1680,552
 
 [Grid Text]
 Text="Антенная цепь"
@@ -2173,7 +2058,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=2
+Scale=1.3333333333333333
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -2361,9 +2246,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=295,48
-Scale 3=2
-Px=1209,1105
+SB 3=471,409
+Scale 3=1.3333333333333333
+Px=712,528
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -2532,13 +2417,13 @@ SimulationLog=True
 
 [Transient]
 WinID=1
-Window Placement=2,3, -1,-1, -8,-31, 0,78,689,572
+Window Placement=2,3, -1,-1, -8,-31, 0,78,617,572
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Title=Main.cir MIXER_F
+Title=Main.cir MIXER_IN_F
 AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
@@ -2575,7 +2460,7 @@ Tracker Cursor BranchInfo=False
 Horizontal Cursor=False
 Same Y Scales=Yes
 Enable X Scaling=True
-Enable Y Scaling=False
+Enable Y Scaling=True
 Keep X Scales The Same=True
 Number of Grids X=5
 Number of Grids Y=5
@@ -2807,20 +2692,6 @@ AliasID1=18
 Page="MIXER_OUT_F"
 Pos=20000000,0.59272913316528675,22255319.148936171,0.55571856287425159
 Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=16
-AliasID1=17
-Page="MIXER_IN_F"
-Pos=200000000,0.14999996429718343,203384113.16648531,0.1280538922155689
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
 FormatY=3
 
@@ -3927,10 +3798,10 @@ AliasID=17
 XExp=F
 YExp=harm(v(BUF1))
 XRng=201e6,199e6
-YRng=80m,0
+YRng=200m, 0
 Options=LINEARX,LINEARY
 Range Grid X=20e6
-Range Grid Y=5m
+Range Grid Y=20m
 Enable=Enable
 CS=Popsicle
 Line Color=#FF0000
@@ -3955,10 +3826,10 @@ AliasID=20
 XExp=F
 YExp=harm(i(R25))
 XRng=201e6,199e6
-YRng=80m,0
+YRng=200m, 0
 Options=LINEARX,LINEARY
 Range Grid X=20e6
-Range Grid Y=5m
+Range Grid Y=20m
 Enable=Enable
 CS=Popsicle
 Line Color=#000000
@@ -4195,7 +4066,7 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
-FirstTab 0=1
+FirstTab 0=2
 CurrentPage 0="MIXER_IN_F"
 
 [Pane]
