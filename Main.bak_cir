@@ -4616,7 +4616,7 @@ Text=	.define Rc_rfa 100
 Text=	.define Ck_rfa 1.671126902464901e-10
 Text=	.define Lk_rfa 3.789403406949889e-09
 Text=
-Text=	.define Rfb_rfa 15
+Text=	.define Rfb_rfa 13
 Text=
 Text=
 Text=* Áóôåð ÓÐ×
@@ -4996,7 +4996,7 @@ CBorder=#000000
 w=23
 AliasID1=30
 Page="DET_F"
-Pos=90000,0.00090802946154428172,107903.78006872852,0.0036976744186046511
+Pos=90000,0.00092500298960696307,65517.241379310326,0.0081627906976744179
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
 FormatY=3
@@ -5010,7 +5010,35 @@ CBorder=#000000
 w=23
 AliasID1=30
 Page="DET_F"
-Pos=45000,0.029168504818960959,71477.663230240549,0.033697674418604648
+Pos=45000,0.031954215516835624,17701.149425287331,0.033558139534883721
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=23
+AliasID1=30
+Page="DET_F"
+Pos=180000,5.0258380142815771e-005,159450.17182130585,0.012348837209302325
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=23
+AliasID1=30
+Page="DET_F"
+Pos=135000,0.00020759439713440614,153493.69988545246,0.0082325581395348828
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
 FormatY=3
