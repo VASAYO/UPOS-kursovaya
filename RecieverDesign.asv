@@ -173,7 +173,7 @@ clc; clear; close all;
     % Исходные данные
         E = 3.5;
         Fc = 20e6;
-        Ku = 4;
+        Ku = 5;
         Rl = +inf;
         Rc = 100;
 
@@ -211,7 +211,7 @@ clc; clear; close all;
         Req = (1/Rl + 1/Rc)^-1;
 
     % Экв-я добротность
-        Qeq = 3;
+        Qeq = 5;
         
     % Волновое сопротивление 
         Ro = Req / Qeq;
