@@ -173,7 +173,7 @@ clc; clear; close all;
     % Исходные данные
         E = 3.5;
         Fc = 20e6;
-        Ku = 4;
+        Ku = 6;
         Rl = +inf;
         Rc = 100;
 
