@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=491
-TXCnt=26
+NLCnt=489
+TXCnt=25
 
 [shapedef]
 Name=Battery
@@ -280,7 +280,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=257
-Used=352
+Used=365
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -291,7 +291,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4865
-Used=62
+Used=63
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -302,8 +302,8 @@ Pin="Minus",0,0,-20,-6
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=6145
-Used=249
+Mask=6401
+Used=259
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -315,7 +315,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6145
-Used=90
+Used=94
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -338,8 +338,8 @@ Pin="Minus",0,0,-3,-9
 Name=Battery
 Definition=Battery
 Shape=Battery
-Mask=7937
-Used=62
+Mask=6401
+Used=67
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -364,8 +364,8 @@ Pin="Emitter",3,3,5,1
 Name=NPN
 Definition=NPN
 Shape=NPN
-Mask=5633
-Used=11
+Mask=4097
+Used=13
 memo=NPN Transistor
 Label Offset=37,-17,-14,33
 PinCnt=3
@@ -394,7 +394,7 @@ Name=Ideal_Trans2
 Definition=Macro
 Shape=Transformer
 Mask=4224
-Used=10
+Used=11
 memo=Ideal Transformer Macro
 Label Offset=10,53,1,11
 PinCnt=4
@@ -443,7 +443,7 @@ Pin="PinD",a,6,3,0,-4
 Pin="PinE",a,6,0,-8,-1
 
 [Circuit]
-Window Placement=2,3, -1,-1, -8,-31, 0,0,749,723
+Window Placement=2,3, -1,-1, -8,-31, 0,0,749,576
 Default Object=Color=#000000
 Default Object Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Default Object Apply Border To Text=No
@@ -462,7 +462,7 @@ SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=True
+Show Voltages=False
 Show Current=False
 Show Power=False
 Show Condition=False
@@ -2007,96 +2007,6 @@ Object=Rectangle
 CBorder=#000080
 Px=1920,630,2198,984
 
-[Object]
-Object=Rectangle
-CBorder=#000080
-Px=2344,700,2521,1017
-
-[Comp]
-Name=Resistor
-Px=2352,872
-Rot=1
-COff=8,2360,883,-159,-121
-
-[Attr]
-ON=8,11,PART
-V=R27
-Style=8192
-
-[Attr]
-ON=7,31,RESISTANCE
-V=R2_buf2
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Ground
-Px=2352,936
-Rot=1
-
-[Wire]
-Pxs=2352,920,2352,936
-
-[Wire]
-Pxs=2352,856,2352,864
-
-[Comp]
-Name=Resistor
-Px=2352,808
-Rot=1
-COff=8,2360,819,-161,-31
-
-[Attr]
-ON=8,11,PART
-V=R28
-Style=8192
-
-[Attr]
-ON=8,25,RESISTANCE
-V=R1_buf2
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=2352,864,2408,864
-
-[Wire]
-Pxs=2352,864,2352,872
-
-[Comp]
-Name=Resistor
-Px=2432,944
-Rot=1
-COff=8,2440,955,130,-109
-
-[Attr]
-ON=8,11,PART
-V=R29
-Style=8192
-
-[Attr]
-ON=5,27,RESISTANCE
-V=Re_buf2
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Comp]
-Name=Ground
-Px=2432,992
-Rot=1
-
-[Wire]
-Pxs=2432,880,2432,936
-
 [Comp]
 Name=Capacitor
 Px=1912,872
@@ -2115,88 +2025,6 @@ Style=8192
 [Attr]
 ON=0,0,PACKAGE
 V
-
-[Wire]
-Pxs=2352,784,2352,808
-
-[Wire]
-Pxs=2352,784,2392,784
-
-[Comp]
-Name=Battery
-Px=2392,736
-Rot=1
-COff=8,2402,749,-1,-18
-
-[Attr]
-ON=10,13,PART
-V=V9
-Style=8192
-
-[Attr]
-ON=10,27,VALUE
-V=3.5
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=2392,784,2432,784
-
-[Comp]
-Name=Ground
-Px=2392,736
-Rot=3
-
-[Comp]
-Name=Capacitor
-Px=2496,936
-Rot=6
-
-[Attr]
-ON=-31,-27,PART
-V=C13
-Style=8192
-
-[Attr]
-ON=-31,-41,CAPACITANCE
-V=1u
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
-
-[Wire]
-Pxs=2432,936,2448,936
-
-[Wire]
-Pxs=2432,936,2432,944
-
-[Wire]
-Pxs=2496,936,2560,936
-
-[Comp]
-Name=2SC4618
-Px=2408,856
-COff=8,2408,856,-44,-8
-COff=8,2432,832,4,-24
-COff=8,2432,880,60,-240
-
-[Attr]
-ON=37,-17,PART
-V=Q11
-Style=8192
-
-[Attr]
-ON=37,-3,MODEL
-V=2SC4618
-
-[Attr]
-ON=37,25,PACKAGE
-V=SC-75A
 
 [Comp]
 Name=Resistor
@@ -2485,12 +2313,6 @@ V
 [Wire]
 Pxs=2200,776,2200,864
 
-[Wire]
-Pxs=2408,856,2408,864
-
-[Wire]
-Pxs=2432,784,2432,832
-
 [Comp]
 Name=Resistor
 Px=2056,720
@@ -2551,9 +2373,6 @@ Pxs=1960,872,1960,912
 
 [Wire]
 Pxs=1960,872,2016,872
-
-[Wire]
-Pxs=2328,864,2352,864
 
 [Wire]
 Pxs=2160,776,2200,776
@@ -4055,7 +3874,7 @@ V=Ideal_Trans2
 
 [Attr]
 ON=0,11,Param:GAIN
-V=1/7
+V=1/sqrt(10)
 
 [Attr]
 ON=0,0,PACKAGE
@@ -4097,6 +3916,171 @@ Pxs=1672,552,1680,552
 
 [Wire]
 Pxs=568,1128,656,1128
+
+[Comp]
+Name=Resistor
+Px=2344,808
+Rot=1
+
+[Attr]
+ON=8,11,PART
+V=R37
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=2048.4
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=2344,872
+Rot=1
+
+[Attr]
+ON=8,11,PART
+V=R10
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=28715
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=2344,920
+Rot=1
+
+[Wire]
+Pxs=2344,856,2344,864
+
+[Wire]
+Pxs=2328,864,2344,864
+
+[Wire]
+Pxs=2344,864,2344,872
+
+[Comp]
+Name=NPN
+Px=2400,864
+
+[Attr]
+ON=37,-17,PART
+V=Q13
+Style=8192
+
+[Attr]
+ON=37,-3,MODEL
+V=2N2222
+
+[Attr]
+ON=37,25,PACKAGE
+V=TO-18
+
+[Wire]
+Pxs=2344,864,2400,864
+
+[Comp]
+Name=Resistor
+Px=2424,904
+Rot=1
+
+[Attr]
+ON=9,14,PART
+V=R38
+Style=8192
+
+[Attr]
+ON=8,38,RESISTANCE
+V=354.81
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=2424,952
+Rot=1
+
+[Wire]
+Pxs=2424,888,2424,896
+
+[Wire]
+Pxs=2344,800,2344,808
+
+[Wire]
+Pxs=2344,800,2384,800
+
+[Wire]
+Pxs=2424,800,2424,840
+
+[Comp]
+Name=Battery
+Px=2384,752
+Rot=1
+
+[Attr]
+ON=10,13,PART
+V=V14
+Style=8192
+
+[Attr]
+ON=10,27,VALUE
+V=3.5
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=2384,800,2424,800
+
+[Comp]
+Name=Ground
+Px=2384,752
+Rot=3
+
+[Comp]
+Name=Capacitor
+Px=2456,896
+
+[Attr]
+ON=16,12,PART
+V=C26
+Style=8192
+
+[Attr]
+ON=16,26,CAPACITANCE
+V=1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=2424,896,2456,896
+
+[Wire]
+Pxs=2424,896,2424,904
+
+[Wire]
+Pxs=2504,896,2560,896
+
+[Wire]
+Pxs=2560,896,2560,936
 
 [Grid Text]
 Text="Антенная цепь"
@@ -4187,15 +4171,6 @@ CBorder=None
 [Grid Text]
 Text="MIXER"
 Px=1680,872
-GridSnap=True
-JustifyH=Left
-JustifyV=Bottom
-CBorder=None
-
-[Grid Text]
-Text="Эмиттерный повторитель"
-Px=2328,1032
-Font=Unbounded
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -4335,7 +4310,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1.3333333333333333
+Scale=4
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -4523,9 +4498,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=1543,351
-Scale 3=1.3333333333333333
-Px=2316,969
+SB 3=197,0
+Scale 3=4
+Px=2140,1035
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -4574,7 +4549,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
-SB 0=0,26
+SB 0=0,3
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -4641,7 +4616,7 @@ Text=	.define Rc_rfa 100
 Text=	.define Ck_rfa 1.671126902464901e-10
 Text=	.define Lk_rfa 3.789403406949889e-09
 Text=
-Text=	.define Rfb_rfa 13
+Text=	.define Rfb_rfa 15
 Text=
 Text=
 Text=* Буфер УРЧ
@@ -4797,12 +4772,12 @@ PSS_Periods="1"
 PSS_Iterations="5"
 PSS_Error="1u"
 PSS_ShowPlots=True
-FFT_NPts="1048576"
+FFT_NPts="32768"
 FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
-MonMaxShow=26
+MonMaxShow=21
 MonPageWidth=90
 MonPlotWidth=35
 MonExprXWidth=104
@@ -5018,6 +4993,34 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
+w=23
+AliasID1=30
+Page="DET_F"
+Pos=90000,0.00090802946154428172,107903.78006872852,0.0036976744186046511
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=23
+AliasID1=30
+Page="DET_F"
+Pos=45000,0.029168504818960959,71477.663230240549,0.033697674418604648
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
 w=16
 AliasID1=23
 Page="IFA_F"
@@ -5036,34 +5039,6 @@ w=15
 AliasID1=22
 Page="IFA_F"
 Pos=20025000,0.04994726422542798,19252314.814814817,0.096296296296296338
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=23
-AliasID1=30
-Page="DET_F"
-Pos=90000,0.0017179169105924698,118213.05841924399,0.0016203703703703703
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=23
-AliasID1=30
-Page="DET_F"
-Pos=45000,0.018258478840712945,76517.754868270335,0.023148148148148147
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
 FormatY=3
@@ -6066,8 +6041,8 @@ LinearY=True
 
 [Limits]
 Analysis=Transient
-TMax=1/{Fmod}*1 + 0u
-TStart=0u
+TMax=1/{Fmod}*9 + 40u
+TStart=40u
 TStep=1/{Fc}/100
 NPts=5100
 Temp=27
