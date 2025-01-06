@@ -280,7 +280,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=257
-Used=330
+Used=352
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -291,7 +291,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4865
-Used=60
+Used=62
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -303,7 +303,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6145
-Used=234
+Used=249
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -315,7 +315,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6145
-Used=76
+Used=90
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -327,7 +327,7 @@ Name=Inductor
 Definition=Inductor
 Shape=Inductor
 Mask=6913
-Used=49
+Used=54
 memo=Inductor
 Label Offset=18,9,11,12
 PinCnt=2
@@ -339,7 +339,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=7937
-Used=58
+Used=62
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -351,7 +351,7 @@ Name=2SC4618
 Definition=NPN
 Shape=NPN
 Mask=4224
-Used=3
+Used=5
 memo=NPN High Frequency Amplifier Transistor Vceo=25V Ic=50mA Ft=300MHz
 Link=http://www.rohm.com/products/databook/tr/pdf/2sc5659.pdf#page=001
 Label Offset=37,-17,-14,33
@@ -394,7 +394,7 @@ Name=Ideal_Trans2
 Definition=Macro
 Shape=Transformer
 Mask=4224
-Used=8
+Used=10
 memo=Ideal Transformer Macro
 Label Offset=10,53,1,11
 PinCnt=4
@@ -462,7 +462,7 @@ SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=False
+Show Voltages=True
 Show Current=False
 Show Power=False
 Show Condition=False
@@ -818,7 +818,7 @@ Pxs=1552,552,1568,552
 Pxs=1552,552,1552,560
 
 [Wire]
-Pxs=1616,552,1664,552
+Pxs=1616,552,1672,552
 
 [Comp]
 Name=2SC4618
@@ -1166,7 +1166,7 @@ Style=8192
 
 [Attr]
 ON=-32,-39,RESISTANCE
-V=10
+V=100
 Style=8192
 
 [Attr]
@@ -1903,7 +1903,7 @@ ON=0,0,PACKAGE
 V
 
 [Wire]
-Pxs=560,1128,576,1128
+Pxs=560,1128,568,1128
 
 [Comp]
 Name=Voltage Source
@@ -2594,9 +2594,6 @@ Pxs=944,488,984,488
 [Wire]
 Pxs=1384,480,1400,480
 
-[Wire]
-Pxs=576,1128,656,1128
-
 [Comp]
 Name=NFV
 Enable=FALSE
@@ -2649,9 +2646,6 @@ Pxs=1472,920,1512,920
 
 [Wire]
 Pxs=1680,872,1728,872
-
-[Wire]
-Pxs=1664,552,1680,552
 
 [Comp]
 Name=Capacitor
@@ -4098,6 +4092,12 @@ Pxs=3784,936,3784,976
 [Wire]
 Pxs=3680,936,3784,936
 
+[Wire]
+Pxs=1672,552,1680,552
+
+[Wire]
+Pxs=568,1128,656,1128
+
 [Grid Text]
 Text="Антенная цепь"
 Px=696,616
@@ -4134,7 +4134,7 @@ CBorder=None
 
 [Grid Text]
 Text="BUF1"
-Px=576,1128
+Px=568,1128
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -4178,7 +4178,7 @@ CBorder=None
 
 [Grid Text]
 Text="BUF1"
-Px=1664,552
+Px=1672,552
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -4335,7 +4335,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1
+Scale=1.3333333333333333
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -4523,9 +4523,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=2761,651
-Scale 3=1
-Px=2571,1098
+SB 3=1543,351
+Scale 3=1.3333333333333333
+Px=2316,969
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -4574,7 +4574,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
-SB 0=0,39
+SB 0=0,26
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -4667,7 +4667,7 @@ Text=	.define Rc_ifa 100
 Text=	.define Ck_ifa 2.387324146378430e-10
 Text=	.define Lk_ifa 2.652582384864923e-07
 Text=
-Text=	.define Rfb_ifa 19
+Text=	.define Rfb_ifa 19.717603059564308
 Text=
 Text=
 Text=* Буфер УПЧ
@@ -4779,8 +4779,8 @@ Tracker Cursor=True
 Tracker Cursor BranchInfo=False
 Horizontal Cursor=False
 Same Y Scales=Yes
-Enable X Scaling=True
-Enable Y Scaling=False
+Enable X Scaling=False
+Enable Y Scaling=True
 Keep X Scales The Same=True
 Number of Grids X=5
 Number of Grids Y=5
@@ -4797,7 +4797,7 @@ PSS_Periods="1"
 PSS_Iterations="5"
 PSS_Error="1u"
 PSS_ShowPlots=True
-FFT_NPts="8192"
+FFT_NPts="1048576"
 FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
@@ -4962,6 +4962,42 @@ ALIGNBOTTOM=Yes
 
 [APage]
 Analysis=Transient
+Name="RFA_T"
+
+[APage]
+Analysis=Transient
+Name="RFA_F"
+
+[APage]
+Analysis=Transient
+Name="BUF1_T"
+
+[APage]
+Analysis=Transient
+Name="BUF1_F"
+
+[APage]
+Analysis=Transient
+Name="MIXER_T"
+
+[APage]
+Analysis=Transient
+Name="MIXER_IN_F"
+
+[APage]
+Analysis=Transient
+Name="MIXER_OUT_F"
+
+[APage]
+Analysis=Transient
+Name="IFA_T"
+
+[APage]
+Analysis=Transient
+Name="IFA_F"
+
+[APage]
+Analysis=Transient
 Name="BUF2_T"
 
 [APage]
@@ -4982,7 +5018,35 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
-w=6
+w=16
+AliasID1=23
+Page="IFA_F"
+Pos=20025000,0.17944116960285686,19405092.592592593,0.21543209876543212
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=15
+AliasID1=22
+Page="IFA_F"
+Pos=20025000,0.04994726422542798,19252314.814814817,0.096296296296296338
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=23
 AliasID1=30
 Page="DET_F"
 Pos=90000,0.0017179169105924698,118213.05841924399,0.0016203703703703703
@@ -4996,7 +5060,7 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
-w=6
+w=23
 AliasID1=30
 Page="DET_F"
 Pos=45000,0.018258478840712945,76517.754868270335,0.023148148148148147
@@ -6002,8 +6066,8 @@ LinearY=True
 
 [Limits]
 Analysis=Transient
-TMax=1/{Fmod}*9 + 17u
-TStart=17u
+TMax=1/{Fmod}*1 + 0u
+TStart=0u
 TStep=1/{Fc}/100
 NPts=5100
 Temp=27
@@ -6222,7 +6286,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Normal
 Line Color=#000000
 Text Color=#008000
@@ -6254,7 +6318,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Normal
 Line Color=#FF0000
 Text Color=#FF0000
@@ -6287,7 +6351,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Popsicle
 Line Color=#000000
 Text Color=#000000
@@ -6320,7 +6384,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Popsicle
 Line Color=#FF0000
 Text Color=#FF00FF
@@ -6352,7 +6416,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Normal
 Line Color=#000000
 Text Color=#000000
@@ -6384,7 +6448,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Normal
 Line Color=#FF0000
 Text Color=#FF0000
@@ -6417,10 +6481,10 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Popsicle
 Line Color=#000000
-Text Color=#FF00FF
+Text Color=#000000
 Rainbow=False
 VFmtX=3
 VFmtY=3
@@ -6450,10 +6514,10 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Popsicle
 Line Color=#FF0000
-Text Color=#FF00FF
+Text Color=#FF0000
 Rainbow=False
 VFmtX=3
 VFmtY=3
@@ -6482,7 +6546,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Normal
 Line Color=#000000
 Text Color=#000000
@@ -6514,7 +6578,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Normal
 Line Color=#FF0000
 Text Color=#FF0000
@@ -6547,7 +6611,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Popsicle
 Line Color=#FF0000
 Text Color=#FF0000
@@ -6580,7 +6644,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Popsicle
 Line Color=#000000
 Text Color=#000000
@@ -6613,7 +6677,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Popsicle
 Line Color=#FF0000
 Text Color=#FF0000
@@ -6644,7 +6708,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Normal
 Line Color=#000000
 Text Color=#000000
@@ -6675,7 +6739,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Normal
 Line Color=#FF0000
 Text Color=#FF0000
@@ -6708,7 +6772,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Popsicle
 Line Color=#000000
 Text Color=#000000
@@ -6741,7 +6805,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=DontRun
+Enable=Enable
 CS=Popsicle
 Line Color=#FF0000
 Text Color=#FF0000
@@ -6985,7 +7049,7 @@ Plt=1
 Page=PRESEL
 AliasID=1
 XExp=F
-YExp=db(v(IC)/v(RX))
+YExp=(v(IC)/v(RX))
 XRng=250e6,150e6
 YRng=22, -20
 Options=LINEARX,LINEARY
@@ -7012,7 +7076,7 @@ Plt=1
 Page=PRESEL
 AliasID=3
 XExp=F
-YExp=db(v(RFA)/v(IC))
+YExp=(v(RFA)/v(IC))
 XRng=250e6,150e6
 YRng=22, -20
 Options=LINEARX,LINEARY
@@ -7040,7 +7104,7 @@ Plt=1
 Page=PRESEL
 AliasID=2
 XExp=F
-YExp=db(v(RFA)/v(RX))
+YExp=(v(RFA)/v(RX))
 XRng=250e6,150e6
 YRng=22, -20
 Options=LINEARX,LINEARY
@@ -7178,7 +7242,7 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
-CurrentPage 0="DET_T"
+CurrentPage 0="DET_F"
 
 [Pane]
 Analysis=AC
