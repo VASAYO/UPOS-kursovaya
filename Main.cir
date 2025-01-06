@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=292
-TXCnt=17
+NLCnt=491
+TXCnt=26
 
 [shapedef]
 Name=Battery
@@ -41,6 +41,21 @@ Line=22,-8,22,8
 Line=26,-8,26,8
 Line=26,0,48,0
 Current=32,12,16,12
+
+[shapedef]
+Name=Diode
+Root="Diode.root",0,0,0
+
+[shapedef]
+Name=Diode.root
+Line=0,0,20,0
+Line=28,0,48,0
+Rectangle=18,-8,20,8
+PolyClosed=3
+PolyLine=20,0
+PolyLine=28,-8
+PolyLine=28,8
+Current=32,16,16,16
 
 [shapedef]
 Name=Ground
@@ -196,6 +211,11 @@ Ellipse=38,6,42,10
 Ellipse=38,70,42,74
 
 [shapedef]
+Name=Trans5
+Root="Trans.root",0,0,0
+Line=48,24,44,24
+
+[shapedef]
 Name=Trans.root
 Arc=1,4,15,18 , 8,18,15,11
 Arc=1,5,15,17 , 15,11,8,5
@@ -260,7 +280,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=257
-Used=319
+Used=330
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -271,7 +291,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4865
-Used=58
+Used=60
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -283,7 +303,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6145
-Used=223
+Used=234
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -295,7 +315,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6145
-Used=62
+Used=76
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -307,7 +327,7 @@ Name=Inductor
 Definition=Inductor
 Shape=Inductor
 Mask=6913
-Used=47
+Used=49
 memo=Inductor
 Label Offset=18,9,11,12
 PinCnt=2
@@ -374,7 +394,7 @@ Name=Ideal_Trans2
 Definition=Macro
 Shape=Transformer
 Mask=4224
-Used=6
+Used=8
 memo=Ideal Transformer Macro
 Label Offset=10,53,1,11
 PinCnt=4
@@ -394,6 +414,33 @@ Label Offset=18,12,16,13
 PinCnt=2
 Pin="Plus",6,0,-8,-4
 Pin="Minus",0,0,-21,-6
+
+[compdef]
+Name=Diode
+Definition=Diode
+Shape=Diode
+Mask=4609
+Used=38
+memo=Diode
+Label Offset=17,10,12,12
+PinCnt=2
+Pin="Anode",6,0,-9,-8
+Pin="Cathode",0,0,-20,-8
+
+[compdef]
+Name=Centap
+Definition=Macro
+Shape=Trans5
+Mask=20480
+Used=5
+memo=Center Tapped Transformer Macro
+Label Offset=18,45,-1,10
+PinCnt=5
+Pin="PinA",a,0,0,-17,-1
+Pin="PinB",a,0,6,-20,17
+Pin="PinC",a,6,6,-5,17
+Pin="PinD",a,6,3,0,-4
+Pin="PinE",a,6,0,-8,-1
 
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 0,0,749,723
@@ -1978,7 +2025,7 @@ Style=8192
 
 [Attr]
 ON=7,31,RESISTANCE
-V=R2_buf1
+V=R2_buf2
 Style=8192
 
 [Attr]
@@ -2009,7 +2056,7 @@ Style=8192
 
 [Attr]
 ON=8,25,RESISTANCE
-V=R1_buf1
+V=R1_buf2
 Style=8192
 
 [Attr]
@@ -2035,7 +2082,7 @@ Style=8192
 
 [Attr]
 ON=5,27,RESISTANCE
-V=Re_buf1
+V=Re_buf2
 Style=8192
 
 [Attr]
@@ -2048,7 +2095,7 @@ Px=2432,992
 Rot=1
 
 [Wire]
-Pxs=2432,928,2432,936
+Pxs=2432,880,2432,936
 
 [Comp]
 Name=Capacitor
@@ -2129,7 +2176,7 @@ Pxs=2432,936,2448,936
 Pxs=2432,936,2432,944
 
 [Wire]
-Pxs=2496,936,2536,936
+Pxs=2496,936,2560,936
 
 [Comp]
 Name=2SC4618
@@ -2466,6 +2513,7 @@ V
 
 [Comp]
 Name=Resistor
+Enable=FALSE
 Px=2560,984
 Rot=3
 
@@ -2485,6 +2533,7 @@ V
 
 [Comp]
 Name=Ground
+Enable=FALSE
 Px=2560,984
 Rot=7
 
@@ -2493,26 +2542,6 @@ Pxs=2248,864,2256,864
 
 [Wire]
 Pxs=2256,864,2280,864
-
-[Comp]
-Name=Resistor
-Px=2432,880
-Rot=1
-COff=8,2440,891,129,-64
-
-[Attr]
-ON=8,11,PART
-V=R36
-Style=8192
-
-[Attr]
-ON=8,25,RESISTANCE
-V=0
-Style=8192
-
-[Attr]
-ON=0,0,PACKAGE
-V
 
 [Wire]
 Pxs=1912,872,1960,872
@@ -2528,9 +2557,6 @@ Pxs=2328,864,2352,864
 
 [Wire]
 Pxs=2160,776,2200,776
-
-[Wire]
-Pxs=2536,936,2560,936
 
 [Comp]
 Name=Voltage Source
@@ -2645,6 +2671,1432 @@ Style=8192
 [Attr]
 ON=0,0,PACKAGE
 V
+
+[Wire]
+Pxs=3168,888,3168,936
+
+[Comp]
+Name=Capacitor
+Px=3296,888
+Rot=2
+
+[Attr]
+ON=9,-24,PART
+V=C_sv
+Style=8192
+
+[Attr]
+ON=11,13,CAPACITANCE
+V={Csv}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3296,888,3352,888
+
+[Wire]
+Pxs=3352,888,3352,1000
+
+[Comp]
+Name=Inductor
+Px=3448,888
+Rot=6
+
+[Attr]
+ON=-35,-24,PART
+V=L_sv
+Style=8192
+
+[Attr]
+ON=-32,6,INDUCTANCE
+V={Lsv}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3304,936,3328,936
+
+[Wire]
+Pxs=3392,936,3392,976
+
+[Wire]
+Pxs=3304,1064,3328,1064
+
+[Comp]
+Name=Capacitor
+Px=3392,976
+Rot=1
+
+[Attr]
+ON=-25,15,PART
+V=C2
+Style=8192
+
+[Attr]
+ON=2,6,CAPACITANCE
+V={C2det}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3392,1024,3392,1064
+
+[Comp]
+Name=Diode
+Px=3480,936
+Rot=2
+
+[Attr]
+ON=-32,10,PART
+V=D3
+Style=8192
+
+[Attr]
+ON=-81,-38,MODEL
+V=1N5711
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Diode
+Px=3480,1064
+Rot=2
+
+[Attr]
+ON=-31,-25,PART
+V=D4
+Style=8192
+
+[Attr]
+ON=-81,-38,MODEL
+V=1N5711
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3376,936,3392,936
+
+[Wire]
+Pxs=3376,1064,3392,1064
+
+[Wire]
+Pxs=3480,1064,3552,1064
+
+[Wire]
+Pxs=3480,936,3552,936
+
+[Wire]
+Pxs=3504,1000,3552,1000
+
+[Wire]
+Pxs=3624,1000,3624,1008
+
+[Wire]
+Pxs=3552,1000,3624,1000
+
+[Wire]
+Pxs=3552,1000,3552,1008
+
+[Wire]
+Pxs=3504,888,3504,1000
+
+[Wire]
+Pxs=3448,888,3504,888
+
+[Wire]
+Pxs=3624,936,3680,936
+
+[Comp]
+Name=Capacitor
+Px=3552,944
+Rot=1
+
+[Attr]
+ON=10,15,PART
+V=C_det
+Style=8192
+
+[Attr]
+ON=12,26,CAPACITANCE
+V={Cdet}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3552,992,3552,1000
+
+[Comp]
+Name=Capacitor
+Px=3552,1008
+Rot=1
+
+[Attr]
+ON=9,17,PART
+V=C_det1
+Style=8192
+
+[Attr]
+ON=12,26,CAPACITANCE
+V={Cdet}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=3624,944
+Rot=1
+
+[Attr]
+ON=7,15,PART
+V=R_det
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V={Rdet}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3624,992,3624,1000
+
+[Comp]
+Name=Resistor
+Px=3624,1008
+Rot=1
+
+[Attr]
+ON=8,17,PART
+V=R_det1
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V={Rdet}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=3328,936
+
+[Attr]
+ON=3,-19,PART
+V=R0_det
+Style=8192
+
+[Attr]
+ON=7,6,RESISTANCE
+V={Rloss}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=3328,1064
+
+[Attr]
+ON=0,7,PART
+V=R0_det1
+Style=8192
+
+[Attr]
+ON=7,6,RESISTANCE
+V={Rloss}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=3160,1032
+Rot=3
+
+[Attr]
+ON=11,-33,PART
+V=C_indet
+Style=8192
+
+[Attr]
+ON=3,1,CAPACITANCE
+V={Cindet}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3160,1072,3240,1072
+
+[Comp]
+Name=Resistor
+Px=3176,936
+
+[Attr]
+ON=3,8,PART
+V=R_indet
+Style=8192
+
+[Attr]
+ON=13,8,RESISTANCE
+V={Rloss}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3160,1032,3160,1072
+
+[Wire]
+Pxs=3160,936,3160,984
+
+[Comp]
+Name=Ground
+Enable=FALSE
+Px=2648,984
+Rot=7
+
+[Wire]
+Pxs=3352,888,3400,888
+
+[Comp]
+Name=Voltage Source
+Enable=FALSE
+Px=2648,984
+Rot=5
+
+[Attr]
+ON=15,-31,PART
+V=V12
+Style=8192
+
+[Attr]
+ON=15,-41,VALUE
+V=DC 0 AC 1 0 SFFM 0 100m 20Meg {m} {Fmod}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Attr]
+ON=0,0,SMOOTHING
+V=N
+Style=256
+
+[Attr]
+ON=0,0,Saved_PulseS
+V=N
+Style=256
+
+[Attr]
+ON=0,0,FRACTION
+V=.2
+Style=256
+
+[Attr]
+ON=0,0,Saved_PulseF
+V=.2
+Style=256
+
+[Attr]
+ON=0,0,Saved_Pulse
+V=DC 0 AC 1 0 Pulse 0 5 100n 10n 10n 400n 1u
+Style=256
+
+[Attr]
+ON=0,11,Saved_SFFM
+V=DC 0 AC 1 0 SFFM 0 100m 20Meg {m} {Fmod}
+Style=256
+
+[Attr]
+ON=0,22,Saved_Sin
+V=DC 0 AC 1 0 Sin 0 {Umax} {Fc} 0 0 0
+Style=256
+
+[Attr]
+ON=0,33,Saved_None
+V=DC 0 AC 1 0
+Style=256
+
+[Object]
+Object=Rectangle
+CBorder=#000080
+Px=2819,890,3132,1150
+
+[Object]
+Object=Rectangle
+CBorder=#000080
+Px=3137,850,3759,1106
+
+[Wire]
+Pxs=3224,936,3240,936
+
+[Wire]
+Pxs=3160,936,3168,936
+
+[Comp]
+Name=Ground
+Px=3664,1000
+Rot=1
+
+[Wire]
+Pxs=3624,1000,3664,1000
+
+[Wire]
+Pxs=3240,936,3240,976
+
+[Wire]
+Pxs=3240,1024,3240,1072
+
+[Wire]
+Pxs=3304,1000,3352,1000
+
+[Comp]
+Name=Ground
+Px=2984,1128
+Rot=1
+
+[Comp]
+Name=Centap
+Style=ShowPinText
+Px=3256,976
+
+[Attr]
+ON=18,45,PART
+V=X5
+Style=8192
+
+[Attr]
+ON=18,59,FILE
+V=Centap
+
+[Attr]
+ON=18,87,Param:L1
+V={Lindet}
+
+[Attr]
+ON=18,101,Param:L2
+V={Ldet}
+
+[Attr]
+ON=18,115,Param:L3
+V={Ldet}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3240,976,3256,976
+
+[Wire]
+Pxs=3240,1024,3256,1024
+
+[Wire]
+Pxs=3304,936,3304,976
+
+[Wire]
+Pxs=3304,1024,3304,1064
+
+[Comp]
+Name=Capacitor
+Px=2880,968
+Rot=7
+
+[Attr]
+ON=-43,15,PART
+V=C_res
+Style=8192
+
+[Attr]
+ON=2,-42,CAPACITANCE
+V={C_res}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=2952,968
+Rot=1
+
+[Attr]
+ON=7,15,PART
+V=R_res
+Style=8192
+
+[Attr]
+ON=7,-41,RESISTANCE
+V={R_res}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=3000,1104
+Rot=5
+
+[Attr]
+ON=-52,-31,PART
+V=C_res1
+Style=8192
+
+[Attr]
+ON=3,-43,CAPACITANCE
+V={C_res}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=3072,1104
+Rot=3
+
+[Attr]
+ON=-48,-31,PART
+V=R_res1
+Style=8192
+
+[Attr]
+ON=7,-41,RESISTANCE
+V={R_res}
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Diode
+Px=2912,1040
+Rot=1
+
+[Attr]
+ON=-28,16,PART
+V=D1
+Style=8192
+
+[Attr]
+ON=12,26,MODEL
+V=1N5711
+
+[Attr]
+ON=0,0,PACKAGE
+V=Outline-15
+
+[Comp]
+Name=Diode
+Px=3040,1016
+Rot=5
+
+[Attr]
+ON=-30,-32,PART
+V=D2
+Style=8192
+
+[Attr]
+ON=12,-40,MODEL
+V=1N5711
+
+[Attr]
+ON=0,0,PACKAGE
+V=Outline-15
+
+[Wire]
+Pxs=2880,1016,2880,1032
+
+[Wire]
+Pxs=2880,1032,2912,1032
+
+[Wire]
+Pxs=2952,1016,2952,1032
+
+[Wire]
+Pxs=2912,1032,2912,1040
+
+[Wire]
+Pxs=2912,1032,2952,1032
+
+[Wire]
+Pxs=2912,1088,2912,1120
+
+[Wire]
+Pxs=3000,1040,3000,1056
+
+[Wire]
+Pxs=3000,1040,3040,1040
+
+[Wire]
+Pxs=3072,1040,3072,1056
+
+[Wire]
+Pxs=3040,1016,3040,1040
+
+[Wire]
+Pxs=3040,1040,3072,1040
+
+[Wire]
+Pxs=2904,2352,3032,2352
+Enable=FALSE
+
+[Comp]
+Name=Ground
+Enable=FALSE
+Px=2904,2400
+Rot=7
+
+[Comp]
+Name=Voltage Source
+Enable=FALSE
+Px=2904,2400
+Rot=5
+
+[Attr]
+ON=15,-31,PART
+V=V13
+Style=8192
+
+[Attr]
+ON=15,-41,VALUE
+V=DC 0 AC 1 0 SFFM 0 250m 200Meg 8 45k
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Attr]
+ON=0,0,SMOOTHING
+V=N
+Style=256
+
+[Attr]
+ON=0,0,Saved_PulseS
+V=N
+Style=256
+
+[Attr]
+ON=0,0,FRACTION
+V=.2
+Style=256
+
+[Attr]
+ON=0,0,Saved_PulseF
+V=.2
+Style=256
+
+[Attr]
+ON=0,0,Saved_Pulse
+V=DC 0 AC 1 0 Pulse 0 5 100n 10n 10n 400n 1u
+Style=256
+
+[Attr]
+ON=0,11,Saved_SFFM
+V=DC 0 AC 1 0 SFFM 0 250m 200Meg 8 45k
+Style=256
+
+[Attr]
+ON=0,22,Saved_Sin
+V=DC 0 AC 1 0 Sin 0 {Umax} {Fc} 0 0 0
+Style=256
+
+[Attr]
+ON=0,33,Saved_None
+V=DC 0 AC 1 0
+Style=256
+
+[Object]
+Object=Rectangle
+CBorder=#000080
+Px=2936,2283,3342,2502
+
+[Comp]
+Name=Ground
+Enable=FALSE
+Px=3224,2472
+Rot=1
+
+[Wire]
+Pxs=3032,2304,3032,2352
+Enable=FALSE
+
+[Comp]
+Name=Capacitor
+Enable=FALSE
+Px=3136,2368
+Rot=5
+
+[Attr]
+ON=-32,-30,PART
+V=C18
+Style=8192
+
+[Attr]
+ON=2,-42,CAPACITANCE
+V=100u
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Enable=FALSE
+Px=3208,2368
+Rot=3
+
+[Attr]
+ON=-29,-29,PART
+V=R4
+Style=8192
+
+[Attr]
+ON=7,-41,RESISTANCE
+V=10
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3032,2304,3168,2304
+Enable=FALSE
+
+[Comp]
+Name=Capacitor
+Enable=FALSE
+Px=3256,2456
+Rot=5
+
+[Attr]
+ON=-37,-31,PART
+V=C19
+Style=8192
+
+[Attr]
+ON=3,-43,CAPACITANCE
+V=100u
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Enable=FALSE
+Px=3328,2456
+Rot=3
+
+[Attr]
+ON=-32,-33,PART
+V=R5
+Style=8192
+
+[Attr]
+ON=7,-41,RESISTANCE
+V=10
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3224,2472,3288,2472
+Enable=FALSE
+
+[Comp]
+Name=Diode
+Enable=FALSE
+Px=3168,2392
+Rot=1
+
+[Attr]
+ON=-28,16,PART
+V=D5
+Style=8192
+
+[Attr]
+ON=12,26,MODEL
+V=1N5711
+
+[Attr]
+ON=0,0,PACKAGE
+V=Outline-15
+
+[Comp]
+Name=Diode
+Enable=FALSE
+Px=3296,2384
+Rot=5
+
+[Attr]
+ON=-30,-32,PART
+V=D6
+Style=8192
+
+[Attr]
+ON=12,-40,MODEL
+V=1N5711
+
+[Attr]
+ON=0,0,PACKAGE
+V=Outline-15
+
+[Wire]
+Pxs=3136,2368,3136,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3136,2384,3168,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3208,2368,3208,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3168,2384,3168,2392
+Enable=FALSE
+
+[Wire]
+Pxs=3168,2384,3208,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3168,2440,3168,2472
+Enable=FALSE
+
+[Wire]
+Pxs=3168,2472,3224,2472
+Enable=FALSE
+
+[Wire]
+Pxs=3256,2392,3256,2408
+Enable=FALSE
+
+[Wire]
+Pxs=3256,2392,3296,2392
+Enable=FALSE
+
+[Wire]
+Pxs=3328,2392,3328,2408
+Enable=FALSE
+
+[Wire]
+Pxs=3296,2384,3296,2392
+Enable=FALSE
+
+[Wire]
+Pxs=3296,2392,3328,2392
+Enable=FALSE
+
+[Wire]
+Pxs=3296,2304,3296,2336
+Enable=FALSE
+
+[Comp]
+Name=Capacitor
+Enable=FALSE
+Px=3408,2360
+Rot=1
+
+[Attr]
+ON=4,30,PART
+V=C20
+Style=8192
+
+[Attr]
+ON=3,1,CAPACITANCE
+V=500p
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Centap
+Style=ShowPinText
+Enable=FALSE
+Px=3504,2360
+
+[Attr]
+ON=18,45,PART
+V=X6
+Style=8192
+
+[Attr]
+ON=18,59,FILE
+V=Centap
+
+[Attr]
+ON=18,87,Param:L1
+V=1.267n
+
+[Attr]
+ON=18,101,Param:L2
+V=63.32n
+
+[Attr]
+ON=18,115,Param:L3
+V=63.32n
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3408,2304,3408,2360
+Enable=FALSE
+
+[Wire]
+Pxs=3408,2304,3448,2304
+Enable=FALSE
+
+[Wire]
+Pxs=3504,2304,3504,2360
+Enable=FALSE
+
+[Wire]
+Pxs=3408,2408,3408,2456
+Enable=FALSE
+
+[Wire]
+Pxs=3408,2456,3504,2456
+Enable=FALSE
+
+[Wire]
+Pxs=3504,2408,3504,2456
+Enable=FALSE
+
+[Comp]
+Name=Ground
+Enable=FALSE
+Px=3408,2456
+Rot=1
+
+[Comp]
+Name=Capacitor
+Enable=FALSE
+Px=3600,2272
+
+[Attr]
+ON=9,-24,PART
+V=C21
+Style=8192
+
+[Attr]
+ON=11,13,CAPACITANCE
+V=50u
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inductor
+Enable=FALSE
+Px=3824,2272
+Rot=6
+
+[Attr]
+ON=-35,-24,PART
+V=L4
+Style=8192
+
+[Attr]
+ON=-32,6,INDUCTANCE
+V=10u
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3448,2272,3448,2304
+Enable=FALSE
+
+[Wire]
+Pxs=3448,2272,3600,2272
+Enable=FALSE
+
+[Wire]
+Pxs=3448,2304,3504,2304
+Enable=FALSE
+
+[Wire]
+Pxs=3648,2272,3712,2272
+Enable=FALSE
+
+[Wire]
+Pxs=3712,2272,3712,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3552,2384,3712,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3712,2272,3776,2272
+Enable=FALSE
+
+[Wire]
+Pxs=3552,2312,3552,2360
+Enable=FALSE
+
+[Wire]
+Pxs=3552,2312,3760,2312
+Enable=FALSE
+
+[Wire]
+Pxs=3552,2408,3552,2456
+Enable=FALSE
+
+[Wire]
+Pxs=3552,2456,3760,2456
+Enable=FALSE
+
+[Comp]
+Name=Capacitor
+Enable=FALSE
+Px=3760,2360
+Rot=1
+
+[Attr]
+ON=-25,15,PART
+V=C22
+Style=8192
+
+[Attr]
+ON=2,6,CAPACITANCE
+V=5p
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3760,2312,3760,2360
+Enable=FALSE
+
+[Wire]
+Pxs=3760,2312,3784,2312
+Enable=FALSE
+
+[Wire]
+Pxs=3760,2408,3760,2456
+Enable=FALSE
+
+[Wire]
+Pxs=3760,2456,3792,2456
+Enable=FALSE
+
+[Comp]
+Name=Diode
+Enable=FALSE
+Px=3840,2456
+Rot=2
+
+[Attr]
+ON=-30,-25,PART
+V=D7
+Style=8192
+
+[Attr]
+ON=-81,-38,MODEL
+V=1N5711
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Diode
+Enable=FALSE
+Px=3832,2312
+Rot=2
+
+[Attr]
+ON=-30,-25,PART
+V=D8
+Style=8192
+
+[Attr]
+ON=-81,-38,MODEL
+V=1N5711
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3840,2456,3904,2456
+Enable=FALSE
+
+[Wire]
+Pxs=3832,2312,3904,2312
+Enable=FALSE
+
+[Comp]
+Name=Capacitor
+Enable=FALSE
+Px=3904,2328
+Rot=1
+
+[Attr]
+ON=10,15,PART
+V=C23
+Style=8192
+
+[Attr]
+ON=12,26,CAPACITANCE
+V=2.22n
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Enable=FALSE
+Px=3904,2392
+Rot=1
+
+[Attr]
+ON=9,17,PART
+V=C24
+Style=8192
+
+[Attr]
+ON=12,26,CAPACITANCE
+V=2.22n
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Enable=FALSE
+Px=3984,2328
+Rot=1
+
+[Attr]
+ON=7,15,PART
+V=R6
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=5k
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Enable=FALSE
+Px=3984,2392
+Rot=1
+
+[Attr]
+ON=8,17,PART
+V=R36
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=5k
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=3984,2456,4040,2456
+Enable=FALSE
+
+[Comp]
+Name=Ground
+Enable=FALSE
+Px=4040,2392
+Rot=1
+
+[Wire]
+Pxs=3984,2312,4032,2312
+Enable=FALSE
+
+[Wire]
+Pxs=3904,2312,3904,2328
+Enable=FALSE
+
+[Wire]
+Pxs=3904,2312,3984,2312
+Enable=FALSE
+
+[Wire]
+Pxs=3904,2376,3904,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3904,2440,3904,2456
+Enable=FALSE
+
+[Wire]
+Pxs=3904,2456,3984,2456
+Enable=FALSE
+
+[Wire]
+Pxs=3984,2440,3984,2456
+Enable=FALSE
+
+[Wire]
+Pxs=3984,2376,3984,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3984,2312,3984,2328
+Enable=FALSE
+
+[Wire]
+Pxs=3904,2384,3984,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3904,2384,3904,2392
+Enable=FALSE
+
+[Wire]
+Pxs=3984,2384,3984,2392
+Enable=FALSE
+
+[Wire]
+Pxs=3984,2384,4040,2384
+Enable=FALSE
+
+[Wire]
+Pxs=4040,2384,4040,2392
+Enable=FALSE
+
+[Wire]
+Pxs=3872,2384,3904,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3872,2272,3872,2384
+Enable=FALSE
+
+[Wire]
+Pxs=3824,2272,3872,2272
+Enable=FALSE
+
+[Wire]
+Pxs=3256,2456,3256,2464
+Enable=FALSE
+
+[Wire]
+Pxs=3256,2464,3288,2464
+Enable=FALSE
+
+[Wire]
+Pxs=3328,2456,3328,2464
+Enable=FALSE
+
+[Wire]
+Pxs=3288,2464,3288,2472
+Enable=FALSE
+
+[Wire]
+Pxs=3288,2464,3328,2464
+Enable=FALSE
+
+[Wire]
+Pxs=3136,2312,3136,2320
+Enable=FALSE
+
+[Wire]
+Pxs=3136,2312,3168,2312
+Enable=FALSE
+
+[Wire]
+Pxs=3208,2312,3208,2320
+Enable=FALSE
+
+[Wire]
+Pxs=3168,2304,3168,2312
+Enable=FALSE
+
+[Wire]
+Pxs=3168,2304,3296,2304
+Enable=FALSE
+
+[Wire]
+Pxs=3168,2312,3208,2312
+Enable=FALSE
+
+[Wire]
+Pxs=3296,2304,3408,2304
+Enable=FALSE
+
+[Comp]
+Name=Ground
+Px=3160,1072
+Rot=1
+
+[Wire]
+Pxs=2880,952,2880,968
+
+[Wire]
+Pxs=2880,952,2912,952
+
+[Wire]
+Pxs=2952,952,2952,968
+
+[Wire]
+Pxs=2912,936,2912,952
+
+[Wire]
+Pxs=2912,936,3040,936
+
+[Wire]
+Pxs=2912,952,2952,952
+
+[Wire]
+Pxs=3040,936,3040,968
+
+[Wire]
+Pxs=3040,936,3160,936
+
+[Wire]
+Pxs=2912,1120,2984,1120
+
+[Wire]
+Pxs=3072,1104,3072,1120
+
+[Wire]
+Pxs=3000,1104,3000,1120
+
+[Wire]
+Pxs=3000,1120,3072,1120
+
+[Wire]
+Pxs=2984,1120,2984,1128
+
+[Wire]
+Pxs=2984,1120,3000,1120
+
+[Wire]
+Pxs=3168,888,3248,888
+
+[Wire]
+Pxs=3168,936,3176,936
+
+[Wire]
+Pxs=3392,936,3432,936
+
+[Wire]
+Pxs=3552,936,3552,944
+
+[Wire]
+Pxs=3552,936,3624,936
+
+[Wire]
+Pxs=3624,936,3624,944
+
+[Wire]
+Pxs=3392,1064,3432,1064
+
+[Wire]
+Pxs=3624,1064,3664,1064
+
+[Wire]
+Pxs=3552,1056,3552,1064
+
+[Wire]
+Pxs=3552,1064,3624,1064
+
+[Wire]
+Pxs=3624,1056,3624,1064
+
+[Wire]
+Pxs=2560,936,2648,936
+
+[Comp]
+Name=Ideal_Trans2
+Px=2712,936
+
+[Attr]
+ON=10,53,PART
+V=X7
+Style=8192
+
+[Attr]
+ON=10,67,FILE
+V=Ideal_Trans2
+
+[Attr]
+ON=0,11,Param:GAIN
+V=1/5
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=2648,936,2664,936
+
+[Comp]
+Name=Ground
+Px=2712,984
+Rot=1
+
+[Comp]
+Name=Ground
+Px=2760,984
+Rot=1
+
+[Wire]
+Pxs=2760,936,2912,936
+
+[Wire]
+Pxs=3664,1064,3784,1064
+
+[Wire]
+Pxs=2664,936,2712,936
+
+[Wire]
+Pxs=3784,1024,3784,1064
+
+[Wire]
+Pxs=3784,936,3784,976
+
+[Wire]
+Pxs=3680,936,3784,936
 
 [Grid Text]
 Text="Антенная цепь"
@@ -2768,7 +4220,7 @@ CBorder=None
 
 [Grid Text]
 Text="BUF2"
-Px=2536,936
+Px=2664,936
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
@@ -2790,6 +4242,91 @@ JustifyH=Left
 JustifyV=Bottom
 CBorder=None
 
+[Grid Text]
+Text="AmpResOut"
+Px=3040,936
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Амплитудный ограничитель"
+Px=2816,912
+Height=-13
+FStyle=4
+Color=#000000
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="OutDetectM"
+Px=3664,1064
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="OutDetectP"
+Px=3680,936
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Детектор на настроенных контурах"
+Px=3136,1120
+Height=-13
+FStyle=4
+Color=#000000
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Амплитудный ограничитель"
+Px=2936,2496
+Height=-13
+FStyle=4
+Color=#000000
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+Enable=FALSE
+CBorder=None
+
+[Grid Text]
+Text="Sig1"
+Px=2936,2352
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+Enable=FALSE
+CBorder=None
+
+[Grid Text]
+Text="OutDetectM1"
+Px=4024,2456
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+Enable=FALSE
+CBorder=None
+
+[Grid Text]
+Text="OutDetectP1"
+Px=4016,2312
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+Enable=FALSE
+CBorder=None
+
 [Schematic]
 CurrentSection 0=0
 CurrentSection 1=0
@@ -2798,7 +4335,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1
+Scale=2
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -2986,9 +4523,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=1738,499
-Scale 3=1
-Px=1835,1134
+SB 3=2346,240
+Scale 3=2
+Px=3762,1324
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -3037,7 +4574,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
-SB 0=0,6
+SB 0=0,47
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -3089,9 +4626,11 @@ Text=
 Text=	* Сопротивление антенны
 Text=		.define Ra 50
 Text=
+Text=
 Text=* Входная цепь
 Text=	.define C_ic 3.342253804929803e-10
 Text=	.define L_ic 1.894701703474945e-09
+Text=
 Text=
 Text=* УРЧ
 Text=	.define Re_rfa (4.641663572224285e+02 - Rfb_rfa)
@@ -3104,10 +4643,12 @@ Text=	.define Lk_rfa 3.789403406949889e-09
 Text=
 Text=	.define Rfb_rfa 13
 Text=
-Text=* Буфер
+Text=
+Text=* Буфер УРЧ
 Text=	.define Re_buf1 498.7034
 Text=	.define R1_buf1 2.807500000000000e+03
 Text=	.define R2_buf1 3.514555555555556e+04
+Text=
 Text=
 Text=* Смеситель
 Text=	.define R1_mixer 100
@@ -3115,6 +4656,7 @@ Text=	.define R2_mixer 271.88133
 Text=
 Text=	.define V1_mixer 1.720863
 Text=	.define V2_mixer 2.696754
+Text=
 Text=
 Text=* УПЧ
 Text=	.define Re_ifa (464.16635722 - Rfb_ifa)
@@ -3126,6 +4668,32 @@ Text=	.define Ck_ifa 2.387324146378430e-10
 Text=	.define Lk_ifa 2.652582384864923e-07
 Text=
 Text=	.define Rfb_ifa 19
+Text=
+Text=
+Text=* Буфер УПЧ
+Text=	.define Re_buf2 498.7034
+Text=	.define R1_buf2 2.807500000000000e+03
+Text=	.define R2_buf2 3.514555555555556e+04
+Text=
+Text=
+Text=* Ограничитель
+Text=		.define C_res 100u
+Text=		.define R_res 10
+Text=
+Text=
+Text=* Детектор
+Text=		.define Cindet 500p
+Text=		.define Lindet 126.6515n
+Text=		.define Rloss 0.5305
+Text=				
+Text=		.define Ldet 6.3326u
+Text=		.define C2det 5p
+Text=		
+Text=		.define Cdet 6n
+Text=		.define Rdet 5k
+Text=		
+Text=		.define Csv 1n
+Text=		.define Lsv 100n
 
 [Text Area]
 Section=0
@@ -3175,7 +4743,7 @@ WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Title=Main.cir BUF2_F
+Title=Main.cir DET_F
 AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
@@ -3394,45 +4962,15 @@ ALIGNBOTTOM=Yes
 
 [APage]
 Analysis=Transient
-Name="MIXER_T"
-
-[APage]
-Analysis=Transient
-Name="MIXER_IN_F"
-
-[APage]
-Analysis=Transient
-Name="MIXER_OUT_F"
-
-[APage]
-Analysis=Transient
-Name="IFA_T"
-
-[APage]
-Analysis=Transient
-Name="IFA_F"
-
-[APage]
-Analysis=Transient
 Name="BUF2_T"
 
 [APage]
 Analysis=Transient
 Name="BUF2_F"
 
-[AObject]
+[APage]
 Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=3
-AliasID1=18
-Page="MIXER_OUT_F"
-Pos=20000000,0.022075457080022041,19549397.590361446,0.074637681159420308
-Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
-Format=3
-FormatY=3
+Name="DET_T"
 
 [AObject]
 Analysis=Transient
@@ -3440,66 +4978,10 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
-w=2
-AliasID1=17
-Page="MIXER_IN_F"
-Pos=200000000,0.010355412728699323,199459657.70171148,0.07922705314009662
-Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=3
-AliasID1=18
-Page="MIXER_OUT_F"
-Pos=20000000,0.4660283484722863,19592592.592592593,0.34320987654320995
-Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=7
-AliasID1=23
-Page="IFA_F"
-Pos=20000000,0.44005532197644909,19579088.171216201,0.42098765432098767
-Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000080
 w=5
-AliasID1=6
-Page="IFA_T"
-Pos=200320000,0.0054126522237332381,200708284.71411902,0.0079741100323624595
-Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000080
-w=4
-AliasID1=5
-Page="IFA_T"
-Pos=200320000,0.0057682537487573566,200183197.19953325,0.0099417475728155336
+AliasID1=30
+Page="DET_F"
+Pos=90000,0.0017179169105924698,118213.05841924399,0.0016203703703703703
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
 FormatY=3
@@ -3509,12 +4991,12 @@ Analysis=Transient
 Object=Tag
 Locked=True
 EndPoint=ArrowF
-CBorder=#000080
-w=6
-AliasID1=11
-Page="IFA_F"
-Pos=200000000,5.2119998104446999e-005,200098360.6557377,5.6995412844037621e-005
-Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+CBorder=#000000
+w=5
+AliasID1=30
+Page="DET_F"
+Pos=45000,0.018258478840712945,76517.754868270335,0.023148148148148147
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
 FormatY=3
 
@@ -4516,7 +5998,7 @@ LinearY=True
 
 [Limits]
 Analysis=Transient
-TMax=25u
+TMax=1/{Fmod}*9
 TStart=0
 TStep=1/{Fc}/100
 NPts=5100
@@ -4996,7 +6478,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 CS=Normal
 Line Color=#000000
 Text Color=#000000
@@ -5028,7 +6510,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 CS=Normal
 Line Color=#FF0000
 Text Color=#FF0000
@@ -5061,7 +6543,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 CS=Popsicle
 Line Color=#FF0000
 Text Color=#FF0000
@@ -5127,7 +6609,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 CS=Popsicle
 Line Color=#FF0000
 Text Color=#FF0000
@@ -5158,7 +6640,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 CS=Normal
 Line Color=#000000
 Text Color=#000000
@@ -5189,7 +6671,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 CS=Normal
 Line Color=#FF0000
 Text Color=#FF0000
@@ -5222,7 +6704,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 CS=Popsicle
 Line Color=#000000
 Text Color=#000000
@@ -5255,7 +6737,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 CS=Popsicle
 Line Color=#FF0000
 Text Color=#FF0000
@@ -5286,7 +6768,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 CS=Normal
 Line Color=#000000
 Text Color=#000000
@@ -5312,7 +6794,7 @@ YExp=v(BUF2)
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
-Enable=Enable
+Enable=DontRun
 CS=Normal
 Line Color=#FF0000
 Text Color=#FF0000
@@ -5345,7 +6827,7 @@ WSP Checked=False
 WSP NOP=0
 WSP Save Actual Data=True
 WSP Wav Order=0
-Enable=Enable
+Enable=DontRun
 CS=Popsicle
 Line Color=#000000
 Text Color=#000000
@@ -5373,10 +6855,94 @@ YRng=220m,0
 Options=LINEARX,LINEARY
 Range Grid X=4e6
 Range Grid Y=20m
-Enable=Enable
+WSP Title="harm(v(IFA)) vs F"
+WSP Checked=False
+WSP Save Actual Data=False
+WSP Wav Order=0
+Enable=DontRun
 CS=Popsicle
 Line Color=#FF0000
 Text Color=#FF0000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+Page=DET_T
+AliasID=28
+XExp=T
+YExp=v(AmpResOut)
+XRng=AutoAlways
+YRng=AutoAlways
+Options=LINEARX,LINEARY
+Enable=DontRun
+CS=Normal
+Line Color=#008000
+Text Color=#008000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=2
+Page=DET_T
+AliasID=29
+XExp=T
+YExp=v(v(OutDetectP, OutDetectM))
+XRng=AutoAlways
+YRng=AutoAlways
+Options=LINEARX,LINEARY
+Enable=DontRun
+CS=Normal
+Line Color=#FF00FF
+Text Color=#FF00FF
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=2
+Page=DET_F
+AliasID=30
+XExp=F
+YExp=harm(v(OutDetectP, OutDetectM))
+XRng=200k, 0
+YRng=30m, 0
+Options=LINEARX,LINEARY
+Range Grid X=45k
+Range Grid Y=5m
+Enable=DontRun
+CS=Popsicle
+Line Color=#000000
+Text Color=#000000
 Rainbow=False
 VFmtX=3
 VFmtY=3
@@ -5606,7 +7172,7 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
-CurrentPage 0="BUF2_T"
+CurrentPage 0="BUF2_F"
 
 [Pane]
 Analysis=AC
