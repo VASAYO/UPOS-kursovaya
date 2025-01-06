@@ -2,19 +2,19 @@
 ***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
 ***                                                                          ***
 ***                                                                          ***
-***                          DC Analysis of VTChars                          ***
-***                           06.01.2025 19:40:56                            ***
+***               DC Analysis of amp_restrictor_with_detector                ***
+***                            07.01.2025 1:27:07                            ***
 ********************************************************************************
 Limits
 ======
 Variable 1 Method        Auto
 Variable 1 Name          VIN
-Variable 1 Range         3.5,0,0.001
+Variable 1 Range         0.8,0,.005
 Variable 2 Method        None
 Variable 2 Name          
 Variable 2 Range         
 Temperature              Linear 27
-Number of Points         5100
+Number of Points         510
 Maximum Change %         5
 Run Options              Normal
 Auto Scale Ranges        Off
