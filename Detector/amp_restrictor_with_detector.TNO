@@ -3,13 +3,13 @@
 ***                                                                          ***
 ***                                                                          ***
 ***            Transient Analysis of amp_restrictor_with_detector            ***
-***                           05.01.2025 19:05:57                            ***
+***                            07.01.2025 0:15:29                            ***
 ********************************************************************************
 Limits
 ======
-Maximum Run Time           400u
-Output Start Time (tstart) 0
-Maximum Time Step          0
+Maximum Run Time           1/{Fmod}*18 + 30u
+Output Start Time (tstart) 30u
+Maximum Time Step          1/{Fpc}/50
 Number of Points           51
 Temperature                Linear 27
 Retrace Runs               1
@@ -17,7 +17,7 @@ Run Options                Normal
 State Variables            Zero
 Operating Point            On
 Operating Point Only       Off
-Auto Scale Ranges          On
+Auto Scale Ranges          Off
 Accumulate Plots           Off
 Fixed Time Step            Off
 Periodic Steady State      Off
@@ -33,15 +33,15 @@ Temperature=27
 DC Operating Point Voltages
 ===========================
 Node           Voltage  Node           Voltage  Node           Voltage 
-SIG             0.000   2               0.000   3           3.666E-026 
+SIG         1.195E-072  2               0.000   3           3.666E-026 
 4           3.666E-026  OUTDETECTP -3.455E-022  OUTDETECTM -3.455E-022 
 7               0.000   8               0.000   9               0.000  
-10          1.000E-049  11          1.000E-049 
+10              0.000   11          1.000E-049  12          1.000E-049 
 
 DC Operating Point Inductor Current
 ===================================
   Inductor     Current    Inductor     Current    Inductor     Current 
-L_SV        1.382E-025  X3.LP           0.000   X3.LS1      6.911E-026 
+L_SV        1.382E-025  X3.LP       2.253E-072  X3.LS1      6.911E-026 
 X3.LS2     -6.911E-026 
 
 
@@ -93,13 +93,26 @@ tc1                   0.000          0.000          0.000          0.000
 tc2                   0.000          0.000          0.000          0.000 
 
 
-Instance:            R_INDET          R_RES         R_RES1      X3.K0.RPM
-V                     0.000      1.000E-049     1.000E-049         0.000 
+Instance:            R_INDET          R_RES         R_RES1             R8
+V                -1.195E-072     1.000E-049     1.000E-049     1.195E-072
 Power DC Terms:
-PD                    0.000      1.000E-099     1.000E-099         0.000 
+PD                1.885E-100     1.000E-099     1.000E-099     1.000E-094
 
 DC Pin Currents:
-Ir                    0.000      1.000E-050     1.000E-050         0.000 
+Ir               -1.885E-050     1.000E-050     1.000E-050     1.000E-044
+
+Device Variables:
+tc1                   0.000          0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000          0.000 
+
+
+Instance:          X3.K0.RPM       X3.K0.RP       X3.K0.RM      X3.K0.RPM
+V                     0.000          0.000          0.000          0.000 
+Power DC Terms:
+PD                    0.000          0.000          0.000          0.000 
+
+DC Pin Currents:
+Ir                    0.000          0.000          0.000          0.000 
 
 Device Variables:
 tc1                   0.000          0.000          0.000          0.000 
@@ -119,17 +132,17 @@ tc1                   0.000          0.000          0.000          0.000
 tc2                   0.000          0.000          0.000          0.000 
 
 
-Instance:           X3.K0.RM      X3.K0.RPM       X3.K0.RP       X3.K0.RM
-V                     0.000          0.000          0.000          0.000 
+Instance:           X3.K0.RM
+V                     0.000 
 Power DC Terms:
-PD                    0.000          0.000          0.000          0.000 
+PD                    0.000 
 
 DC Pin Currents:
-Ir                    0.000          0.000          0.000          0.000 
+Ir                    0.000 
 
 Device Variables:
-tc1                   0.000          0.000          0.000          0.000 
-tc2                   0.000          0.000          0.000          0.000 
+tc1                   0.000 
+tc2                   0.000 
 
 
 
@@ -141,7 +154,7 @@ Power DC Terms:
 PS                    0.000          0.000          0.000          0.000 
 
 DC Pin Currents:
-Il                1.382E-025         0.000      6.911E-026    -6.911E-026
+Il                1.382E-025     2.253E-072     6.911E-026    -6.911E-026
 
 Device Variables:
 ic                    0.000          0.000          0.000          0.000 
@@ -151,7 +164,7 @@ ic                    0.000          0.000          0.000          0.000
 Operating Point for Devices of Type Capacitor
 =============================================
 Instance:               C_SV             C2          C_DET         C_DET1
-V                     0.000          0.000      3.455E-022    -3.455E-022
+V                 1.195E-072         0.000      3.455E-022    -3.455E-022
 Power DC Terms:
 PS                    0.000          0.000          0.000          0.000 
 
@@ -163,7 +176,7 @@ ic                    0.000          0.000          0.000          0.000
 
 
 Instance:            C_INDET          C_RES         C_RES1
-V                     0.000      1.000E-049     1.000E-049
+V                 1.195E-072     1.000E-049     1.000E-049
 Power DC Terms:
 PS                    0.000          0.000          0.000 
 
