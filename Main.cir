@@ -7,8 +7,8 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=506
-TXCnt=28
+NLCnt=596
+TXCnt=31
 
 [shapedef]
 Name=Battery
@@ -307,7 +307,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=257
-Used=381
+Used=385
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -318,7 +318,7 @@ Name=Voltage Source
 Definition=VSpice
 Shape=SPICE_V
 Mask=4865
-Used=65
+Used=63
 memo=Voltage Source
 Label Offset=19,13,15,13
 PinCnt=2
@@ -330,7 +330,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6401
-Used=277
+Used=280
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -342,7 +342,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6145
-Used=107
+Used=112
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -354,7 +354,7 @@ Name=Inductor
 Definition=Inductor
 Shape=Inductor
 Mask=6913
-Used=56
+Used=58
 memo=Inductor
 Label Offset=18,9,11,12
 PinCnt=2
@@ -366,7 +366,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=6401
-Used=73
+Used=75
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -474,7 +474,7 @@ Name=NMOS1
 Definition=NMOS
 Shape=NMOS
 Mask=5632
-Used=31
+Used=34
 memo=NMOS
 Label Offset=29,1,7,25
 PinCnt=4
@@ -4408,6 +4408,566 @@ Style=256
 [Wire]
 Pxs=992,488,1056,488
 
+[Comp]
+Name=Resistor
+Px=48,1264
+Rot=1
+COff=8,-248,-389,-4,31
+
+[Attr]
+ON=8,11,PART
+V=R48
+
+[Attr]
+ON=-25,17,RESISTANCE
+V=Rp
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=88,1264
+Rot=1
+COff=8,-204,-388,6,4
+
+[Attr]
+ON=12,12,PART
+V=C36
+
+[Attr]
+ON=-30,15,CAPACITANCE
+V=Cp
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=128,1264
+Rot=1
+COff=8,-164,-388,7,9
+
+[Attr]
+ON=12,12,PART
+V=C37
+
+[Attr]
+ON=-27,16,CAPACITANCE
+V=Cs
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=168,1232
+Rot=1
+COff=8,-128,-421,-7,-10
+
+[Attr]
+ON=8,11,PART
+V=R49
+
+[Attr]
+ON=5,15,RESISTANCE
+V=Rs
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inductor
+Px=168,1304
+Rot=1
+
+[Attr]
+ON=11,12,PART
+V=L7
+
+[Attr]
+ON=12,15,INDUCTANCE
+V=Lg
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Battery
+Px=208,1144
+Rot=7
+COff=8,-123,-504,-34,12
+
+[Attr]
+ON=-27,16,PART
+V=V21
+Style=8192
+
+[Attr]
+ON=14,15,VALUE
+V=3.5
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Ground
+Px=208,1136
+Rot=3
+
+[Comp]
+Name=Resistor
+Px=248,1232
+Rot=1
+COff=8,-48,-421,-27,27
+
+[Attr]
+ON=8,11,PART
+V=R50
+
+[Attr]
+ON=-21,16,RESISTANCE
+V=Rs
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Inductor
+Px=248,1304
+Rot=1
+
+[Attr]
+ON=11,12,PART
+V=L8
+
+[Attr]
+ON=-23,16,INDUCTANCE
+V=Lg
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=288,1264
+Rot=1
+COff=8,-4,-388,-20,-6
+
+[Attr]
+ON=12,12,PART
+V=C38
+
+[Attr]
+ON=9,16,CAPACITANCE
+V=Cs
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=328,1264
+Rot=1
+COff=8,36,-388,-22,-6
+
+[Attr]
+ON=12,12,PART
+V=C39
+
+[Attr]
+ON=9,15,CAPACITANCE
+V=Cp
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=368,1264
+Rot=1
+COff=8,72,-389,-36,26
+
+[Attr]
+ON=8,11,PART
+V=R51
+
+[Attr]
+ON=6,16,RESISTANCE
+V=Rp
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=184,1376
+COff=8,-104,-276,-9,-7
+COff=7,-104,-312,29,-65
+
+[Attr]
+ON=16,12,PART
+V=C40
+
+[Attr]
+ON=16,-24,CAPACITANCE
+V=Cg
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=NMOS1
+Px=136,1472
+Rot=6
+COff=8,-168,-192,-10,-27
+COff=8,-192,-216,-53,-3
+COff=8,-192,-168,-50,-11
+COff=8,-192,-192,22,-9
+
+[Attr]
+ON=-47,-26,PART
+V=M6
+Style=8192
+
+[Attr]
+ON=-47,15,MODEL
+V=M1_Req
+
+[Attr]
+ON=0,0,PACKAGE
+V=TO-236AB
+
+[Attr]
+ON=0,11,USER1
+V
+
+[Comp]
+Name=NMOS1
+Px=280,1472
+COff=8,-24,-192,-3,-26
+COff=8,0,-216,16,-1
+COff=8,0,-168,13,-10
+COff=8,0,-192,-51,-41
+
+[Attr]
+ON=33,-23,PART
+V=M7
+Style=8192
+
+[Attr]
+ON=-47,15,MODEL
+V=M1_Req
+
+[Attr]
+ON=0,0,PACKAGE
+V=TO-236AB
+
+[Attr]
+ON=0,11,USER1
+V
+
+[Comp]
+Name=NMOS1
+Px=184,1568
+COff=8,-120,-96,-15,4
+COff=8,-96,-120,-10,-18
+COff=8,-96,-72,14,-10
+COff=8,-96,-96,20,-8
+COff=23,-120,-85,17,1
+
+[Attr]
+ON=49,-5,PART
+V=M8
+Style=8192
+
+[Attr]
+ON=-47,15,MODEL
+V=M2_Req
+
+[Attr]
+ON=0,0,PACKAGE
+V=TO-236AB
+
+[Attr]
+ON=0,11,USER1
+V
+
+[Comp]
+Name=Ground
+Px=208,1592
+Rot=1
+
+[Comp]
+Name=Ground
+Px=208,1568
+Rot=4
+
+[Comp]
+Name=Ground
+Px=304,1472
+Rot=4
+
+[Comp]
+Name=Ground
+Px=112,1472
+Rot=6
+
+[Comp]
+Name=Battery
+Px=144,1616
+Rot=5
+
+[Attr]
+ON=-36,-31,PART
+V=V22
+Style=8192
+
+[Attr]
+ON=10,-31,VALUE
+V=0.624
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=144,1568,184,1568
+
+[Comp]
+Name=Ground
+Px=144,1632
+Rot=1
+
+[Wire]
+Pxs=248,1400,312,1400
+
+[Wire]
+Pxs=208,1200,304,1200
+
+[Wire]
+Pxs=168,1376,184,1376
+
+[Wire]
+Pxs=232,1376,248,1376
+
+[Wire]
+Pxs=168,1376,168,1400
+
+[Wire]
+Pxs=248,1376,248,1400
+
+[Wire]
+Pxs=248,1400,248,1416
+
+[Wire]
+Pxs=88,1400,168,1400
+
+[Object]
+Object=Rectangle
+Weight=2
+CBorder=#000000
+Px=14,1085,414,1678
+
+[Wire]
+Pxs=208,1192,208,1200
+
+[Wire]
+Pxs=208,1136,208,1144
+
+[Wire]
+Pxs=168,1216,168,1232
+
+[Wire]
+Pxs=48,1216,88,1216
+
+[Wire]
+Pxs=48,1216,48,1264
+
+[Wire]
+Pxs=88,1216,88,1264
+
+[Wire]
+Pxs=88,1216,112,1216
+
+[Wire]
+Pxs=128,1216,128,1264
+
+[Wire]
+Pxs=128,1216,168,1216
+
+[Wire]
+Pxs=112,1200,112,1216
+
+[Wire]
+Pxs=112,1200,208,1200
+
+[Wire]
+Pxs=112,1216,128,1216
+
+[Wire]
+Pxs=248,1216,248,1232
+
+[Wire]
+Pxs=248,1216,288,1216
+
+[Wire]
+Pxs=368,1216,368,1264
+
+[Wire]
+Pxs=328,1216,328,1264
+
+[Wire]
+Pxs=328,1216,368,1216
+
+[Wire]
+Pxs=288,1216,288,1264
+
+[Wire]
+Pxs=288,1216,304,1216
+
+[Wire]
+Pxs=304,1200,304,1216
+
+[Wire]
+Pxs=304,1216,328,1216
+
+[Wire]
+Pxs=168,1280,168,1304
+
+[Wire]
+Pxs=248,1280,248,1304
+
+[Wire]
+Pxs=248,1352,248,1360
+
+[Wire]
+Pxs=168,1352,168,1360
+
+[Wire]
+Pxs=48,1360,88,1360
+
+[Wire]
+Pxs=48,1312,48,1360
+
+[Wire]
+Pxs=168,1360,168,1376
+
+[Wire]
+Pxs=88,1312,88,1360
+
+[Wire]
+Pxs=88,1360,128,1360
+
+[Wire]
+Pxs=128,1312,128,1360
+
+[Wire]
+Pxs=128,1360,168,1360
+
+[Wire]
+Pxs=248,1360,288,1360
+
+[Wire]
+Pxs=368,1312,368,1360
+
+[Wire]
+Pxs=248,1360,248,1376
+
+[Wire]
+Pxs=328,1312,328,1360
+
+[Wire]
+Pxs=328,1360,368,1360
+
+[Wire]
+Pxs=288,1312,288,1360
+
+[Wire]
+Pxs=288,1360,328,1360
+
+[Wire]
+Pxs=168,1400,168,1416
+
+[Wire]
+Pxs=208,1528,208,1544
+
+[Wire]
+Pxs=112,1528,208,1528
+
+[Wire]
+Pxs=112,1496,112,1528
+
+[Wire]
+Pxs=208,1528,304,1528
+
+[Wire]
+Pxs=304,1496,304,1528
+
+[Wire]
+Pxs=112,1416,168,1416
+
+[Wire]
+Pxs=112,1416,112,1432
+
+[Wire]
+Pxs=248,1416,304,1416
+
+[Wire]
+Pxs=304,1416,304,1432
+
+[Wire]
+Pxs=136,1472,176,1472
+
+[Wire]
+Pxs=240,1472,280,1472
+
+[Wire]
+Pxs=112,1432,184,1432
+
+[Wire]
+Pxs=112,1432,112,1448
+
+[Wire]
+Pxs=232,1432,304,1432
+
+[Wire]
+Pxs=304,1432,304,1448
+
+[Wire]
+Pxs=176,1472,232,1432
+
+[Wire]
+Pxs=184,1432,240,1472
+
+[Wire]
+Pxs=144,1616,144,1632
+
 [Grid Text]
 Text="Антенная цепь"
 Px=680,616
@@ -4647,6 +5207,32 @@ JustifyH=Left
 JustifyV=Bottom
 CBorder=None
 
+[Grid Text]
+Text="GET3"
+Px=312,1400
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="GET4"
+Px=88,1400
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Гетеродин САНИ"
+Px=16,1104
+Color=#000000
+Font=Unbounded
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
 [Schematic]
 CurrentSection 0=0
 CurrentSection 1=0
@@ -4655,7 +5241,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1
+Scale=1.3333333333333333
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -4843,9 +5429,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=565,137
-Scale 3=1
-Px=828,388
+SB 3=0,734
+Scale 3=1.3333333333333333
+Px=480,1395
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -4894,6 +5480,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
+SB 0=0,33
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -4909,7 +5496,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=0,7
+SB 0=0,26
 Font=Height=-12,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -4970,16 +5557,28 @@ Text=	.define R1_buf1 2.807500000000000e+03
 Text=	.define R2_buf1 3.514555555555556e+04
 Text=
 Text=
-Text=* Гетеродин
-Text=	.define Rp 6.885095e+05
-Text=	.define Cp 5.820284e-17
-Text=	.define Cs 4.047027e-14
-Text=	.define Rs 8.888000e-02
-Text=	.define Cg 2.605992e-10 * 0.981
+Text=* Гетеродин (старый)
+Text=*	.define Rp 6.885095e+05
+Text=*	.define Cp 5.820284e-17
+Text=*	.define Cs 4.047027e-14
+Text=*	.define Rs 8.888000e-02
+Text=*	.define Cg 2.605992e-10 * 0.981
+Text=*	.define Lg 1.000000e-09
+Text=*	.define U_cm 7.400000e-01
+Text=*	.define w1 2.987330e-03
+Text=*	.define w2 5.974660e-03
+Text=
+Text=
+Text=* Гетеродин (Сани)
+Text=	.define Rp 1.529969e+05
+Text=	.define Cp 2.619217e-16
+Text=	.define Cs 4.126655e-14
+Text=	.define Rs 4.444000e-02
+Text=	.define Cg 2.597885e-10
 Text=	.define Lg 1.000000e-09
 Text=	.define U_cm 7.400000e-01
-Text=	.define w1 2.987330e-03
-Text=	.define w2 5.974660e-03
+Text=	.define w1 1.572054e-03
+Text=	.define w2 3.144107e-03
 Text=
 Text=
 Text=* Смеситель
@@ -5074,6 +5673,30 @@ Text=+ IKF=.11754 IKR=11.942E-3 IS=40.000E-15 ISC=41.950E-12 ISE=403.75E-15
 Text=+ ITF=1.0238 MJC=.19187 MJE=.37142 NC=2.0763 NE=1.4655 NK=.82547 RB=12.661
 Text=+ RC=1.0143 TF=299.22E-14 TR=26.534E-9 VAF=100 VAR=100 VTF=8.3572 XTB=1.5000
 Text=+ XTF=26.349)
+Text=
+Text=* Гетеродин Сани
+Text=.MODEL M1_Req NMOS (LEVEL=8 A0=2.208 AF=1.4 AGS=249M B0=-17.6N CAPMOD=2 CDSC=0
+Text=+ CDSCD=84.48U CF=0 CGBO=110p CGDL=135p CGDO=112p CGSL=135p CGSO=112p CIT=1M
+Text=+ CJ=930u CJSW=280p CLC=1F DLC=29N DROUT=500M DSUB=500M DVT0=22.27 DVT1=1.051
+Text=+ DVT1W=0 DVT2=3.393M DVT2W=0 DWC=26.76N ETA0=30.85M ETAB=-39.5M JS=20U
+Text=+ K1=604.4M K2=2.945M K3=-1.72 K3B=632.5M KETA=-621U KF=2.810000E-027 KT1=-330M
+Text=+ L=0.4U LINT=-16.7N MJ=310M MJSW=190M NCH=2.310000E+017 NFACTOR=111.9M
+Text=+ NLX=191.8N PB=690M PBSW=690M PCLM=683.1M PDIBLC1=107.6M PDIBLC2=1.453M
+Text=+ PDIBLCB=258.3M PSCBE1=275.6MEG PSCBE2=9.645U RDSW=604.3 RSH=2 TOX=7.7N
+Text=+ U0=403.5 UA=1P UA1=0 UB=0.001723F UB1=0 UC=57.56P UC1=0 UTE=-1.8 VERSION=3.1
+Text=+ VOFF=-57.2M VSAT=117.8K VTH0=465.5M W={w1} W0=118.4N WINT=26.76N XJ=300N
+Text=+ XPART=1)
+Text=.MODEL M2_Req NMOS (LEVEL=8 A0=2.208 AF=1.4 AGS=249M B0=-17.6N CAPMOD=2 CDSC=0
+Text=+ CDSCD=84.48U CF=0 CGBO=110p CGDL=135p CGDO=112p CGSL=135p CGSO=112p CIT=1M
+Text=+ CJ=930u CJSW=280p CLC=1F DLC=29N DROUT=500M DSUB=500M DVT0=22.27 DVT1=1.051
+Text=+ DVT1W=0 DVT2=3.393M DVT2W=0 DWC=26.76N ETA0=30.85M ETAB=-39.5M JS=20U
+Text=+ K1=604.4M K2=2.945M K3=-1.72 K3B=632.5M KETA=-621U KF=2.810000E-027 KT1=-330M
+Text=+ L=0.4U LINT=-16.7N MJ=310M MJSW=190M NCH=2.310000E+017 NFACTOR=111.9M
+Text=+ NLX=191.8N PB=690M PBSW=690M PCLM=683.1M PDIBLC1=107.6M PDIBLC2=1.453M
+Text=+ PDIBLCB=258.3M PSCBE1=275.6MEG PSCBE2=9.645U RDSW=604.3 RSH=2 TOX=7.7N
+Text=+ U0=403.5 UA=1P UA1=0 UB=0.001723F UB1=0 UC=57.56P UC1=0 UTE=-1.8 VERSION=3.1
+Text=+ VOFF=-57.2M VSAT=117.8K VTH0=465.5M W={w2} W0=118.4N WINT=26.76N XJ=300N
+Text=+ XPART=1)
 
 [InfoPage]
 InfoPage=True
