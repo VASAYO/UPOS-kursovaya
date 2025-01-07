@@ -101,7 +101,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=257
-Used=379
+Used=381
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -124,7 +124,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6401
-Used=276
+Used=277
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -146,7 +146,7 @@ Pin="Minus",0,6,8,3
 [Circuit]
 Window Placement=2,3, -1,-1, -8,-31, 0,82,945,576
 Default Object=Color=#000080
-Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
+Default Object Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Default Object Apply Border To Text=No
 Default Object Apply Fill To Text=No
 Default Object GridSnap=No
@@ -158,7 +158,7 @@ WarningFormat=3
 GridTextFormulaFormat=3
 Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 26,26,715,560
 Window Placement in AC Analysis=2,3, -1,-1, -8,-31, 0,0,715,477
-Window Placement in DC Analysis=2,3, -1,-1, -8,-31, 301,95,887,576
+Window Placement in DC Analysis=0,1, -1,-1, -8,-31, 301,95,887,576
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
@@ -544,7 +544,7 @@ Scale 1=1
 Scale 2=1
 SB 3=258,240
 Scale 3=0.66666666666666663
-Px=558,509
+Px=518,395
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -608,6 +608,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
+SB 0=13,28
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -661,6 +662,18 @@ Text=.MODEL 2N3904 NPN (BF=326.427 BR=528.632m CJC=3.66441p CJE=4.42095p
 Text=+ IKF=26.7378m IKR=980.247 IS=10.0184f ISC=100p ISE=999.933f ITF=10.1029m
 Text=+ MJC=300m MJE=423.145m NE=1.72338 NF=1.01772 RE=1.47525 TF=477.297p
 Text=+ TR=595.818n VAF=101.811 VJC=700.503m VJE=1 VTF=10 XTF=500.027m)
+Text=*** From file C:\Users\Андре\OneDrive\Документы\Политех\УПОС\Курсовая работа\MicroCap\library\ROHM_TRANSISTOR.LIB
+Text=.MODEL 2SC4618 NPN (BF=378.97 BR=6.6209 CJC=2.0001E-12 CJE=3.8356E-12
+Text=+ IKF=.11754 IKR=11.942E-3 IS=40.000E-15 ISC=41.950E-12 ISE=403.75E-15
+Text=+ ITF=1.0238 MJC=.19187 MJE=.37142 NC=2.0763 NE=1.4655 NK=.82547 RB=12.661
+Text=+ RC=1.0143 TF=299.22E-12 TR=26.534E-9 VAF=100 VAR=100 VTF=8.3572 XTB=1.5000
+Text=+ XTF=26.349)
+Text=*** From file C:\Users\Андре\OneDrive\Документы\Политех\УПОС\Курсовая работа\MicroCap\library\ROHM_TRANSISTOR.LIB
+Text=.MODEL 2SC4505 NPN (BF=221.52 BR=5.0362 CJC=24.168E-12 CJE=71.942E-12
+Text=+ IKF=.15259 IKR=29.591E-3 IS=350.00E-15 ISC=80.066E-12 ISE=350.00E-15
+Text=+ ITF=1.6472 MJC=.41523 MJE=.42942 NC=1.4650 NE=1.3284 NK=.79752 RB=1.9613
+Text=+ RC=40.659E-3 TF=7.5011E-9 TR=4.5306E-6 VAF=13.557 VAR=100 VTF=141.36
+Text=+ XTB=1.5000 XTF=155.73)
 
 [InfoPage]
 InfoPage=True
@@ -1121,7 +1134,7 @@ Name="MAIN"
 
 [DC]
 WinID=3
-Window Placement=2,3, -1,-1, -8,-31, 301,95,887,576
+Window Placement=0,1, -1,-1, -8,-31, 150,57,736,538
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -1163,7 +1176,7 @@ Tracker Cursor=False
 Tracker Cursor BranchInfo=False
 Horizontal Cursor=False
 Same Y Scales=Yes
-Enable X Scaling=False
+Enable X Scaling=True
 Enable Y Scaling=True
 Keep X Scales The Same=True
 Number of Grids X=5
@@ -1341,6 +1354,36 @@ Name="TR"
 [APage]
 Analysis=DC
 Name="OUT"
+
+[AObject]
+Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=0
+AliasID1=3
+Page="IN"
+Pos=0.6207372321114818,7.9999999999999895e-006,0.43863179074446679,7.2761194029850734e-006
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=DC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000080
+w=2
+AliasID1=2
+Page="OUT"
+Pos=1,0.0010375565673292897,1.365,0.0011897972822454889
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+Branch=7
 
 [AObject]
 Analysis=DC
@@ -1607,10 +1650,10 @@ AliasID=3
 XExp=DCINPUT1
 YExp=i(Rin)
 XRng=1
-YRng=100u, 0
+YRng=10u, 0
 Options=LINEARX,LINEARY
 Range Grid X=0.2
-Range Grid Y=10u
+Range Grid Y=1u
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -1634,10 +1677,10 @@ AliasID=1
 XExp=DCINPUT1
 YExp=-i(Rout)
 XRng=1
-YRng=11m, 0
+YRng=2m, 0
 Options=LINEARX,LINEARY
 Range Grid X=0.2
-Range Grid Y=1m
+Range Grid Y=200u
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -1661,10 +1704,10 @@ AliasID=2
 XExp=DCINPUT1
 YExp=-i(Rout)
 XRng=3.5, 0
-YRng=11m, 0
+YRng=2m, 0
 Options=LINEARX,LINEARY
-Range Grid X=0.25
-Range Grid Y=1m
+Range Grid X=0.5
+Range Grid Y=200u
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -1718,9 +1761,9 @@ Index=1
 Parameter Type=Component
 Name=IIN
 Param=dc.value
-From=0u
-To=80u
-Value=5u
+From=1u
+To=10u
+Value=1u
 
 [Stepping]
 Analysis=DC
@@ -1729,8 +1772,8 @@ Parameter Type=Component
 Name=VOUT
 Param=dc.value
 From=0
-To=3.5
-Value=0.2
+To=1
+Value=0.1
 
 [Watch]
 Analysis=Transient
