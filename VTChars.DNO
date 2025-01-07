@@ -3,13 +3,13 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                          DC Analysis of VTChars                          ***
-***                           06.01.2025 19:40:56                            ***
+***                           07.01.2025 16:55:26                            ***
 ********************************************************************************
 Limits
 ======
 Variable 1 Method        Auto
 Variable 1 Name          VIN
-Variable 1 Range         3.5,0,0.001
+Variable 1 Range         1,0,0.001
 Variable 2 Method        None
 Variable 2 Name          
 Variable 2 Range         
