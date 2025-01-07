@@ -511,14 +511,14 @@ PathDelayFormat=3
 WarningFormat=3
 GridTextFormulaFormat=3
 Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 59,4,676,498
-Window Placement in AC Analysis=0,1, -1,-1, -8,-31, 78,78,609,572
+Window Placement in AC Analysis=2,3, -1,-1, -8,-31, 78,78,609,664
 Window Placement in DC Analysis=0,1, -1,-1, -8,-31, 1,-13,975,664
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
 Show Nodes=False
-Show Voltages=False
-Show Current=False
+Show Voltages=True
+Show Current=True
 Show Power=False
 Show Condition=False
 Show Pin Connections=False
@@ -4313,7 +4313,7 @@ Style=8192
 
 [Attr]
 ON=-247,-41,VALUE
-V=DC 0 AC 1 0 Sin 0 75m 200meg 0 0 0
+V=DC 0 AC 1 0 Sin 0 81m 200meg 0 0 0
 
 [Attr]
 ON=0,0,PACKAGE
@@ -4326,7 +4326,7 @@ Style=256
 
 [Attr]
 ON=0,0,Saved_Sin
-V=DC 0 AC 1 0 Sin 0 75m 200meg 0 0 0
+V=DC 0 AC 1 0 Sin 0 81m 200meg 0 0 0
 Style=256
 
 [Comp]
@@ -4655,7 +4655,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=4
+Scale=1
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -4843,8 +4843,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-Scale 3=4
-Px=2515,2283
+SB 3=565,137
+Scale 3=1
+Px=828,388
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -5151,7 +5152,7 @@ PSS_Periods="1"
 PSS_Iterations="5"
 PSS_Error="1u"
 PSS_ShowPlots=True
-FFT_Min="0u"
+FFT_Min="20u"
 FFT_NPts="65536"
 FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
@@ -5401,6 +5402,118 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
+w=34
+AliasID1=30
+Page="DET_F"
+Pos=180000,0.00017372365964242109,159770.11494252871,0.0084563758389261789
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=34
+AliasID1=30
+Page="DET_F"
+Pos=135000,0.00018396279604964544,151494.25287356321,0.0084563758389261789
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=34
+AliasID1=30
+Page="DET_F"
+Pos=90000,0.00054810514719345167,110344.82758620688,0.0043288590604026889
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=34
+AliasID1=30
+Page="DET_F"
+Pos=45000,0.032254168866541769,68505.747126436763,0.032919463087248323
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=15
+AliasID1=35
+Page="PRESEL_F"
+Pos=199999999.99999997,0.076782706209733362,200583621.68396771,0.071174496644295301
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=14
+AliasID1=34
+Page="PRESEL_F"
+Pos=199999999.99999997,0.014999996106025086,200495963.09111878,0.011040268456375839
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=13
+AliasID1=10
+Page="BUF1_F"
+Pos=199999999.99999997,0.078265153477631896,200354094.57900807,0.0631879194630873
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=12
+AliasID1=9
+Page="BUF1_F"
+Pos=199999999.99999997,0.080999978972535469,200358708.18915799,0.089496644295302089
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
 w=9
 AliasID1=14
 Page="RFA_F"
@@ -5429,63 +5542,7 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
-w=12
-AliasID1=9
-Page="BUF1_F"
-Pos=199999999.99999997,0.074999980530138524,200495963.09111878,0.078926174496644297
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=35
-AliasID1=30
-Page="DET_F"
-Pos=180000,6.8618297878521978e-005,162428.40778923253,0.0039765100671140937
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=35
-AliasID1=30
-Page="DET_F"
-Pos=135000,0.00018413397495448382,150515.46391752578,0.0023154362416107381
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=35
-AliasID1=30
-Page="DET_F"
-Pos=90000,0.00056977012647555533,107445.58991981673,0.0021140939597315434
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=24
+w=23
 AliasID1=18
 Page="MIXER_OUT_F"
 Pos=20515000,0.017044379848227809,20543252.595155708,0.033892617449664431
@@ -5499,7 +5556,7 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
-w=22
+w=21
 AliasID1=17
 Page="MIXER_IN_F"
 Pos=200000000,0.012707504797100843,199782006.92041522,0.054026845637583892
@@ -5513,49 +5570,7 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
-w=16
-AliasID1=35
-Page="PRESEL_F"
-Pos=200000000,0.012730427750857493,199185567.01030928,0.022111783802201482
-Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=15
-AliasID1=34
-Page="PRESEL_F"
-Pos=200000000,0.0025747614204168798,199158075.60137457,0.01142856241462099
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=35
-AliasID1=30
-Page="DET_F"
-Pos=45000,0.031954215516835624,17701.149425287331,0.033558139534883721
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=28
+w=27
 AliasID1=23
 Page="IFA_F"
 Pos=20025000,0.17944116960285686,19405092.592592593,0.21543209876543212
@@ -5569,7 +5584,7 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
-w=27
+w=26
 AliasID1=22
 Page="IFA_F"
 Pos=20025000,0.04994726422542798,19252314.814814817,0.096296296296296338
@@ -5579,7 +5594,7 @@ FormatY=3
 
 [AC]
 WinID=2
-Window Placement=0,1, -1,-1, -8,-31, 78,78,609,572
+Window Placement=2,3, -1,-1, -8,-31, 78,78,609,664
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -5795,7 +5810,66 @@ ALIGNBOTTOM=Yes
 
 [APage]
 Analysis=AC
-Name="PRESEL"
+Name="PRESEL_NOISE"
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=1
+AliasID1=6
+Page="PRESEL_NOISE"
+Pos=395713161.19183213,3.8559942922717311e-005,303409502.26244342,4.9056603773584927e-005
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=0
+AliasID1=5
+Page="PRESEL_NOISE"
+Pos=199394202.61696383,1.0213606977101538e-008,296606164.38356161,6.8133802816901454e-009
+Font=Height=-15,FStyle=0,Color=#FF00FF,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=0
+AliasID1=2
+Page="PRESEL_NOISE"
+Pos=240000000,-21.17462421178233,190674157.3033708,-20.009998593947721
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+Branch=0
+
+[AObject]
+Analysis=AC
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=0
+AliasID1=2
+Page="PRESEL_NOISE"
+Pos=200000000,14.254950030358783,202332195.67690557,19.399656946826759
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+Branch=0
 
 [AObject]
 Analysis=AC
@@ -5805,7 +5879,7 @@ EndPoint=ArrowF
 CBorder=#000000
 w=0
 AliasID1=3
-Page="PRESEL"
+Page="PRESEL_NOISE"
 Pos=194520086.88025451,3.8580989999999979,159216589.86175114,16.022965476492665
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
@@ -5820,7 +5894,7 @@ EndPoint=ArrowF
 CBorder=#000000
 w=0
 AliasID1=3
-Page="PRESEL"
+Page="PRESEL_NOISE"
 Pos=204289509.29291865,3.8580989999999988,247465437.78801844,14.365212901980142
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
@@ -5835,38 +5909,9 @@ EndPoint=ArrowF
 CBorder=#000000
 w=0
 AliasID1=3
-Page="PRESEL"
+Page="PRESEL_NOISE"
 Pos=199408208.34398657,5.4569999999999999,199539170.50691244,17.233101673281325
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-Branch=0
-
-[AObject]
-Analysis=AC
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=1
-AliasID1=6
-Page="PRESEL"
-Pos=394766786.86449164,2.1894663627926602e-005,295285067.87330317,2.8018867924528317e-005
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=AC
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=0
-AliasID1=5
-Page="PRESEL"
-Pos=199872210.29303005,6.0391165887810919e-009,313339366.51583713,2.619469026548674e-009
-Font=Height=-15,FStyle=0,Color=#FF00FF,Name=Arial
 Format=3
 FormatY=3
 Branch=0
@@ -6115,15 +6160,15 @@ Seed=0
 [Performance]
 Analysis=Transient
 WinID=7
-Window Placement=2,3, -1,-1, -8,-31, 0,78,617,572
+Window Placement=2,3, -1,-1, -8,-31, 59,4,676,498
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
 Select Box Color=#000080
-Title=High_Y(v(RX), 140) * 4.9437 vs VA.sin.va,High_Y(v(BUF1), 140) vs VA.sin.va
+Title=High_Y(v(RX), 140) * 5.1189 vs VA
 AutoTitle=Yes
-ShowWin=False
+ShowWin=True
 Grid Color=#808080
 Grid Weight=1
 Grid Pattern=Dot6
@@ -6158,7 +6203,7 @@ Tracker Cursor=True
 Horizontal Cursor=False
 Same Y Scales=Yes
 Enable X Scaling=True
-Enable Y Scaling=True
+Enable Y Scaling=False
 Keep X Scales The Same=True
 Number of Grids X=5
 Number of Grids Y=5
@@ -6269,74 +6314,69 @@ ALIGNMIDDLES=Yes
 ALIGNBOTTOM=Yes
 
 [AObject]
-Object=Line
-Weight=2
-CBorder=#000000
-w=1
-AliasID1=2
-Pos=0.16325145872936669,0.72009698275861989,0.1614672891791937,0.73787715517241304
-
-[AObject]
-Object=Line
-Weight=2
-CBorder=#000000
-w=0
-AliasID1=1
-Pos=0.16325145872936669,0.7195581896551716,0.16511672689545667,0.73976293103448199
-
-[AObject]
-Object=Line
-Weight=2
-CBorder=#000000
-w=0
-AliasID1=1
-Pos=0.16314332724147743,0.80603448275861977,0.16138619056327674,0.78367456896551635
-
-[AObject]
-Object=Line
-Weight=2
-CBorder=#000000
-w=0
-AliasID1=1
-Pos=0.16317036011344976,0.80630387931034386,0.16506266115151202,0.78367456896551635
-
-[AObject]
-Object=Line
-Weight=2
-CBorder=#000000
-w=0
-AliasID1=1
-Pos=0.1631433272414774,0.80657327586206795,0.16325145872936669,0.71982758620689558
-
-[AObject]
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=0
-AliasID1=1
-Pos=0.16320899999999999,0.80685633329683826,0.08611111111111111,0.90100671140939603
-Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
 Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000000
 w=1
 AliasID1=2
-Pos=0.16320899999999999,0.71897860134093561,0.19679054054054057,0.5474137931034484
+Pos=0.174151,0.79439281483600377,0.16244084362139918,0.48993288590604034
 Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Format=3
 FormatY=3
+
+[AObject]
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=1
+AliasID1=2
+Pos=0,2.9666115709736694e-007,0.011856995884773664,0.29411764705882359
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Object=Line
+CBorder=#000000
+w=1
+AliasID1=2
+Pos=0.17412325820630326,0.79450244698205652,0.17135509211633784,0.82537928221859802
+
+[AObject]
+Object=Line
+CBorder=#000000
+w=1
+AliasID1=2
+Pos=0.17429860656504259,0.79565456769983789,0.17632563359206962,0.82422716150081665
+
+[AObject]
+Object=Line
+CBorder=#000000
+w=0
+AliasID1=1
+Pos=0.17418813709903683,0.89162622349102871,0.17185249696062851,0.86789253670473177
+
+[AObject]
+Object=Line
+CBorder=#000000
+w=0
+AliasID1=1
+Pos=0.17418813709903683,0.89185664763458494,0.17686979799869082,0.86996635399673827
+
+[AObject]
+Object=Line
+CBorder=#000000
+w=0
+AliasID1=1
+Pos=0.17414488450388113,0.89162622349102871,0.17414488450388113,0.79530893148450343
 
 [APage]
 
 [Performance WaveForm]
 ;Transient
-PMExpression=High_Y(v(RX), 140) * 4.9437
+PMExpression=High_Y(v(RX), 140) * 5.1189
 XData=1000
 VFmtX=3
 VFmtY=3
@@ -6359,8 +6399,8 @@ Auto Scale X=No
 Auto Scale Y=No
 Range Min X=0
 Range Min Y=0
-Range Max X=0.29999999999999999
-Range Max Y=1.5
+Range Max X=0.32013888888888892
+Range Max Y=2.0000000000000004
 Range Grid X=0.075000000000000011
 Range Grid Y=0.40000000000000008
 Range Bold X=0
@@ -6393,8 +6433,8 @@ Auto Scale X=No
 Auto Scale Y=No
 Range Min X=0
 Range Min Y=0
-Range Max X=0.29999999999999999
-Range Max Y=1.5
+Range Max X=0.32013888888888892
+Range Max Y=2.0000000000000004
 Range Grid X=0.075000000000000011
 Range Grid Y=0.40000000000000008
 Range Bold X=0
@@ -6404,7 +6444,7 @@ LinearY=True
 
 [Performance WaveForm]
 ;Transient
-PMExpression=High_Y(v(RX), 140) * 4.9437 / High_Y(v(BUF1), 140)
+PMExpression=High_Y(v(RX), 140) * 5.1189 / High_Y(v(BUF1), 140)
 XData=1000
 VFmtX=3
 VFmtY=3
@@ -6427,9 +6467,9 @@ Auto Scale X=No
 Auto Scale Y=No
 Range Min X=0
 Range Min Y=-10
-Range Max X=0.29999999999999999
-Range Max Y=1.5
-Range Grid X=0.075000000000000011
+Range Max X=0.37500000000000006
+Range Max Y=10
+Range Grid X=0.050000000000000003
 Range Grid Y=0.50000000000000011
 Range Bold X=0
 Range Bold Y=0
@@ -6664,7 +6704,7 @@ LinearY=True
 
 [Limits]
 Analysis=Transient
-TMax=1/{100k}*1 + 0u
+TMax=1/{45k}*9 + 20u
 TStart=0u
 TStep=1/{Fc}/100
 NPts=5100
@@ -7138,7 +7178,7 @@ YRng=70m,0
 Options=LINEARX,LINEARY
 Range Grid X=1e6
 Range Grid Y=5m
-Enable=Hide
+Enable=DontRun
 CS=Popsicle
 Line Color=#0000FF
 Text Color=#0000FF
@@ -7838,7 +7878,7 @@ XExp=F
 YExp=db(v(IC)/v(RX))
 XRng=250e6,150e6
 YRng=22, -20
-Options=LINEARX
+Options=LINEARX,LINEARY
 Range Grid X=10e6
 Range Grid Y=5
 Enable=DontRun
@@ -7865,9 +7905,9 @@ XExp=F
 YExp=(v(RFA)/v(IC))
 XRng=250e6,150e6
 YRng=39.8107,0.398107
-Options=LINEARX
+Options=LINEARX,LINEARY
 Range Grid X=20e6
-Enable=Enable
+Enable=DontRun
 CS=Normal
 Line Color=#FF0000
 Text Color=#FF0000
@@ -7891,10 +7931,10 @@ AliasID=2
 XExp=F
 YExp=db(v(BUF1)/v(RX))
 XRng=250e6,150e6
-YRng=22, -20
-Options=LINEARX
+YRng=45,-30
+Options=LINEARX,LINEARY
 Range Grid X=10e6
-Range Grid Y=5
+Range Grid Y=15
 Enable=DontRun
 CS=Normal
 Line Color=#FF0000
@@ -7921,7 +7961,7 @@ YExp=ONOISE()
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
-Enable=DontRun
+Enable=Enable
 Line Color=#FF00FF
 Text Color=#FF00FF
 Rainbow=False
@@ -7946,7 +7986,7 @@ YExp=SQRT(SD(ONOISE()^2))
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
-Enable=DontRun
+Enable=Enable
 Line Color=#000000
 Text Color=#000000
 Rainbow=False
@@ -8077,11 +8117,12 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
-CurrentPage 0="RFA_F"
+FirstTab 0=6
+CurrentPage 0="DET_F"
 
 [Pane]
 Analysis=AC
-CurrentPage 0="PRESEL"
+CurrentPage 0="PRESEL_NOISE"
 
 [Pane]
 Analysis=DC
@@ -8101,7 +8142,7 @@ Analysis=Transient
 Index=1
 Parameter Type=Component
 Name=VA
-Param=sin.va
+Param=dc.value
 From=0m
 To=300m
 Value=10m
