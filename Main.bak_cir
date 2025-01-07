@@ -5310,7 +5310,7 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1
+Scale=4
 GridUser=10
 ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
 CalcRMS=False
@@ -5498,9 +5498,8 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=215,706
-Scale 3=1
-Px=421,1151
+Scale 3=4
+Px=1253,1152
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -6029,6 +6028,62 @@ Name="DET_T"
 [APage]
 Analysis=Transient
 Name="DET_F"
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=26
+AliasID1=30
+Page="DET_F"
+Pos=180000,3.8728697632635213e-005,165635.73883161513,0.0089999999999999993
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=26
+AliasID1=30
+Page="DET_F"
+Pos=135000,0.0001384100479946114,154639.17525773196,0.007744186046511628
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=26
+AliasID1=30
+Page="DET_F"
+Pos=90000,0.00051614724206774443,114318.4421534937,0.0032093023255813954
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
+
+[AObject]
+Analysis=Transient
+Object=Tag
+Locked=True
+EndPoint=ArrowF
+CBorder=#000000
+w=26
+AliasID1=30
+Page="DET_F"
+Pos=45000,0.027966091729908181,77892.325315005728,0.029162790697674416
+Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Format=3
+FormatY=3
 
 [AObject]
 Analysis=Transient
@@ -8335,7 +8390,7 @@ PlaceText=True
 [Pane]
 Analysis=Transient
 FirstTab 0=1
-CurrentPage 0="GET_F"
+CurrentPage 0="DET_F"
 
 [Pane]
 Analysis=AC
