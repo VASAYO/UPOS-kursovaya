@@ -3,12 +3,12 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                        Transient Analysis of Main                        ***
-***                            09.01.2025 2:32:18                            ***
+***                            09.01.2025 2:49:09                            ***
 ********************************************************************************
 Limits
 ======
 Maximum Run Time           1/{45k}*9 +20u
-Output Start Time (tstart) 20u
+Output Start Time (tstart) 0u
 Maximum Time Step          1/{Fc}/100
 Number of Points           50
 Temperature                Linear 27

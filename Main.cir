@@ -4958,7 +4958,7 @@ Enable=True
 CurrentPage 0=0
 CurrentPage 1=0
 CurrentPage 2=0
-CurrentPage 3=1
+CurrentPage 3=0
 TabSize 0=425
 TabSize 1=425
 TabSize 2=425
@@ -4975,7 +4975,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=4
-Px=296,1480
+Px=2268,1796
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -5024,7 +5024,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
-SB 0=0,24
+SB 0=0,21
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -5306,6 +5306,7 @@ PSS_Periods="1"
 PSS_Iterations="5"
 PSS_Error="1u"
 PSS_ShowPlots=True
+FFT_Min="20u"
 FFT_NPts="65536"
 FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
@@ -5548,48 +5549,6 @@ Name="DET_T"
 [APage]
 Analysis=Transient
 Name="DET_F"
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=35
-AliasID1=30
-Page="DET_F"
-Pos=135000,0.0002571317743962301,160824.74226804124,0.0036241610738255033
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=35
-AliasID1=30
-Page="DET_F"
-Pos=90000,0.00019879185754637934,115234.8224513173,0.0025671140939597316
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=35
-AliasID1=30
-Page="DET_F"
-Pos=45000,0.02586126198989612,66666.666666666672,0.02692953020134228
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
 
 [AObject]
 Analysis=Transient
@@ -6900,7 +6859,7 @@ LinearY=True
 [Limits]
 Analysis=Transient
 TMax=1/{45k}*9 +20u
-TStart=20u
+TStart=0u
 TStep=1/{Fc}/100
 NPts=50
 Temp=27
@@ -8340,7 +8299,8 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
-CurrentPage 0="GET_F"
+FirstTab 0=6
+CurrentPage 0="IFA_T"
 
 [Pane]
 Analysis=AC
