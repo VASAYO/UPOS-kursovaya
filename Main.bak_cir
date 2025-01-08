@@ -4958,7 +4958,7 @@ Enable=True
 CurrentPage 0=0
 CurrentPage 1=0
 CurrentPage 2=0
-CurrentPage 3=0
+CurrentPage 3=1
 TabSize 0=425
 TabSize 1=425
 TabSize 2=425
@@ -4975,7 +4975,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=4
-Px=2640,3312
+Px=296,1480
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -5024,7 +5024,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
-SB 0=0,18
+SB 0=0,24
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -5040,6 +5040,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
+SB 0=0,25
 Font=Height=-12,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -5078,18 +5079,18 @@ Text=		.define Ra 50
 Text=
 Text=
 Text=* Входная цепь
-Text=	.define C_ic 3.342253804929803e-10
-Text=	.define L_ic 1.894701703474945e-09
+Text=	.define C_ic 334.2254p
+Text=	.define L_ic 1.895n
 Text=
 Text=
 Text=* УРЧ
-Text=	.define Re_rfa (2.390057361376673e+03 - Rfb_rfa)
-Text=	.define R1_rfa 6.772553571428571e+03
-Text=	.define R2_rfa 6.501535416666666e+04
+Text=	.define Re_rfa (2390.06 - Rfb_rfa)
+Text=	.define R1_rfa 6772.55
+Text=	.define R2_rfa 65015.35
 Text=
 Text=	.define Rc_rfa 1000
-Text=	.define Ck_rfa 2.179222646601388e-11
-Text=	.define Lk_rfa 2.905886641515081e-08
+Text=	.define Ck_rfa 21.792p
+Text=	.define Lk_rfa 29.06n
 Text=
 Text=	.define Rfb_rfa 110
 Text=
@@ -5101,15 +5102,15 @@ Text=	.define R2_buf1 35145.56
 Text=
 Text=
 Text=* Гетеродин (Сани)
-Text=	.define Rp 1.529969e+05
+Text=	.define Rp 152996.9
 Text=	.define Cp 2.619217e-16
 Text=	.define Cs 4.126655e-14
 Text=	.define Rs 4.444000e-02
 Text=	.define Cg 2.592088e-10
-Text=	.define Lg 1e-09
+Text=	.define Lg 1n
 Text=	.define U_cm 7.4e-01
-Text=	.define w1 1.572054e-03
-Text=	.define w2 3.144107e-03
+Text=	.define w1 1.572054m
+Text=	.define w2 3.144107m
 Text=
 Text=
 Text=* Смеситель
@@ -5126,8 +5127,8 @@ Text=	.define R1_ifa 2616.19
 Text=	.define R2_ifa 32970.08
 Text=
 Text=	.define Rc_ifa 100
-Text=	.define Ck_ifa 79.57747154594768p
-Text=	.define Lk_ifa 795.7747154594766n
+Text=	.define Ck_ifa 79.5775p
+Text=	.define Lk_ifa 795.775n
 Text=
 Text=	.define Rfb_ifa 19
 Text=
@@ -5198,7 +5199,6 @@ Text=+ PDIBLCB=258.3M PSCBE1=275.6MEG PSCBE2=9.645U RDSW=604.3 RSH=2 TOX=7.7N
 Text=+ U0=403.5 UA=1P UA1=0 UB=0.001723F UB1=0 UC=57.56P UC1=0 UTE=-1.8 VERSION=3.1
 Text=+ VOFF=-57.2M VSAT=117.8K VTH0=465.5M W={w2} W0=118.4N WINT=26.76N XJ=300N
 Text=+ XPART=1)
-Text=*** From file C:\Users\Андре\OneDrive\Документы\Политех\УПОС\Курсовая работа\MicroCap\library\ROHM_TRANSISTOR.LIB
 Text=.MODEL 2SC4618 NPN (BF=378.97 BR=6.6209 CJC=2.0001E-14 CJE=3.8356E-14
 Text=+ IKF=.11754 IKR=11.942E-3 IS=40.000E-15 ISC=41.950E-12 ISE=403.75E-15
 Text=+ ITF=1.0238 MJC=.19187 MJE=.37142 NC=2.0763 NE=1.4655 NK=.82547 RB=12.661
@@ -8340,8 +8340,7 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
-FirstTab 0=12
-CurrentPage 0="DET_F"
+CurrentPage 0="GET_F"
 
 [Pane]
 Analysis=AC

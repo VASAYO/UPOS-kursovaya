@@ -3,7 +3,7 @@
 ***                                                                          ***
 ***                                                                          ***
 ***                        Transient Analysis of Main                        ***
-***                            09.01.2025 2:09:13                            ***
+***                            09.01.2025 2:32:18                            ***
 ********************************************************************************
 Limits
 ======
@@ -33,7 +33,7 @@ Temperature=27
 DC Operating Point Voltages
 ===========================
 Node           Voltage  Node           Voltage  Node           Voltage 
-RX              0.000   IC          1.484E-067  3               3.163  
+RX              0.000   IC              0.000   3               3.163  
 4               3.500   5               2.500   6               3.121  
 BUF1            0.000   8               3.500   9               3.500  
 10              2.500   11              2.385   RFA             0.000  
@@ -417,12 +417,12 @@ acnqsmod             0.000
 Operating Point for Devices of Type Resistor
 ============================================
 Instance:                 R1             R7             R8             R9
-V                 1.484E-067        -3.163       -336.902m        -2.500 
+V                     0.000         -3.163       -336.902m        -2.500 
 Power DC Terms:
-PD                2.000E-102       284.679u        40.429u        12.533m
+PD                    0.000        284.679u        40.429u        12.533m
 
 DC Pin Currents:
-Ir                2.000E-052       -90.000u      -120.001u        -5.013m
+Ir                    0.000        -90.000u      -120.001u        -5.013m
 
 Device Variables:
 tc1                   0.000          0.000          0.000          0.000 
@@ -430,7 +430,7 @@ tc2                   0.000          0.000          0.000          0.000
 
 
 Instance:                R11            R12            R13            R14
-V                    -3.121       -379.279m      -115.059m        -2.385 
+V                    -3.121       -379.279m      -115.058m        -2.385 
 Power DC Terms:
 PD                  149.794u        21.241u       120.350u         2.495m
 
@@ -628,9 +628,9 @@ tc2                   0.000          0.000          0.000          0.000
 Operating Point for Devices of Type Inductor
 ============================================
 Instance:                 L1             L2             L3           L_SV
-V                 1.484E-067         0.000          0.000     -6.911E-076
+V                     0.000          0.000          0.000     -6.911E-076
 Power DC Terms:
-PS               -1.991E-120         0.000          0.000     -9.552E-101
+PS                    0.000          0.000          0.000     -9.552E-101
 
 DC Pin Currents:
 Il               -1.342E-053         1.038m         5.354m     1.382E-025
@@ -667,7 +667,7 @@ ic                    0.000
 Operating Point for Devices of Type Capacitor
 =============================================
 Instance:                 C1             C3             C4             C5
-V                 1.484E-067        -3.121          2.500          2.385 
+V                     0.000         -3.121          2.500          2.385 
 Power DC Terms:
 PS                    0.000          0.000          0.000          0.000 
 
@@ -813,7 +813,7 @@ Power DC Terms:
 PG                   0.000         17.861m         3.829m        34.675m
 
 DC Pin Currents:
-ISource          2.967E-069        -5.103m        -1.094m        -9.907m
+ISource              0.000         -5.103m        -1.094m        -9.907m
 
 
 Instance:                V4             V5             V6            V10
