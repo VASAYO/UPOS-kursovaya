@@ -87,7 +87,7 @@ Name=2SC4618
 Definition=NPN
 Shape=NPN
 Mask=4224
-Used=5
+Used=4
 memo=NPN High Frequency Amplifier Transistor Vceo=25V Ic=50mA Ft=300MHz
 Link=http://www.rohm.com/products/databook/tr/pdf/2sc5659.pdf#page=001
 Label Offset=37,-17,-14,33
@@ -101,7 +101,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=257
-Used=381
+Used=457
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -111,9 +111,10 @@ Pin="PinA",0,0,-3,-7
 Name=Battery
 Definition=Battery
 Shape=Battery
-Mask=6401
-Used=73
+Mask=6657
+Used=127
 memo=Battery
+Link=2N2222
 Label Offset=19,7,10,13
 PinCnt=2
 Pin="Plus",6,0,-4,-5
@@ -124,7 +125,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6401
-Used=277
+Used=305
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -135,8 +136,8 @@ Pin="Minus",0,0,-14,-4
 Name=Current Source
 Definition=ISpice
 Shape=SPICE_I
-Mask=7169
-Used=3
+Mask=6657
+Used=11
 memo=Current Source
 Label Offset=15,12,-29,12
 PinCnt=2
@@ -158,7 +159,7 @@ WarningFormat=3
 GridTextFormulaFormat=3
 Window Placement in Transient Analysis=2,3, -1,-1, -8,-31, 26,26,715,560
 Window Placement in AC Analysis=2,3, -1,-1, -8,-31, 0,0,715,477
-Window Placement in DC Analysis=0,1, -1,-1, -8,-31, 301,95,887,576
+Window Placement in DC Analysis=2,3, -1,-1, -8,-31, 301,95,887,576
 SpiceType=AMBIGUOUS
 Title_Block_Border=None
 Title_Block=False
@@ -184,11 +185,11 @@ Style=8192
 
 [Attr]
 ON=37,-3,MODEL
-V=2SC4618
+V=2N2222
 
 [Attr]
 ON=37,25,PACKAGE
-V=SC-75A
+V=TO-18
 
 [Comp]
 Name=Ground
@@ -236,7 +237,7 @@ Style=8192
 
 [Attr]
 ON=-30,-47,VALUE
-V=1
+V=1.9
 Style=8192
 
 [Attr]
@@ -267,6 +268,7 @@ Pxs=520,384,536,384
 
 [Wire]
 Pxs=520,384,520,400
+Enable=FALSE
 
 [Wire]
 Pxs=584,384,600,384
@@ -338,7 +340,6 @@ Rot=1
 
 [Wire]
 Pxs=448,384,448,400
-Enable=FALSE
 
 [Wire]
 Pxs=448,384,520,384
@@ -544,7 +545,7 @@ Scale 1=1
 Scale 2=1
 SB 3=258,240
 Scale 3=0.66666666666666663
-Px=518,395
+Px=518,397
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -608,7 +609,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=13,28
+SB 0=48,40
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -674,6 +675,12 @@ Text=+ IKF=.15259 IKR=29.591E-3 IS=350.00E-15 ISC=80.066E-12 ISE=350.00E-15
 Text=+ ITF=1.6472 MJC=.41523 MJE=.42942 NC=1.4650 NE=1.3284 NK=.79752 RB=1.9613
 Text=+ RC=40.659E-3 TF=7.5011E-9 TR=4.5306E-6 VAF=13.557 VAR=100 VTF=141.36
 Text=+ XTB=1.5000 XTF=155.73)
+Text=*** From file C:\Users\Андре\OneDrive\Рабочий стол\Micro-Cap 12.2.0.5\library\MSBJT.LBR
+Text=*** NPN General purpose transistor
+Text=.MODEL 2N2222 NPN (BF=200.601 BR=155.257m CJC=36.6437p CJE=42.4239p IKF=1.77131
+Text=+ IKR=995.298 IS=10.017f ISC=9.15251p ISE=999.157f ITF=10.2871m MJC=558.066m
+Text=+ MJE=642.887m NE=1.83441 NF=979.99m RE=668.817m TF=407.084p TR=2.26225u
+Text=+ VAF=100 VJC=700m VJE=700m VTF=10 XTF=500.021m)
 
 [InfoPage]
 InfoPage=True
@@ -912,6 +919,10 @@ ALIGNTOP=Yes
 ALIGNMIDDLES=Yes
 ALIGNBOTTOM=Yes
 
+[APage]
+Analysis=Transient
+Name="MAIN"
+
 [AC]
 WinID=2
 Window Placement=2,3, -1,-1, -8,-31, 0,0,715,477
@@ -1134,7 +1145,7 @@ Name="MAIN"
 
 [DC]
 WinID=3
-Window Placement=0,1, -1,-1, -8,-31, 150,57,736,538
+Window Placement=2,3, -1,-1, -8,-31, 301,95,887,576
 Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -1361,11 +1372,11 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000080
-w=0
-AliasID1=3
-Page="IN"
-Pos=0.6207372321114818,7.9999999999999895e-006,0.43863179074446679,7.2761194029850734e-006
-Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+w=1
+AliasID1=1
+Page="TR"
+Pos=0.72071892410306582,0.015057000000000023,0.42153493699885453,0.012257456828885399
+Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
 Format=3
 FormatY=3
 Branch=0
@@ -1376,14 +1387,14 @@ Object=Tag
 Locked=True
 EndPoint=ArrowF
 CBorder=#000080
-w=2
-AliasID1=2
-Page="OUT"
-Pos=1,0.0010375565673292897,1.365,0.0011897972822454889
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
+w=0
+AliasID1=3
+Page="IN"
+Pos=0.72071879693801244,7.800000000000008e-005,0.4634703196347032,6.2543171114599677e-005
+Font=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
 Format=3
 FormatY=3
-Branch=7
+Branch=0
 
 [AObject]
 Analysis=DC
@@ -1477,9 +1488,11 @@ Plt=1
 AliasID=1
 XExp=T
 YExp=v(1)
-XRng=Auto
-YRng=Auto
+XRng=1e-6
+YRng=2.5
 Options=LINEARX,LINEARY
+Range Grid X=2e-7
+Range Grid Y=0.5
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -1501,9 +1514,11 @@ Plt=1
 AliasID=2
 XExp=T
 YExp=v(2)
-XRng=Auto
-YRng=Auto
+XRng=1e-6
+YRng=2.5
 Options=LINEARX,LINEARY
+Range Grid X=2e-7
+Range Grid Y=0.5
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -1629,8 +1644,8 @@ NOFmtY=3E
 
 [Limits]
 Analysis=DC
-I1Range=1,0,0.001
-I1=VIN
+I1Range=3.5,0,0.001
+I1=VOUT
 NPts=5100
 Temp=27
 MaxChng=5
@@ -1650,10 +1665,10 @@ AliasID=3
 XExp=DCINPUT1
 YExp=i(Rin)
 XRng=1
-YRng=10u, 0
+YRng=80u, 0
 Options=LINEARX,LINEARY
 Range Grid X=0.2
-Range Grid Y=1u
+Range Grid Y=10u
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -1677,10 +1692,10 @@ AliasID=1
 XExp=DCINPUT1
 YExp=-i(Rout)
 XRng=1
-YRng=2m, 0
+YRng=16m, 0
 Options=LINEARX,LINEARY
 Range Grid X=0.2
-Range Grid Y=200u
+Range Grid Y=1m
 Enable=Enable
 Line Color=#0000FF
 Text Color=#0000FF
@@ -1704,10 +1719,10 @@ AliasID=2
 XExp=DCINPUT1
 YExp=-i(Rout)
 XRng=3.5, 0
-YRng=2m, 0
+YRng=16m, 0
 Options=LINEARX,LINEARY
 Range Grid X=0.5
-Range Grid Y=200u
+Range Grid Y=1m
 Enable=Enable
 Line Color=#FF0000
 Text Color=#FF0000
@@ -1737,6 +1752,7 @@ PlaceText=True
 
 [Pane]
 Analysis=Transient
+CurrentPage 0="MAIN"
 
 [Pane]
 Analysis=AC
@@ -1744,7 +1760,7 @@ CurrentPage 0="MAIN"
 
 [Pane]
 Analysis=DC
-CurrentPage 0="TR"
+CurrentPage 0="OUT"
 
 [Pane]
 Analysis=HmDistortion
@@ -1758,12 +1774,13 @@ Analysis=Stability
 [Stepping]
 Analysis=DC
 Index=1
+Status=On
 Parameter Type=Component
 Name=IIN
 Param=dc.value
-From=1u
-To=10u
-Value=1u
+From=10u
+To=80u
+Value=10u
 
 [Stepping]
 Analysis=DC

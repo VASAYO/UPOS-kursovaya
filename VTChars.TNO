@@ -1,0 +1,121 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                      Transient Analysis of VTChars                       ***
+***                           08.01.2025 16:37:45                            ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           1u
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             1.900   2             0.021f  3             0.000  
+4             1.900   5            14.004T 
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                Q1
+Using model:         2N2222
+
+Beta Terms:
+BETADC              -1.091 
+BETAAC              18.210m
+
+Capacitance Terms:
+CPI                 42.424p
+CMU                 17.619p
+CBX                  0.000 
+CJS                  0.000 
+
+Conductance Terms:
+GM                 383.609f
+
+Current Terms:
+IB                 -21.455p
+IC                  23.401p
+
+Resistance Terms:
+RPI                 47.470G
+RX                   0.000 
+RO                 963.298G
+
+Voltage Terms:
+VBE                  0.021f
+VBC                 -1.900 
+VCE                  1.900 
+
+Frequency Terms:
+FT                   1.017m
+
+Power DC Terms:
+PD                  44.462p
+PS                   0.000 
+
+DC Pin Currents:
+Ib                 -21.455p
+Ic                  23.401p
+Ie                  -1.946p
+Is                   0.000 
+
+Condition:
+State                   OFF
+
+Device Variables:
+area                 1.000 
+vbe                  0.000 
+vce                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                RIN           ROUT        IIN.int
+V                    -0.021f         0.000        -14.004T
+Power DC Terms:
+PD                4.603E-028         0.000      196.112MEG
+
+DC Pin Currents:
+Ir                  -21.455p         0.000        -14.004u
+
+Device Variables:
+tc1                   0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:               VIN           VOUT            IIN
+V                    0.000          1.900        -14.004T
+Power DC Terms:
+PG                   0.000          0.000      196.112MEG
+
+DC Pin Currents:
+ISource             21.455p         0.000         14.004u
+
+
