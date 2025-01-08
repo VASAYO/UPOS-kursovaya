@@ -7,7 +7,7 @@ Shape Version=11.00
 Screen=1920,1080
 MCAPVersion=12.2.0.5
 Key ID=Demo
-NLCnt=596
+NLCnt=595
 TXCnt=31
 
 [shapedef]
@@ -307,7 +307,7 @@ Name=Ground
 Definition=Ground
 Shape=Ground
 Mask=257
-Used=385
+Used=393
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -330,7 +330,7 @@ Name=Resistor
 Definition=Resistor
 Shape=Resistor
 Mask=6401
-Used=280
+Used=286
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -342,7 +342,7 @@ Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
 Mask=6145
-Used=112
+Used=116
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -366,7 +366,7 @@ Name=Battery
 Definition=Battery
 Shape=Battery
 Mask=6401
-Used=75
+Used=77
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -378,7 +378,7 @@ Name=2SC4618
 Definition=NPN
 Shape=NPN
 Mask=4224
-Used=5
+Used=7
 memo=NPN High Frequency Amplifier Transistor Vceo=25V Ic=50mA Ft=300MHz
 Link=http://www.rohm.com/products/databook/tr/pdf/2sc5659.pdf#page=001
 Label Offset=37,-17,-14,33
@@ -3453,6 +3453,7 @@ Pxs=856,960,896,960
 
 [Comp]
 Name=Resistor
+Enable=FALSE
 Px=40,752
 Rot=1
 COff=7,47,768,-4,31
@@ -3472,6 +3473,7 @@ V
 
 [Comp]
 Name=Capacitor
+Enable=FALSE
 Px=72,752
 Rot=1
 COff=7,81,767,6,4
@@ -3491,6 +3493,7 @@ V
 
 [Comp]
 Name=Capacitor
+Enable=FALSE
 Px=112,752
 Rot=1
 COff=7,122,767,-1,6
@@ -3510,6 +3513,7 @@ V
 
 [Comp]
 Name=Resistor
+Enable=FALSE
 Px=144,752
 Rot=1
 COff=7,149,767,-7,-10
@@ -3529,6 +3533,7 @@ V
 
 [Comp]
 Name=Inductor
+Enable=FALSE
 Px=144,800
 Rot=1
 
@@ -3547,6 +3552,7 @@ V
 
 [Comp]
 Name=Battery
+Enable=FALSE
 Px=184,800
 Rot=5
 COff=7,194,759,-34,12
@@ -3567,11 +3573,13 @@ V
 
 [Comp]
 Name=Ground
+Enable=FALSE
 Px=184,800
 Rot=1
 
 [Comp]
 Name=Resistor
+Enable=FALSE
 Px=224,752
 Rot=1
 COff=7,228,767,-27,27
@@ -3591,6 +3599,7 @@ V
 
 [Comp]
 Name=Inductor
+Enable=FALSE
 Px=224,800
 Rot=1
 
@@ -3609,6 +3618,7 @@ V
 
 [Comp]
 Name=Capacitor
+Enable=FALSE
 Px=256,752
 Rot=1
 COff=7,265,768,-20,-6
@@ -3628,6 +3638,7 @@ V
 
 [Comp]
 Name=Capacitor
+Enable=FALSE
 Px=296,752
 Rot=1
 COff=7,305,767,-22,-6
@@ -3647,6 +3658,7 @@ V
 
 [Comp]
 Name=Resistor
+Enable=FALSE
 Px=328,752
 Rot=1
 COff=7,334,768,-36,26
@@ -3666,6 +3678,7 @@ V
 
 [Comp]
 Name=Capacitor
+Enable=FALSE
 Px=160,848
 COff=8,176,860,-9,-7
 COff=7,176,824,29,-65
@@ -3685,6 +3698,7 @@ V
 
 [Comp]
 Name=NMOS1
+Enable=FALSE
 Px=168,912
 Rot=6
 COff=8,144,888,-53,-3
@@ -3711,6 +3725,7 @@ V
 
 [Comp]
 Name=NMOS1
+Enable=FALSE
 Px=200,912
 COff=8,224,888,16,-1
 COff=8,224,936,13,-10
@@ -3736,6 +3751,7 @@ V
 
 [Comp]
 Name=NMOS1
+Enable=FALSE
 Px=160,960
 COff=8,160,960,-15,4
 COff=8,184,936,-10,-18
@@ -3762,26 +3778,31 @@ V
 
 [Comp]
 Name=Ground
+Enable=FALSE
 Px=184,984
 Rot=1
 
 [Comp]
 Name=Ground
+Enable=FALSE
 Px=184,960
 Rot=4
 
 [Comp]
 Name=Ground
+Enable=FALSE
 Px=224,912
 Rot=4
 
 [Comp]
 Name=Ground
+Enable=FALSE
 Px=144,912
 Rot=6
 
 [Comp]
 Name=Battery
+Enable=FALSE
 Px=144,1008
 Rot=5
 
@@ -3801,110 +3822,141 @@ V
 
 [Wire]
 Pxs=144,960,160,960
+Enable=FALSE
 
 [Comp]
 Name=Ground
+Enable=FALSE
 Px=144,1008
 Rot=1
 
 [Wire]
-Pxs=224,872,232,872
+Pxs=224,872,288,872
+Enable=FALSE
 
 [Wire]
 Pxs=40,752,72,752
+Enable=FALSE
 
 [Wire]
 Pxs=72,752,112,752
+Enable=FALSE
 
 [Wire]
 Pxs=112,752,144,752
+Enable=FALSE
 
 [Wire]
 Pxs=144,752,184,752
+Enable=FALSE
 
 [Wire]
 Pxs=184,752,224,752
+Enable=FALSE
 
 [Wire]
 Pxs=224,752,256,752
+Enable=FALSE
 
 [Wire]
 Pxs=256,752,296,752
+Enable=FALSE
 
 [Wire]
 Pxs=296,752,328,752
+Enable=FALSE
 
 [Wire]
 Pxs=40,800,40,848
+Enable=FALSE
 
 [Wire]
 Pxs=40,848,72,848
+Enable=FALSE
 
 [Wire]
 Pxs=144,848,160,848
+Enable=FALSE
 
 [Wire]
 Pxs=208,848,224,848
+Enable=FALSE
 
 [Wire]
 Pxs=328,800,328,848
+Enable=FALSE
 
 [Wire]
 Pxs=224,848,256,848
+Enable=FALSE
 
 [Wire]
 Pxs=296,800,296,848
+Enable=FALSE
 
 [Wire]
 Pxs=296,848,328,848
+Enable=FALSE
 
 [Wire]
 Pxs=256,800,256,848
+Enable=FALSE
 
 [Wire]
 Pxs=256,848,296,848
+Enable=FALSE
 
 [Wire]
 Pxs=112,800,112,848
+Enable=FALSE
 
 [Wire]
 Pxs=112,848,144,848
+Enable=FALSE
 
 [Wire]
 Pxs=72,800,72,848
+Enable=FALSE
 
 [Wire]
 Pxs=72,848,112,848
+Enable=FALSE
 
 [Wire]
 Pxs=144,848,144,872
+Enable=FALSE
 
 [Wire]
 Pxs=224,848,224,872
+Enable=FALSE
 
 [Wire]
 Pxs=144,936,184,936
+Enable=FALSE
 
 [Wire]
 Pxs=184,936,224,936
+Enable=FALSE
 
 [Wire]
 Pxs=168,912,224,872
+Enable=FALSE
 
 [Wire]
 Pxs=224,872,224,888
+Enable=FALSE
 
 [Wire]
 Pxs=200,912,144,872
+Enable=FALSE
 
 [Wire]
 Pxs=144,872,144,888
-
-[Wire]
-Pxs=232,872,288,872
+Enable=FALSE
 
 [Wire]
 Pxs=88,872,144,872
+Enable=FALSE
 
 [Object]
 Object=Rectangle
@@ -4412,7 +4464,7 @@ Pxs=992,488,1056,488
 Name=Resistor
 Px=48,1264
 Rot=1
-COff=8,-248,-389,-4,31
+COff=7,23,1281,-4,31
 
 [Attr]
 ON=8,11,PART
@@ -4431,7 +4483,7 @@ V
 Name=Capacitor
 Px=88,1264
 Rot=1
-COff=8,-204,-388,6,4
+COff=7,58,1279,6,4
 
 [Attr]
 ON=12,12,PART
@@ -4450,7 +4502,7 @@ V
 Name=Capacitor
 Px=128,1264
 Rot=1
-COff=8,-164,-388,7,9
+COff=7,101,1280,7,9
 
 [Attr]
 ON=12,12,PART
@@ -4469,7 +4521,7 @@ V
 Name=Resistor
 Px=168,1232
 Rot=1
-COff=8,-128,-421,-7,-10
+COff=7,173,1247,-7,-10
 
 [Attr]
 ON=8,11,PART
@@ -4506,7 +4558,7 @@ V
 Name=Battery
 Px=208,1144
 Rot=7
-COff=8,-123,-504,-34,12
+COff=7,222,1159,-34,12
 
 [Attr]
 ON=-27,16,PART
@@ -4531,7 +4583,7 @@ Rot=3
 Name=Resistor
 Px=248,1232
 Rot=1
-COff=8,-48,-421,-27,27
+COff=7,227,1248,-27,27
 
 [Attr]
 ON=8,11,PART
@@ -4568,7 +4620,7 @@ V
 Name=Capacitor
 Px=288,1264
 Rot=1
-COff=8,-4,-388,-20,-6
+COff=7,297,1280,-20,-6
 
 [Attr]
 ON=12,12,PART
@@ -4587,7 +4639,7 @@ V
 Name=Capacitor
 Px=328,1264
 Rot=1
-COff=8,36,-388,-22,-6
+COff=7,337,1279,-22,-6
 
 [Attr]
 ON=12,12,PART
@@ -4606,7 +4658,7 @@ V
 Name=Resistor
 Px=368,1264
 Rot=1
-COff=8,72,-389,-36,26
+COff=7,374,1280,-36,26
 
 [Attr]
 ON=8,11,PART
@@ -4624,8 +4676,8 @@ V
 [Comp]
 Name=Capacitor
 Px=184,1376
-COff=8,-104,-276,-9,-7
-COff=7,-104,-312,29,-65
+COff=8,200,1388,-9,-7
+COff=7,200,1352,29,-65
 
 [Attr]
 ON=16,12,PART
@@ -4644,10 +4696,10 @@ V
 Name=NMOS1
 Px=136,1472
 Rot=6
-COff=8,-168,-192,-10,-27
-COff=8,-192,-216,-53,-3
-COff=8,-192,-168,-50,-11
-COff=8,-192,-192,22,-9
+COff=8,112,1448,-53,-3
+COff=8,112,1496,-50,-11
+COff=8,112,1472,22,-9
+COff=23,136,1483,-10,-27
 
 [Attr]
 ON=-47,-26,PART
@@ -4669,10 +4721,10 @@ V
 [Comp]
 Name=NMOS1
 Px=280,1472
-COff=8,-24,-192,-3,-26
-COff=8,0,-216,16,-1
-COff=8,0,-168,13,-10
-COff=8,0,-192,-51,-41
+COff=8,304,1448,16,-1
+COff=8,304,1496,13,-10
+COff=8,304,1472,-51,-41
+COff=23,280,1483,-3,-26
 
 [Attr]
 ON=33,-23,PART
@@ -4694,11 +4746,11 @@ V
 [Comp]
 Name=NMOS1
 Px=184,1568
-COff=8,-120,-96,-15,4
-COff=8,-96,-120,-10,-18
-COff=8,-96,-72,14,-10
-COff=8,-96,-96,20,-8
-COff=23,-120,-85,17,1
+COff=8,184,1568,-15,4
+COff=8,208,1544,-10,-18
+COff=8,208,1592,14,-10
+COff=8,208,1568,20,-8
+COff=23,184,1579,17,1
 
 [Attr]
 ON=49,-5,PART
@@ -5135,18 +5187,20 @@ CBorder=None
 
 [Grid Text]
 Text="GET2"
-Px=232,872
+Px=264,912
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
+Enable=FALSE
 CBorder=None
 
 [Grid Text]
 Text="GET1"
-Px=88,872
+Px=64,920
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
+Enable=FALSE
 CBorder=None
 
 [Grid Text]
@@ -5157,6 +5211,7 @@ Font=Unbounded
 GridSnap=True
 JustifyH=Left
 JustifyV=Bottom
+Enable=FALSE
 CBorder=None
 
 [Grid Text]
@@ -5208,7 +5263,7 @@ JustifyV=Bottom
 CBorder=None
 
 [Grid Text]
-Text="GET3"
+Text="GET2"
 Px=312,1400
 GridSnap=True
 JustifyH=Left
@@ -5216,7 +5271,7 @@ JustifyV=Bottom
 CBorder=None
 
 [Grid Text]
-Text="GET4"
+Text="GET1"
 Px=88,1400
 GridSnap=True
 JustifyH=Left
@@ -5429,9 +5484,9 @@ PrinterScale=1
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=0,734
+SB 3=0,686
 Scale 3=1.3333333333333333
-Px=480,1395
+Px=296,1465
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Anchor Color=#000000
@@ -5480,7 +5535,7 @@ Type=Text
 Print=False
 Enable=True
 Name=Text
-SB 0=0,33
+SB 0=0,24
 Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -5496,7 +5551,6 @@ Type=Text
 Print=False
 Enable=True
 Name=Models
-SB 0=0,26
 Font=Height=-12,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 WinBackGround Color=#FFFFFF
@@ -5574,7 +5628,7 @@ Text=	.define Rp 1.529969e+05
 Text=	.define Cp 2.619217e-16
 Text=	.define Cs 4.126655e-14
 Text=	.define Rs 4.444000e-02
-Text=	.define Cg 2.597885e-10
+Text=	.define Cg 2.597885e-10 * 0.9977685
 Text=	.define Lg 1.000000e-09
 Text=	.define U_cm 7.400000e-01
 Text=	.define w1 1.572054e-03
@@ -5775,7 +5829,6 @@ PSS_Periods="1"
 PSS_Iterations="5"
 PSS_Error="1u"
 PSS_ShowPlots=True
-FFT_Min="20u"
 FFT_NPts="65536"
 FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
@@ -6028,7 +6081,7 @@ CBorder=#000000
 w=34
 AliasID1=30
 Page="DET_F"
-Pos=180000,0.00017372365964242109,159770.11494252871,0.0084563758389261789
+Pos=44999.999999999993,0.03148089034719586,73108.97815696965,0.032416107382550338
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
 FormatY=3
@@ -6042,35 +6095,7 @@ CBorder=#000000
 w=34
 AliasID1=30
 Page="DET_F"
-Pos=135000,0.00018396279604964544,151494.25287356321,0.0084563758389261789
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=34
-AliasID1=30
-Page="DET_F"
-Pos=90000,0.00054810514719345167,110344.82758620688,0.0043288590604026889
-Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
-Format=3
-FormatY=3
-
-[AObject]
-Analysis=Transient
-Object=Tag
-Locked=True
-EndPoint=ArrowF
-CBorder=#000000
-w=34
-AliasID1=30
-Page="DET_F"
-Pos=45000,0.032254168866541769,68505.747126436763,0.032919463087248323
+Pos=89999.999999999985,0.001205390856701185,109965.63573883167,0.0030201342281879194
 Font=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Format=3
 FormatY=3
@@ -6791,7 +6816,7 @@ Anchor Color=#000000
 Select Box Color=#000080
 Title=High_Y(v(RX), 140) * 5.1189 vs VA
 AutoTitle=Yes
-ShowWin=True
+ShowWin=False
 Grid Color=#808080
 Grid Weight=1
 Grid Pattern=Dot6
@@ -7327,10 +7352,10 @@ LinearY=True
 
 [Limits]
 Analysis=Transient
-TMax=1/{45k}*9 + 20u
-TStart=0u
+TMax=1/{45k}*9 +15u
+TStart=15u
 TStep=1/{Fc}/100
-NPts=5100
+NPts=50
 Temp=27
 RetraceRuns=1
 StateVar=Zero
@@ -8741,7 +8766,7 @@ PlaceText=True
 [Pane]
 Analysis=Transient
 FirstTab 0=6
-CurrentPage 0="DET_F"
+CurrentPage 0="GET_F"
 
 [Pane]
 Analysis=AC
